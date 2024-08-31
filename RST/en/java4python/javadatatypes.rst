@@ -1,8 +1,8 @@
-Java Data Types
-===============
+Java Data Types and File I/O
+============================
 
-Numeric
--------
+Primitives
+----------
 
 One of the great things about Python is that all of the basic data types
 are objects. Integers are objects, floating point numbers are objects,
@@ -85,8 +85,8 @@ at them in the following order:
 
 -  Input/Output and the Scanner Class
 
-Import
-~~~~~~
+Imports
+-------
 
 In Java, you can use any class that is available without having to import
 the class, subject to two very important conditions:
@@ -135,7 +135,7 @@ Remove the import statement and change the string Scanner to
 compile and run.
 
 Declaring Variables
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Here is where we run into one of the most important differences between
 Java and Python. Python is a **dynamically typed** language. In a
@@ -187,7 +187,7 @@ variable before you use it. There is much more to say about the static
 typing of Java, but for now this is enough.
 
 Input / Output / Scanner
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 In the previous section we created a ``Scanner`` object. In
 Java, ``Scanner`` objects make getting input from the user, a file, or even
@@ -412,6 +412,9 @@ Without the ``<Integer>`` part of the declaration Java simply assumes that
 notation called casting, you cannot do anything with the objects on a
 list like this! So, if you forget you will surely see more errors later
 in your code. (Try it and see what you get)
+
+Exception Handling with try/catch
+-------------------------------------
 
 Lines 13—20 are required to open the file. Why so many lines to open a
 file in Java? The additional code mainly comes from the fact that Java

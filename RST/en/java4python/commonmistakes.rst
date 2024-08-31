@@ -3,8 +3,7 @@
 Common Mistakes
 ===============
 
-Forgetting to declare your variables
-------------------------------------
+**Common mistake #1: Forgetting to declare your variables**
 
 ::
 
@@ -14,8 +13,7 @@ Forgetting to declare your variables
         count = new ArrayList<Integer>(10);
         ^
 
-Not importing a class
----------------------
+**Common mistake #2: Not importing a class**
 
 ::
 
@@ -25,8 +23,8 @@ Not importing a class
         Scanner data = null;
         ^
 
-Forgetting to use the new keyword to create an object
------------------------------------------------------
+**Common mistake #3: Forgetting to use the new keyword to create an object**
+
 Here’s an example of the error message that occurs when you forget to
 use the new keyword. Notice that the message is pretty unhelpful.
 Java *thinks* you are trying to call the Method Scanner, but
@@ -41,8 +39,7 @@ is a constructor.:
         data = Scanner(new File("test.dat"));
                ^
 
-Forgetting a Semicolon
-----------------------
+**Common mistake #4: Forgetting a Semicolon**
 
 ::
 
@@ -51,8 +48,7 @@ Forgetting a Semicolon
         System.exit(0);
         ^
 
-Forgetting to declare the kind of object in a container
--------------------------------------------------------
+**Common mistake #5: Forgetting to declare the kind of object in a container**
 
 ::
 
