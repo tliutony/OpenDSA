@@ -1,6 +1,6 @@
 {
-  "title": "MHC F24 COMSC 205: Data Structures",
-  "desc": "MHC F24 COMSC 205: Data Structures",
+  "title": "MHC F24 COMSC 205: Data Structures - DEVELOPMENT",
+  "desc": "MHC F24 COMSC 205: Data Structures - DEVELOPMENT",
   "build_dir": "Books",
   "code_dir": "SourceCode/",
   "lang": "en",
@@ -101,9 +101,9 @@
       "java4python/moredocumentation": {},
       "MHC/scoping": {}
     },
-    "Object Oriented Programming I: Interfaces and Inheritance": {
-      "Design/IntroOO": {},
-      "IntroToSoftwareDesign/InheritanceAndPolymorphism": {}
+    "Object Oriented Programming I: Inheritance": {
+      "IntroToSoftwareDesign/InheritanceAndPolymorphism": {},
+      "Design/IntroOO": {}
     },
     "Object Oriented Programming II: Abstract Classes": {
       "Design/ADT": {

@@ -196,13 +196,7 @@ to solve.  For example, the title of a book would be important to a
 bookstore, but not to the company that shipped the book from the
 publisher's warehouse.  On the other hand, the weight of the book
 would be important to the shipper, but not to the bookstore.  Facts
-such as the title or weight of a book are called attributes.
-
-
-.. note::
-
-   An **attribute** is a fact
-   associated with a specific object.
+such as the title or weight of a book are called **attributes**.
 
 The attributes of a ``Jeroo`` object include its location,
 the number of flowers in its pouch, and the direction it's facing.
@@ -303,30 +297,26 @@ our new class is a *subclass*.  Whenever you use
 ``extends``, you are saying that the class you are declaring
 *inherits* all the features from another existing class.
 
-.. note::
+A **subclass** is a class that
+**inherits** all the methods and
+attributes of another class, called its
+**superclass**.
 
-   A **subclass** is a class that
-   **inherits** all the methods and
-   attributes of another class, called its
-   **superclass**.
+The terms **derived class**
+and **child class** are different
+names for **subclass**.
 
-.. note::
-   The terms **derived class**
-   and **child class** are different
-   names for **subclass**.
+The terms **base class**
+and **parent class** are different
+names for **superclass**.
 
-.. note::
-   The terms **base class**
-   and **parent class** are different
-   names for **superclass**.
-
-In BlueJ, we can create a new subclass from the
-``Island`` class by clicking the "New Class..." button in BlueJ's
-main window.  In the resulting new class dialog, enter the name for your
-new class, select "Island subclass", and click the "OK" button.
-This action will create a new class and an
-associated source file for you, and fill it with the required
-starting content (including  some comments and placeholders).
+.. In BlueJ, we can create a new subclass from the
+.. ``Island`` class by clicking the "New Class..." button in BlueJ's
+.. main window.  In the resulting new class dialog, enter the name for your
+.. new class, select "Island subclass", and click the "OK" button.
+.. This action will create a new class and an
+.. associated source file for you, and fill it with the required
+.. starting content (including  some comments and placeholders).
 
 .. note::
    In Java, the source code for a given class is stored in a plain text
@@ -334,16 +324,8 @@ starting content (including  some comments and placeholders).
    added on the end. The file name must be capitalized exactly the same
    way as the class name.
 
-When you create a new subclass in BlueJ, the generated
-class will already have a
-**constructor**. a constructor is
-a special kind of method that is used only to initialize a brand new
-object.
-
-.. note::
-   A **constructor** is
-   a special kind of method that is used to initialize a brand new
-   object.
+Whenever you create a new class, that class will need a  **constructor**. A constructor is
+a special kind of method that is used only to initialize a brand new object.
 
 In the constructor for our island subclass, you can define the island's
 dimensions and put any
@@ -351,32 +333,33 @@ actions you would like to perform when the island is created--such
 as populating it with some flowers, or placing water in new
 locations.
 
-We can also say what we wish to happen when the **Run button
-is pressed** by adding a ``myProgram()`` method.  You
-can add this to your island subclass:
+.. TL: I commented out this section as it is rather BlueJ specific
+.. We can also say what we wish to happen when the **Run button
+.. is pressed** by adding a ``myProgram()`` method.  You
+.. can add this to your island subclass:
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo jessica = new Jeroo(8);
-       this.addObject(jessica, 3, 4);
+..    public void myProgram()
+..    {
+..        Jeroo jessica = new Jeroo(8);
+..        this.addObject(jessica, 3, 4);
 
-       //  Give instructions to your jeroo to carry out here
-   }
+..        //  Give instructions to your jeroo to carry out here
+..    }
 
 
-Any actions you place in ``myProgram()`` will be executed
-when the "Run" (or the "Act") button
-is pressed.
+.. Any actions you place in ``myProgram()`` will be executed
+.. when the "Run" (or the "Act") button
+.. is pressed.
 
-.. admonition:: Try It Yourself
+.. .. admonition:: Try It Yourself
 
-   Create an ``Island`` subclass and add the
-   ``myProgram()`` method sketched above to it.  Replace
-   the comment in ``myProgram()`` with instructions to
-   have the jeroo ``jessica`` plant a row of three flowers
-   from (3, 4) to (5, 4).
+..    Create an ``Island`` subclass and add the
+..    ``myProgram()`` method sketched above to it.  Replace
+..    the comment in ``myProgram()`` with instructions to
+..    have the jeroo ``jessica`` plant a row of three flowers
+..    from (3, 4) to (5, 4).
 
 
 Self-Check
@@ -384,36 +367,6 @@ Self-Check
 
 .. avembed:: Exercises/IntroToSoftwareDesign/Week2Quiz1Summ.html ka
    :long_name: Working with Jeroos
-
-
-Your Opinions on Course Grading Policies 
-----------------------------------------
-
-Please Complete the following survey. The survey includes questions regarding your
-opinions on the grading policies in this course and how you approach learning
-in this course. We will use this information to understand better how you are
-affected by these policies so that we can improve the course.
-
-Towards the end of the survey you will be asked if you consent for your answers
-and course data to be used in a study about grading policies.  There is no
-additional work on your part if you provide consent for your data to
-be used in the study.  Completing the survey should take less than 30 minutes.
-Your course instructor will not know whether you agree to
-participate until after you have completed the course and final
-grades have been turned in. You will earn assignment credit for submitting this
-survey, whether or not you agree to participate in the study or decline to
-answer some or all of the questions.
-
-.. raw:: html
-
-    <a href="https://virginiatech.questionpro.com/t/AYIrDZ1HgI" target="_blank">CS 1114 Grading Policies Survey 1</a>
-
-Please answer below and your submission of the survey will be verified
-for credit.
-
-.. avembed:: Exercises/IntroToSoftwareDesign/EGPSurvey.html ka
-   :long_name: Survey Completed
-
 
 Class Hierarchy and Inheritance
 -------------------------------
@@ -587,749 +540,749 @@ Syntax Practice 2a: Jeroo Methods
    :workout_id: 1342
 
 
-Problem Solving and Algorithms
-------------------------------
-
-Learn a basic process for developing a solution to a problem.
-Nothing in this chapter is unique to using a computer to solve a
-problem.  This process can be used to solve a wide variety of
-problems, including ones that have nothing to do with computers.
-
-
-Problems, Solutions, and Tools
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-I have a problem!  I need to thank Aunt Kay for the birthday present
-she sent me.  I could send a thank you note through the mail.  I could
-call her on the telephone.  I could send her an email message.  I could
-drive to her house and thank her in person.  In fact, there are many
-ways I could thank her, but that's not the point.  The point is that
-I must decide how I want to solve the problem, and use the appropriate
-tool to implement (carry out) my plan. The postal service, the
-telephone, the internet, and my automobile are tools that I can use,
-but none of these actually solves my problem.  In a similar way, a
-computer does not solve problems, it's just a tool that I can use to
-implement my plan for solving the problem.
-
-Knowing that Aunt Kay appreciates creative and unusual things, I
-have decided to hire a singing messenger to deliver my thanks.  In this
-context, the messenger is a tool, but one that needs instructions from
-me.  I have to tell the messenger where Aunt Kay lives, what time I
-would like the message to be delivered, and what lyrics I want sung.
-A computer program is similar to my instructions to the messenger.
-
-The story of Aunt Kay uses a familiar context to set the stage for
-a useful point of view concerning computers and computer programs.
-The following list summarizes the key aspects of this point of view.
-
-.. note::
-   * A computer is a tool that can be used to implement a plan for
-     solving a problem.
-   * A computer program is a set of instructions for a computer.
-     These instructions describe the steps that the computer must follow
-     to implement a plan.
-   * An algorithm is a plan for solving a problem.
-   * A person must design an algorithm.
-   * A person must translate an algorithm into a computer program.
-
-This point of view sets the stage for a process that we will use
-to develop solutions to Jeroo problems.  The basic process is important
-because it can be used to solve a wide variety of problems, including
-ones where the solution will be written in some other programming
-language.
-
-
-An Algorithm Development Process
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Every problem solution starts with a plan.  That plan is called
-an algorithm.
-
-.. note::
-   An **algorithm** is a plan
-   for solving a problem.
-
-There are many ways to write an algorithm.  Some are very informal,
-some are quite formal and mathematical in nature, and some are quite
-graphical.  The instructions for connecting a DVD player to a
-television are an algorithm.  A mathematical formula such
-as :math:`\pi R^2` is a special case of an algorithm.  The form
-is not particularly important as long as it provides a good way to
-describe and check the logic of the plan.
-
-The development of an algorithm (a plan) is a key step in solving
-a problem.  Once we have an algorithm, we can translate it into a
-computer program in some programming language.  Our algorithm
-development process consists of five major steps.
-
-.. note:
-
-   1. Obtain a description of the problem.
-   2. Analyze the problem.
-   3. Develop a high-level algorithm.
-   4. Refine the algorithm by adding more detail.
-   5. Review the algorithm.
-
-
-Step 1: Obtain a description of the problem
-"""""""""""""""""""""""""""""""""""""""""""
-
-This step is much more difficult than it appears.  In the following
-discussion, the word *client* refers to someone who wants to
-find a solution to a problem, and the word *developer* refers to
-someone who finds a way to solve the problem.  The developer must
-create an algorithm that will solve the client's problem.
-
-The client is responsible for creating a description of the problem,
-but this is often the weakest part of the process.  It's quite common
-for a problem description to suffer from one or more of the following
-types of defects: (1) the description relies on unstated assumptions,
-(2) the description is ambiguous, (3) the description is incomplete,
-or (4) the description has internal contradictions.  These defects are
-seldom due to carelessness by the client.  Instead, they are due to the
-fact that natural languages (English, French, Korean, etc.) are rather
-imprecise.  Part of the developer's responsibility is to identify
-defects in the description of a problem, and to work with the client
-to remedy those defects.
-
-
-Step 2: Analyze the problem
-"""""""""""""""""""""""""""
-
-The purpose of this step is to determine both the starting and
-ending points for solving the problem.  This process is analogous to a
-mathematician determining what is given and what must be proven.  A
-good problem description makes it easier to perform this step.
-
-When determining the starting point, we should start by seeking
-answers to the following questions:
-
-* What data are available?
-* Where is that data?
-* What formulas pertain to the problem?
-* What rules exist for working with the data?
-* What relationships exist among the data values?
-
-When determining the ending point, we need to describe the
-characteristics of a solution.  In other words, how will we know when
-we're done?  Asking the following questions often helps to determine
-the ending point.
-
-* What new facts will we have?
-* What items will have changed?
-* What changes will have been made to those items?
-* What things will no longer exist?
-
-
-Step 3:  Develop a high-level algorithm
-"""""""""""""""""""""""""""""""""""""""
-
-An algorithm is a plan for solving a problem, but plans come in
-several levels of detail.  It's usually better to start with a
-high-level algorithm that includes the major part of a solution, but
-leaves the details until later.  We can use an everyday example to
-demonstrate a high-level algorithm.
-
-**Problem:**  I need a send a birthday card to my brother,
-Mark. |br|
-**Analysis:** I don't have a card.  I prefer to buy a card rather
-than make one myself. |br|
-High-level algorithm:
-
-  Go to a store that sells greeting cards |br|
-  Select a card |br|
-  Purchase a card |br|
-  Mail the card
-
-
-This algorithm is satisfactory for daily use, but it lacks details
-that would have to be added were a computer to carry out the solution.
-These details include answers to questions such as the following:
-
-* "Which store will I visit?"
-* "How will I get there: walk, drive, ride my bicycle, take the
-  bus?"
-* "What kind of card does Mark like: humorous, sentimental,
-  risque?"
-
-These kinds of details are considered in the next step of our
-process.
-
-
-Step 4: Refine the algorithm by adding more detail
-""""""""""""""""""""""""""""""""""""""""""""""""""
-
-A high-level algorithm shows the major steps that need to be
-followed to solve a problem.  Now we need to add details to these
-steps, but how much detail should we add?  Unfortunately, the answer
-to this question depends on the situation.  We have to consider who
-(or what) is going to implement the algorithm and how much that person
-(or thing) already knows how to do.  If someone is going to purchase
-Mark's birthday card on my behalf, my instructions have to be adapted
-to whether or not that person is familiar with the stores in the
-community and how well the purchaser known my brother's taste in
-greeting cards.
-
-When our goal is to develop algorithms that will lead to computer
-programs, we need to consider the capabilities of the computer and
-provide enough detail so that someone else could use our algorithm
-to write a computer program that follows the steps in our algorithm.
-As with the birthday card problem, we need to adjust the level of
-detail to match the ability of the programmer.  When in doubt, or when
-you are learning, it is better to have too much detail than to have
-too little.
-
-Most of our examples will move from a high-level to a detailed
-algorithm in a single step, but this is not always reasonable.  For
-larger, more complex problems, it is common to go through this
-process several times, developing intermediate level algorithms as
-we go.  Each time, we add more detail to the previous algorithm,
-stopping when we see no benefit to further refinement.  This technique
-of gradually working from a high-level to a detailed algorithm is
-often called **stepwise refinement**.
-
-.. note::
-   **Stepwise refinement** is a process
-   for developing a detailed algorithm by gradually adding detail to a
-   high-level algorithm.
+.. Problem Solving and Algorithms
+.. ------------------------------
+
+.. Learn a basic process for developing a solution to a problem.
+.. Nothing in this chapter is unique to using a computer to solve a
+.. problem.  This process can be used to solve a wide variety of
+.. problems, including ones that have nothing to do with computers.
+
+
+.. Problems, Solutions, and Tools
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. I have a problem!  I need to thank Aunt Kay for the birthday present
+.. she sent me.  I could send a thank you note through the mail.  I could
+.. call her on the telephone.  I could send her an email message.  I could
+.. drive to her house and thank her in person.  In fact, there are many
+.. ways I could thank her, but that's not the point.  The point is that
+.. I must decide how I want to solve the problem, and use the appropriate
+.. tool to implement (carry out) my plan. The postal service, the
+.. telephone, the internet, and my automobile are tools that I can use,
+.. but none of these actually solves my problem.  In a similar way, a
+.. computer does not solve problems, it's just a tool that I can use to
+.. implement my plan for solving the problem.
+
+.. Knowing that Aunt Kay appreciates creative and unusual things, I
+.. have decided to hire a singing messenger to deliver my thanks.  In this
+.. context, the messenger is a tool, but one that needs instructions from
+.. me.  I have to tell the messenger where Aunt Kay lives, what time I
+.. would like the message to be delivered, and what lyrics I want sung.
+.. A computer program is similar to my instructions to the messenger.
+
+.. The story of Aunt Kay uses a familiar context to set the stage for
+.. a useful point of view concerning computers and computer programs.
+.. The following list summarizes the key aspects of this point of view.
+
+.. .. note::
+..    * A computer is a tool that can be used to implement a plan for
+..      solving a problem.
+..    * A computer program is a set of instructions for a computer.
+..      These instructions describe the steps that the computer must follow
+..      to implement a plan.
+..    * An algorithm is a plan for solving a problem.
+..    * A person must design an algorithm.
+..    * A person must translate an algorithm into a computer program.
+
+.. This point of view sets the stage for a process that we will use
+.. to develop solutions to Jeroo problems.  The basic process is important
+.. because it can be used to solve a wide variety of problems, including
+.. ones where the solution will be written in some other programming
+.. language.
+
+
+.. An Algorithm Development Process
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. Every problem solution starts with a plan.  That plan is called
+.. an algorithm.
+
+.. .. note::
+..    An **algorithm** is a plan
+..    for solving a problem.
+
+.. There are many ways to write an algorithm.  Some are very informal,
+.. some are quite formal and mathematical in nature, and some are quite
+.. graphical.  The instructions for connecting a DVD player to a
+.. television are an algorithm.  A mathematical formula such
+.. as :math:`\pi R^2` is a special case of an algorithm.  The form
+.. is not particularly important as long as it provides a good way to
+.. describe and check the logic of the plan.
+
+.. The development of an algorithm (a plan) is a key step in solving
+.. a problem.  Once we have an algorithm, we can translate it into a
+.. computer program in some programming language.  Our algorithm
+.. development process consists of five major steps.
+
+.. .. note:
+
+..    1. Obtain a description of the problem.
+..    2. Analyze the problem.
+..    3. Develop a high-level algorithm.
+..    4. Refine the algorithm by adding more detail.
+..    5. Review the algorithm.
+
+
+.. Step 1: Obtain a description of the problem
+.. """""""""""""""""""""""""""""""""""""""""""
+
+.. This step is much more difficult than it appears.  In the following
+.. discussion, the word *client* refers to someone who wants to
+.. find a solution to a problem, and the word *developer* refers to
+.. someone who finds a way to solve the problem.  The developer must
+.. create an algorithm that will solve the client's problem.
+
+.. The client is responsible for creating a description of the problem,
+.. but this is often the weakest part of the process.  It's quite common
+.. for a problem description to suffer from one or more of the following
+.. types of defects: (1) the description relies on unstated assumptions,
+.. (2) the description is ambiguous, (3) the description is incomplete,
+.. or (4) the description has internal contradictions.  These defects are
+.. seldom due to carelessness by the client.  Instead, they are due to the
+.. fact that natural languages (English, French, Korean, etc.) are rather
+.. imprecise.  Part of the developer's responsibility is to identify
+.. defects in the description of a problem, and to work with the client
+.. to remedy those defects.
+
+
+.. Step 2: Analyze the problem
+.. """""""""""""""""""""""""""
+
+.. The purpose of this step is to determine both the starting and
+.. ending points for solving the problem.  This process is analogous to a
+.. mathematician determining what is given and what must be proven.  A
+.. good problem description makes it easier to perform this step.
+
+.. When determining the starting point, we should start by seeking
+.. answers to the following questions:
+
+.. * What data are available?
+.. * Where is that data?
+.. * What formulas pertain to the problem?
+.. * What rules exist for working with the data?
+.. * What relationships exist among the data values?
+
+.. When determining the ending point, we need to describe the
+.. characteristics of a solution.  In other words, how will we know when
+.. we're done?  Asking the following questions often helps to determine
+.. the ending point.
+
+.. * What new facts will we have?
+.. * What items will have changed?
+.. * What changes will have been made to those items?
+.. * What things will no longer exist?
+
+
+.. Step 3:  Develop a high-level algorithm
+.. """""""""""""""""""""""""""""""""""""""
+
+.. An algorithm is a plan for solving a problem, but plans come in
+.. several levels of detail.  It's usually better to start with a
+.. high-level algorithm that includes the major part of a solution, but
+.. leaves the details until later.  We can use an everyday example to
+.. demonstrate a high-level algorithm.
+
+.. **Problem:**  I need a send a birthday card to my brother,
+.. Mark. |br|
+.. **Analysis:** I don't have a card.  I prefer to buy a card rather
+.. than make one myself. |br|
+.. High-level algorithm:
+
+..   Go to a store that sells greeting cards |br|
+..   Select a card |br|
+..   Purchase a card |br|
+..   Mail the card
+
+
+.. This algorithm is satisfactory for daily use, but it lacks details
+.. that would have to be added were a computer to carry out the solution.
+.. These details include answers to questions such as the following:
+
+.. * "Which store will I visit?"
+.. * "How will I get there: walk, drive, ride my bicycle, take the
+..   bus?"
+.. * "What kind of card does Mark like: humorous, sentimental,
+..   risque?"
+
+.. These kinds of details are considered in the next step of our
+.. process.
+
+
+.. Step 4: Refine the algorithm by adding more detail
+.. """"""""""""""""""""""""""""""""""""""""""""""""""
+
+.. A high-level algorithm shows the major steps that need to be
+.. followed to solve a problem.  Now we need to add details to these
+.. steps, but how much detail should we add?  Unfortunately, the answer
+.. to this question depends on the situation.  We have to consider who
+.. (or what) is going to implement the algorithm and how much that person
+.. (or thing) already knows how to do.  If someone is going to purchase
+.. Mark's birthday card on my behalf, my instructions have to be adapted
+.. to whether or not that person is familiar with the stores in the
+.. community and how well the purchaser known my brother's taste in
+.. greeting cards.
+
+.. When our goal is to develop algorithms that will lead to computer
+.. programs, we need to consider the capabilities of the computer and
+.. provide enough detail so that someone else could use our algorithm
+.. to write a computer program that follows the steps in our algorithm.
+.. As with the birthday card problem, we need to adjust the level of
+.. detail to match the ability of the programmer.  When in doubt, or when
+.. you are learning, it is better to have too much detail than to have
+.. too little.
+
+.. Most of our examples will move from a high-level to a detailed
+.. algorithm in a single step, but this is not always reasonable.  For
+.. larger, more complex problems, it is common to go through this
+.. process several times, developing intermediate level algorithms as
+.. we go.  Each time, we add more detail to the previous algorithm,
+.. stopping when we see no benefit to further refinement.  This technique
+.. of gradually working from a high-level to a detailed algorithm is
+.. often called **stepwise refinement**.
+
+.. .. note::
+..    **Stepwise refinement** is a process
+..    for developing a detailed algorithm by gradually adding detail to a
+..    high-level algorithm.
 
 
-Step 5: Review the algorithm
-""""""""""""""""""""""""""""
+.. Step 5: Review the algorithm
+.. """"""""""""""""""""""""""""
 
-The final step is to review the algorithm.  What are we looking for?
-First, we need to work through the algorithm step by step to determine
-whether or not it will solve the original problem.  Once we are
-satisfied that the algorithm does provide a solution to the problem,
-we start to look for other things.  The following questions are typical
-of ones that should be asked whenever we review an algorithm.  Asking
-these questions and seeking their answers is a good way to develop
-skills that can be applied to the next problem.
+.. The final step is to review the algorithm.  What are we looking for?
+.. First, we need to work through the algorithm step by step to determine
+.. whether or not it will solve the original problem.  Once we are
+.. satisfied that the algorithm does provide a solution to the problem,
+.. we start to look for other things.  The following questions are typical
+.. of ones that should be asked whenever we review an algorithm.  Asking
+.. these questions and seeking their answers is a good way to develop
+.. skills that can be applied to the next problem.
 
-* Does this algorithm solve a **very specific
-  problem** or does it
-  solve a **more general problem**?  If it solves a very
-  specific problem,
-  should it be generalized?
-  For example, an algorithm that computes
-  the area of a circle having radius 5.2 meters
-  (formula :math:`\pi (5.2)^2`) solves a very specific problem, but an
-  algorithm that computes the area of any circle
-  (formula :math:`\pi R^2`) solves a more general problem.
-* Can this algorithm be **simplified**?
-  One formula for computing the perimeter of a rectangle is:
+.. * Does this algorithm solve a **very specific
+..   problem** or does it
+..   solve a **more general problem**?  If it solves a very
+..   specific problem,
+..   should it be generalized?
+..   For example, an algorithm that computes
+..   the area of a circle having radius 5.2 meters
+..   (formula :math:`\pi (5.2)^2`) solves a very specific problem, but an
+..   algorithm that computes the area of any circle
+..   (formula :math:`\pi R^2`) solves a more general problem.
+.. * Can this algorithm be **simplified**?
+..   One formula for computing the perimeter of a rectangle is:
 
-     *length + width + length + width*
+..      *length + width + length + width*
 
-  A simpler formula would be:
+..   A simpler formula would be:
 
-     2.0 * (*length + width*)
+..      2.0 * (*length + width*)
 
-* Is this solution **similar** to the solution to
-  another problem?  How are they alike?  How are they different?
-  For example, consider the following two formulae:
+.. * Is this solution **similar** to the solution to
+..   another problem?  How are they alike?  How are they different?
+..   For example, consider the following two formulae:
 
-     Rectangle area = *length * width* |br|
-     Triangle area = 0.5 * *base * height*
+..      Rectangle area = *length * width* |br|
+..      Triangle area = 0.5 * *base * height*
 
-  Similarities: Each computes an area. Each multiplies two
-  measurements. |br|
-  Differences: Different measurements are used.  The triangle
-  formula contains 0.5. |br|
-  Hypothesis: Perhaps every area formula involves multiplying two
-  measurements.
+..   Similarities: Each computes an area. Each multiplies two
+..   measurements. |br|
+..   Differences: Different measurements are used.  The triangle
+..   formula contains 0.5. |br|
+..   Hypothesis: Perhaps every area formula involves multiplying two
+..   measurements.
 
 
-Example: Pick and Plant
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. Example: Pick and Plant
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This section contains an extended example that demonstrates the
-algorithm development process.  To complete the algorithm, we need to
-know that every Jeroo can hop forward, turn left and right, pick a
-flower from its current location, and plant a flower at its current
-location.
+.. This section contains an extended example that demonstrates the
+.. algorithm development process.  To complete the algorithm, we need to
+.. know that every Jeroo can hop forward, turn left and right, pick a
+.. flower from its current location, and plant a flower at its current
+.. location.
 
 
-Problem Statement (Step 1)
-""""""""""""""""""""""""""
+.. Problem Statement (Step 1)
+.. """"""""""""""""""""""""""
 
-A Jeroo starts at (0, 0) facing East with no flowers in its pouch.
-There is a flower at location (3, 0).  Write a program that directs the
-Jeroo to pick the flower and plant it at location (3, 2).  After
-planting the flower, the Jeroo should hop one space East and stop.
-There are no other nets, flowers, or Jeroos on the island.
+.. A Jeroo starts at (0, 0) facing East with no flowers in its pouch.
+.. There is a flower at location (3, 0).  Write a program that directs the
+.. Jeroo to pick the flower and plant it at location (3, 2).  After
+.. planting the flower, the Jeroo should hop one space East and stop.
+.. There are no other nets, flowers, or Jeroos on the island.
 
-**Start**
+.. **Start**
 
-.. odsafig:: Images/4.1-start.png
+.. .. odsafig:: Images/4.1-start.png
 
-**Finish**
+.. **Finish**
 
-.. odsafig:: Images/4.1-finish.png
+.. .. odsafig:: Images/4.1-finish.png
 
 
-Analysis of the Problem (Step 2)
-""""""""""""""""""""""""""""""""
+.. Analysis of the Problem (Step 2)
+.. """"""""""""""""""""""""""""""""
 
-1. The flower is exactly three spaces ahead of the jeroo.
-2. The flower is to be planted exactly two spaces South of
-   its current location.
-3. The Jeroo is to finish facing East one space East of the
-   planted flower.
-4. There are no nets to worry about.
+.. 1. The flower is exactly three spaces ahead of the jeroo.
+.. 2. The flower is to be planted exactly two spaces South of
+..    its current location.
+.. 3. The Jeroo is to finish facing East one space East of the
+..    planted flower.
+.. 4. There are no nets to worry about.
 
 
-High-level Algorithm (Step 3)
-"""""""""""""""""""""""""""""
+.. High-level Algorithm (Step 3)
+.. """""""""""""""""""""""""""""
 
-Let's name the Jeroo Bobby. Bobby should do the following:
+.. Let's name the Jeroo Bobby. Bobby should do the following:
 
-   Get the flower |br|
-   Put the flower |br|
-   Hop East
+..    Get the flower |br|
+..    Put the flower |br|
+..    Hop East
 
 
-Detailed Algorithm (Step 4)
-"""""""""""""""""""""""""""
+.. Detailed Algorithm (Step 4)
+.. """""""""""""""""""""""""""
 
-Let's name the Jeroo Bobby.  Bobby should do the following:
+.. Let's name the Jeroo Bobby.  Bobby should do the following:
 
-   Get the flower
+..    Get the flower
 
-      Hop 3 times |br|
-      Pick the flower
+..       Hop 3 times |br|
+..       Pick the flower
 
-   Put the flower
+..    Put the flower
 
-      Turn right |br|
-      Hop 2 times |br|
-      Plant a flower
+..       Turn right |br|
+..       Hop 2 times |br|
+..       Plant a flower
 
-   Hop East
+..    Hop East
 
-      Turn left |br|
-      Hop once
+..       Turn left |br|
+..       Hop once
 
 
-Review the Algorithm (Step 5)
-"""""""""""""""""""""""""""""
+.. Review the Algorithm (Step 5)
+.. """""""""""""""""""""""""""""
 
-1. The high-level algorithm partitioned the problem into three
-   rather easy subproblems.  This seems like a good technique.
-2. This algorithm solves a very specific problem because the
-   Jeroo and the flower are in very specific locations.
-3. This algorithm is actually a solution to a slightly more
-   general problem in which the Jeroo starts anywhere, and the flower
-   is 3 spaces directly ahead of the Jeroo.
+.. 1. The high-level algorithm partitioned the problem into three
+..    rather easy subproblems.  This seems like a good technique.
+.. 2. This algorithm solves a very specific problem because the
+..    Jeroo and the flower are in very specific locations.
+.. 3. This algorithm is actually a solution to a slightly more
+..    general problem in which the Jeroo starts anywhere, and the flower
+..    is 3 spaces directly ahead of the Jeroo.
 
 
-Java Code for "Pick and Plant"
-""""""""""""""""""""""""""""""
+.. Java Code for "Pick and Plant"
+.. """"""""""""""""""""""""""""""
 
-A good programmer doesn't write a program all at once.  Instead,
-the programmer will write and test the program in a series of builds.
-Each build adds to the previous one.  The high-level algorithm will
-guide us in this process.
+.. A good programmer doesn't write a program all at once.  Instead,
+.. the programmer will write and test the program in a series of builds.
+.. Each build adds to the previous one.  The high-level algorithm will
+.. guide us in this process.
 
-.. note::
+.. .. note::
 
-   A good programmer works
-   **incrementally**, add small pieces
-   one at a time and constantly re-checking the work so far.
+..    A good programmer works
+..    **incrementally**, add small pieces
+..    one at a time and constantly re-checking the work so far.
 
 
-FIRST BUILD
-"""""""""""
+.. FIRST BUILD
+.. """""""""""
 
-To see this solution in action, create a new BlueJ project
-scenario and use the "New Class..." button to
-create a new `Island` subclass with the name of
-your choice.  This subclass will hold your new code.
+.. To see this solution in action, create a new BlueJ project
+.. scenario and use the "New Class..." button to
+.. create a new `Island` subclass with the name of
+.. your choice.  This subclass will hold your new code.
 
-The recommended first build contains three things:
+.. The recommended first build contains three things:
 
-1. The main method (here ``myProgram()`` in your island
-   subclass).
-2. Declaration and instantiation of every Jeroo that will
-   be used.
-3. The high-level algorithm in the form of comments.
+.. 1. The main method (here ``myProgram()`` in your island
+..    subclass).
+.. 2. Declaration and instantiation of every Jeroo that will
+..    be used.
+.. 3. The high-level algorithm in the form of comments.
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo bobby = new Jeroo();
-       this.addObject(bobby, 0, 0);
+..    public void myProgram()
+..    {
+..        Jeroo bobby = new Jeroo();
+..        this.addObject(bobby, 0, 0);
 
-       // --- Get the flower ---
+..        // --- Get the flower ---
 
-       // --- Put the flower ---
+..        // --- Put the flower ---
 
-       // --- Hop East ---
+..        // --- Hop East ---
 
-   }   // ===== end of method myProgram() =====
+..    }   // ===== end of method myProgram() =====
 
 
-The instantiation at the beginning of ``myProgram()`` places
-``bobby`` at (0, 0), facing East, with no flowers.
+.. The instantiation at the beginning of ``myProgram()`` places
+.. ``bobby`` at (0, 0), facing East, with no flowers.
 
-Once the first build is working correctly, we can proceed to the
-others.  In this case, each build will correspond to one step in the
-high-level algorithm.  It may seem like a lot of work to use four builds
-for such a simple program, but doing so helps establish habits that will
-become invaluable as the programs become more complex.
+.. Once the first build is working correctly, we can proceed to the
+.. others.  In this case, each build will correspond to one step in the
+.. high-level algorithm.  It may seem like a lot of work to use four builds
+.. for such a simple program, but doing so helps establish habits that will
+.. become invaluable as the programs become more complex.
 
 
-SECOND BUILD
-""""""""""""
+.. SECOND BUILD
+.. """"""""""""
 
-This build adds the logic to "get the flower", which in the detailed
-algorithm (step 4 above) consists of hopping 3 times and then picking
-the flower.  The new code is indicated by comments that wouldn't appear
-in the original (they are just here to call attention to the additions).
-The blank lines help show the organization of the logic.
+.. This build adds the logic to "get the flower", which in the detailed
+.. algorithm (step 4 above) consists of hopping 3 times and then picking
+.. the flower.  The new code is indicated by comments that wouldn't appear
+.. in the original (they are just here to call attention to the additions).
+.. The blank lines help show the organization of the logic.
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo bobby = new Jeroo();
-       this.addObject(bobby, 0, 0);
+..    public void myProgram()
+..    {
+..        Jeroo bobby = new Jeroo();
+..        this.addObject(bobby, 0, 0);
 
-       // --- Get the flower ---
-       bobby.hop(3);     // <-- new code to hop 3 times
-       bobby.pick();     // <-- new code to pick the flower
+..        // --- Get the flower ---
+..        bobby.hop(3);     // <-- new code to hop 3 times
+..        bobby.pick();     // <-- new code to pick the flower
 
-       // --- Put the flower ---
+..        // --- Put the flower ---
 
-       // --- Hop East ---
+..        // --- Hop East ---
 
-   }   // ===== end of method myProgram() =====
+..    }   // ===== end of method myProgram() =====
 
 
-By taking a moment to run the work so far, you can confirm whether
-or not this step in the planned algorithm works as expected. Right-click
-on your island subclass in BlueJ's main window and use "new" (the first menu
-entry) to create a new instance.
+.. By taking a moment to run the work so far, you can confirm whether
+.. or not this step in the planned algorithm works as expected. Right-click
+.. on your island subclass in BlueJ's main window and use "new" (the first menu
+.. entry) to create a new instance.
 
 
-THIRD BUILD
-"""""""""""
+.. THIRD BUILD
+.. """""""""""
 
-This build adds the logic to "put the flower".  New code is indicated
-by the comments that are provided here to mark the additions.
+.. This build adds the logic to "put the flower".  New code is indicated
+.. by the comments that are provided here to mark the additions.
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo bobby = new Jeroo();
-       this.addObject(bobby, 0, 0);
+..    public void myProgram()
+..    {
+..        Jeroo bobby = new Jeroo();
+..        this.addObject(bobby, 0, 0);
 
-       // --- Get the flower ---
-       bobby.hop(3);
-       bobby.pick();
+..        // --- Get the flower ---
+..        bobby.hop(3);
+..        bobby.pick();
 
-       // --- Put the flower ---
-       bobby.turn(RIGHT);    // <-- new code to turn right
-       bobby.hop(2);         // <-- new code to hop 2 times
-       bobby.plant();        // <-- new code to plant a flower
+..        // --- Put the flower ---
+..        bobby.turn(RIGHT);    // <-- new code to turn right
+..        bobby.hop(2);         // <-- new code to hop 2 times
+..        bobby.plant();        // <-- new code to plant a flower
 
-       // --- Hop East ---
+..        // --- Hop East ---
 
-   }   // ===== end of method myProgram() =====
+..    }   // ===== end of method myProgram() =====
 
 
-FOURTH BUILD (final)
-""""""""""""""""""""
+.. FOURTH BUILD (final)
+.. """"""""""""""""""""
 
-This build adds the logic to "hop East".
+.. This build adds the logic to "hop East".
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo bobby = new Jeroo();
-       this.addObject(bobby, 0, 0);
+..    public void myProgram()
+..    {
+..        Jeroo bobby = new Jeroo();
+..        this.addObject(bobby, 0, 0);
 
-       // --- Get the flower ---
-       bobby.hop(3);
-       bobby.pick();
+..        // --- Get the flower ---
+..        bobby.hop(3);
+..        bobby.pick();
 
-       // --- Put the flower ---
-       bobby.turn(RIGHT);
-       bobby.hop(2);
-       bobby.plant();
+..        // --- Put the flower ---
+..        bobby.turn(RIGHT);
+..        bobby.hop(2);
+..        bobby.plant();
 
-       // --- Hop East ---
-       bobby.turn(LEFT);     // <-- new code to turn left
-       bobby.hop();          // <-- new code to hop 1 time
+..        // --- Hop East ---
+..        bobby.turn(LEFT);     // <-- new code to turn left
+..        bobby.hop();          // <-- new code to hop 1 time
 
-   }   // ===== end of method myProgram() =====
+..    }   // ===== end of method myProgram() =====
 
 
-Example: Replace Net with Flower
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. Example: Replace Net with Flower
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This section contains a second example that demonstrates the
-algorithm development process.
+.. This section contains a second example that demonstrates the
+.. algorithm development process.
 
 
-Problem Statement (Step 1)
-""""""""""""""""""""""""""
+.. Problem Statement (Step 1)
+.. """"""""""""""""""""""""""
 
-There are two Jeroos.  One Jeroo starts at (0, 0) facing North with
-one flower in its pouch.  The second starts at (0, 2) facing East with
-one flower in its pouch. There is a net at location (3, 2).  Write a
-program that directs the first Jeroo to give its flower to the second
-one.  After receiving the flower, the second Jeroo must disable the net,
-and plant a flower in its place.  After planting the flower, the Jeroo
-must turn and face South.  There are no other nets, flowers, or Jeroos
-on the island.
+.. There are two Jeroos.  One Jeroo starts at (0, 0) facing North with
+.. one flower in its pouch.  The second starts at (0, 2) facing East with
+.. one flower in its pouch. There is a net at location (3, 2).  Write a
+.. program that directs the first Jeroo to give its flower to the second
+.. one.  After receiving the flower, the second Jeroo must disable the net,
+.. and plant a flower in its place.  After planting the flower, the Jeroo
+.. must turn and face South.  There are no other nets, flowers, or Jeroos
+.. on the island.
 
-**Start**
+.. **Start**
 
-.. odsafig:: Images/4.2-start.png
+.. .. odsafig:: Images/4.2-start.png
 
-**Finish**
+.. **Finish**
 
-.. odsafig:: Images/4.2-finish.png
+.. .. odsafig:: Images/4.2-finish.png
 
 
-Analysis of the Problem (Step 2)
-""""""""""""""""""""""""""""""""
+.. Analysis of the Problem (Step 2)
+.. """"""""""""""""""""""""""""""""
 
-1. Jeroo_2 is exactly two spaces behind Jeroo_1.
-2. The only net is exactly three spaces ahead of Jeroo_2.
-3. Each Jeroo has exactly one flower.
-4. Jeroo_2 will have two flowers after receiving one from Jeroo_1. |br|
-   One flower must be used to disable the net. |br|
-   The other flower must be planted at the location of the net,
-   i.e. (3, 2).
-5. Jeroo_1 will finish at (0, 1) facing South.
-6. Jeroo_2 is to finish at (3, 2) facing South.
-7. Each Jeroo will finish with 0 flowers in its pouch.  One
-   flower was used to disable the net, and the other was
-   planted.
+.. 1. Jeroo_2 is exactly two spaces behind Jeroo_1.
+.. 2. The only net is exactly three spaces ahead of Jeroo_2.
+.. 3. Each Jeroo has exactly one flower.
+.. 4. Jeroo_2 will have two flowers after receiving one from Jeroo_1. |br|
+..    One flower must be used to disable the net. |br|
+..    The other flower must be planted at the location of the net,
+..    i.e. (3, 2).
+.. 5. Jeroo_1 will finish at (0, 1) facing South.
+.. 6. Jeroo_2 is to finish at (3, 2) facing South.
+.. 7. Each Jeroo will finish with 0 flowers in its pouch.  One
+..    flower was used to disable the net, and the other was
+..    planted.
 
 
-High-level Algorithm (Step 3)
-"""""""""""""""""""""""""""""
+.. High-level Algorithm (Step 3)
+.. """""""""""""""""""""""""""""
 
-Let's name the first Jeroo Ann and the second one Andy.
+.. Let's name the first Jeroo Ann and the second one Andy.
 
-   Ann should do the following:
+..    Ann should do the following:
 
-      Find Andy (but don't collide with him) |br|
-      Give a flower to Andy (he will be straight ahead)
+..       Find Andy (but don't collide with him) |br|
+..       Give a flower to Andy (he will be straight ahead)
 
-   After receiving the flower, Andy should do the following:
+..    After receiving the flower, Andy should do the following:
 
-      Find the net (but don't hop onto it) |br|
-      Disable the net |br|
-      Plant a flower at the location of the net |br|
-      Face South
+..       Find the net (but don't hop onto it) |br|
+..       Disable the net |br|
+..       Plant a flower at the location of the net |br|
+..       Face South
 
 
-Detailed Algorithm (Step 4)
-"""""""""""""""""""""""""""
+.. Detailed Algorithm (Step 4)
+.. """""""""""""""""""""""""""
 
-Let's name the first Jeroo Ann and the second one Andy.
+.. Let's name the first Jeroo Ann and the second one Andy.
 
-   Ann should do the following:
+..    Ann should do the following:
 
-      Find Andy
+..       Find Andy
 
-         Turn around (either left or right twice) |br|
-         Hop (to location (0, 1))
+..          Turn around (either left or right twice) |br|
+..          Hop (to location (0, 1))
 
-      Give a flower to Andy
+..       Give a flower to Andy
 
-         Give ahead
+..          Give ahead
 
-   Now Andy should do the following:
+..    Now Andy should do the following:
 
-      Find the net
+..       Find the net
 
-         Hop twice (to location (2, 2))
+..          Hop twice (to location (2, 2))
 
-      Disable the net
+..       Disable the net
 
-         Toss
+..          Toss
 
-      Plant a flower at the location of the net |br|
+..       Plant a flower at the location of the net |br|
 
-         Hop (to location (3, 2)) |br|
-         Plant a flower
+..          Hop (to location (3, 2)) |br|
+..          Plant a flower
 
-      Face South
+..       Face South
 
-         Turn right
+..          Turn right
 
 
-Review the Algorithm (Step 5)
-"""""""""""""""""""""""""""""
+.. Review the Algorithm (Step 5)
+.. """""""""""""""""""""""""""""
 
-1. The high-level algorithm helps manage the details.
-2. This algorithm solves a very specific problem, but the
-   specific locations are not important.  The only thing that is
-   important is the starting location of the Jeroos relative to one
-   another and the location of the net relative to the second Jeroo's
-   location and direction.
+.. 1. The high-level algorithm helps manage the details.
+.. 2. This algorithm solves a very specific problem, but the
+..    specific locations are not important.  The only thing that is
+..    important is the starting location of the Jeroos relative to one
+..    another and the location of the net relative to the second Jeroo's
+..    location and direction.
 
 
-Java Code for "Replace Net with Flower"
-"""""""""""""""""""""""""""""""""""""""
+.. Java Code for "Replace Net with Flower"
+.. """""""""""""""""""""""""""""""""""""""
 
-As before, the code should be written **incrementally**
-as a series of builds.  Four builds will be suitable for this problem.
-As usual, the first build will contain the main method, the declaration
-and instantiation of the Jeroo objects, and the high-level algorithm in
-the form of comments.  The second build will have Ann give her flower to
-Andy. The third build will have Andy locate and disable the net.  In the
-final build, Andy will place the flower and turn East.
+.. As before, the code should be written **incrementally**
+.. as a series of builds.  Four builds will be suitable for this problem.
+.. As usual, the first build will contain the main method, the declaration
+.. and instantiation of the Jeroo objects, and the high-level algorithm in
+.. the form of comments.  The second build will have Ann give her flower to
+.. Andy. The third build will have Andy locate and disable the net.  In the
+.. final build, Andy will place the flower and turn East.
 
 
-FIRST BUILD
-"""""""""""
+.. FIRST BUILD
+.. """""""""""
 
-This build creates the main method, instantiates the Jeroos, and
-outlines the high-level algorithm.  In this example, the main method
-would be ``myProgram()`` contained within a subclass of
-``Island``.
+.. This build creates the main method, instantiates the Jeroos, and
+.. outlines the high-level algorithm.  In this example, the main method
+.. would be ``myProgram()`` contained within a subclass of
+.. ``Island``.
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo ann  = new Jeroo(NORTH, 1);
-       this.addObject(ann, 0, 0);
-       Jeroo andy = new Jeroo(1);  // default EAST
-       this.addObject(andy, 0, 2);
+..    public void myProgram()
+..    {
+..        Jeroo ann  = new Jeroo(NORTH, 1);
+..        this.addObject(ann, 0, 0);
+..        Jeroo andy = new Jeroo(1);  // default EAST
+..        this.addObject(andy, 0, 2);
 
-       // --- Ann, find Andy ---
+..        // --- Ann, find Andy ---
 
-       // --- Ann, give Andy a flower ---
+..        // --- Ann, give Andy a flower ---
 
-       // --- Andy, find and disable the net ---
+..        // --- Andy, find and disable the net ---
 
-       // --- Andy, place a flower at (3, 2) ---
+..        // --- Andy, place a flower at (3, 2) ---
 
-       // --- Andy, face South ---
+..        // --- Andy, face South ---
 
-   }   // ===== end of method myProgram() =====
+..    }   // ===== end of method myProgram() =====
 
 
-SECOND BUILD
-""""""""""""
+.. SECOND BUILD
+.. """"""""""""
 
-This build adds the logic for Ann to locate Andy and give him a
-flower.
+.. This build adds the logic for Ann to locate Andy and give him a
+.. flower.
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo ann  = new Jeroo(NORTH, 1);
-       this.addObject(ann, 0, 0);
-       Jeroo andy = new Jeroo(1);  // default EAST
-       this.addObject(andy, 0, 2);
+..    public void myProgram()
+..    {
+..        Jeroo ann  = new Jeroo(NORTH, 1);
+..        this.addObject(ann, 0, 0);
+..        Jeroo andy = new Jeroo(1);  // default EAST
+..        this.addObject(andy, 0, 2);
 
-       // --- Ann, find Andy ---
-       ann.turn(LEFT);
-       ann.turn(LEFT);
-       ann.hop();
-       // Now, Ann is at (0, 1) facing South, and Andy is directly ahead
+..        // --- Ann, find Andy ---
+..        ann.turn(LEFT);
+..        ann.turn(LEFT);
+..        ann.hop();
+..        // Now, Ann is at (0, 1) facing South, and Andy is directly ahead
 
-       // --- Ann, give Andy a flower ---
-       ann.give(AHEAD);       // Ann now has 0 flowers, Andy has 2
+..        // --- Ann, give Andy a flower ---
+..        ann.give(AHEAD);       // Ann now has 0 flowers, Andy has 2
 
-       // --- Andy, find and disable the net ---
+..        // --- Andy, find and disable the net ---
 
-       // --- Andy, place a flower at (3, 2) ---
+..        // --- Andy, place a flower at (3, 2) ---
 
-       // --- Andy, face South ---
+..        // --- Andy, face South ---
 
-   }   // ===== end of method myProgram() =====
+..    }   // ===== end of method myProgram() =====
 
 
-THIRD BUILD
-"""""""""""
+.. THIRD BUILD
+.. """""""""""
 
-This build adds the logic for Andy to locate and disable the net.
+.. This build adds the logic for Andy to locate and disable the net.
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo ann  = new Jeroo(NORTH, 1);
-       this.addObject(ann, 0, 0);
-       Jeroo andy = new Jeroo(1);  // default EAST
-       this.addObject(andy, 0, 2);
+..    public void myProgram()
+..    {
+..        Jeroo ann  = new Jeroo(NORTH, 1);
+..        this.addObject(ann, 0, 0);
+..        Jeroo andy = new Jeroo(1);  // default EAST
+..        this.addObject(andy, 0, 2);
 
-       // --- Ann, find Andy ---
-       ann.turn(LEFT);
-       ann.turn(LEFT);
-       ann.hop();
-       // Now, Ann is at (0, 1) facing South, and Andy is directly ahead
+..        // --- Ann, find Andy ---
+..        ann.turn(LEFT);
+..        ann.turn(LEFT);
+..        ann.hop();
+..        // Now, Ann is at (0, 1) facing South, and Andy is directly ahead
 
-       // --- Ann, give Andy a flower ---
-       ann.give(AHEAD);       // Ann now has 0 flowers, Andy has 2
+..        // --- Ann, give Andy a flower ---
+..        ann.give(AHEAD);       // Ann now has 0 flowers, Andy has 2
 
-       // --- Andy, find and disable the net ---
-       andy.hop(2);           // Andy is at (2, 2) facing the net
-       andy.toss();
+..        // --- Andy, find and disable the net ---
+..        andy.hop(2);           // Andy is at (2, 2) facing the net
+..        andy.toss();
 
-       // --- Andy, place a flower at (3, 2) ---
+..        // --- Andy, place a flower at (3, 2) ---
 
-       // --- Andy, face South ---
+..        // --- Andy, face South ---
 
-   }   // ===== end of method myProgram() =====
+..    }   // ===== end of method myProgram() =====
 
 
-FOURTH BUILD (final)
-""""""""""""""""""""
+.. FOURTH BUILD (final)
+.. """"""""""""""""""""
 
-This build adds the logic for Andy to place a flower at (3, 2) and
-turn South.
+.. This build adds the logic for Andy to place a flower at (3, 2) and
+.. turn South.
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo ann  = new Jeroo(NORTH, 1);
-       this.addObject(ann, 0, 0);
-       Jeroo andy = new Jeroo(1);  // default EAST
-       this.addObject(andy, 0, 2);
+..    public void myProgram()
+..    {
+..        Jeroo ann  = new Jeroo(NORTH, 1);
+..        this.addObject(ann, 0, 0);
+..        Jeroo andy = new Jeroo(1);  // default EAST
+..        this.addObject(andy, 0, 2);
 
-       // --- Ann, find Andy ---
-       ann.turn(LEFT);
-       ann.turn(LEFT);
-       ann.hop();
-       // Now, Ann is at (0, 1) facing South, and Andy is directly ahead
+..        // --- Ann, find Andy ---
+..        ann.turn(LEFT);
+..        ann.turn(LEFT);
+..        ann.hop();
+..        // Now, Ann is at (0, 1) facing South, and Andy is directly ahead
 
-       // --- Ann, give Andy a flower ---
-       ann.give(AHEAD);       // Ann now has 0 flowers, Andy has 2
+..        // --- Ann, give Andy a flower ---
+..        ann.give(AHEAD);       // Ann now has 0 flowers, Andy has 2
 
-       // --- Andy, find and disable the net ---
-       andy.hop(2);           // Andy is at (2, 2) facing the net
-       andy.toss();
+..        // --- Andy, find and disable the net ---
+..        andy.hop(2);           // Andy is at (2, 2) facing the net
+..        andy.toss();
 
-       // --- Andy, place a flower at (3, 2) ---
-       andy.hop();
-       andy.plant();
+..        // --- Andy, place a flower at (3, 2) ---
+..        andy.hop();
+..        andy.plant();
 
-       // --- Andy, face South ---
-       andy.turn(RIGHT);
+..        // --- Andy, face South ---
+..        andy.turn(RIGHT);
 
-   }   // ===== end of method myProgram() =====
+..    }   // ===== end of method myProgram() =====
 
 
-Self-Check
-~~~~~~~~~~
+.. Self-Check
+.. ~~~~~~~~~~
 
-.. avembed:: Exercises/IntroToSoftwareDesign/Week2Quiz3Summ.html ka
-   :long_name: Developing Algorithms
+.. .. avembed:: Exercises/IntroToSoftwareDesign/Week2Quiz3Summ.html ka
+..    :long_name: Developing Algorithms
 
 
 
@@ -1696,411 +1649,411 @@ in a row:
    }
 
 
-Example: Clear Nets and Pick
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. Example: Clear Nets and Pick
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The section contains an extended example that demonstrates the
-algorithm development process, and shows a recommended process for
-developing source code that contains Jeroo methods.
+.. The section contains an extended example that demonstrates the
+.. algorithm development process, and shows a recommended process for
+.. developing source code that contains Jeroo methods.
 
 
-Problem Statement (Step 1)
-""""""""""""""""""""""""""
+.. Problem Statement (Step 1)
+.. """"""""""""""""""""""""""
 
-A Jeroo starts at (4, 1) facing North with 5 flowers in its pouch.
-There are two nets immediately South of the Jeroo at locations (4, 2)
-and (4, 3).  There is a flower directly South of the second net.  Write
-a program that directs the Jeroo to disable the nets and pick the flower.
-After picking the flower, the Jeroo should return to its starting
-location and face South.
+.. A Jeroo starts at (4, 1) facing North with 5 flowers in its pouch.
+.. There are two nets immediately South of the Jeroo at locations (4, 2)
+.. and (4, 3).  There is a flower directly South of the second net.  Write
+.. a program that directs the Jeroo to disable the nets and pick the flower.
+.. After picking the flower, the Jeroo should return to its starting
+.. location and face South.
 
-**Start**
+.. **Start**
 
-.. odsafig:: Images/5.1-start.png
+.. .. odsafig:: Images/5.1-start.png
 
-**Finish**
+.. **Finish**
 
-.. odsafig:: Images/5.1-finish.png
+.. .. odsafig:: Images/5.1-finish.png
 
 
-Analysis of the Problem (Step 2)
-""""""""""""""""""""""""""""""""
+.. Analysis of the Problem (Step 2)
+.. """"""""""""""""""""""""""""""""
 
-1. The Jeroo must turn around to locate the first net
-2. Each net is directly South of the previous one
-3. The first net is directly South of the Jeroo
-4. The flower is at location (4, 4)
-5. The Jeroo must finish facing South at location (4, 1)
-6. The Jeroo should finish with 5 - 2 + 1 = 4 flowers
+.. 1. The Jeroo must turn around to locate the first net
+.. 2. Each net is directly South of the previous one
+.. 3. The first net is directly South of the Jeroo
+.. 4. The flower is at location (4, 4)
+.. 5. The Jeroo must finish facing South at location (4, 1)
+.. 6. The Jeroo should finish with 5 - 2 + 1 = 4 flowers
 
 
-Detailed Algorithm (Steps 3 and 4)
-""""""""""""""""""""""""""""""""""
+.. Detailed Algorithm (Steps 3 and 4)
+.. """"""""""""""""""""""""""""""""""
 
-Let's name the Jeroo Kim.  Kim should do the following:
+.. Let's name the Jeroo Kim.  Kim should do the following:
 
-   Turn around   // now at (4, 1) facing South|br|
-   Disable two nets in a row
+..    Turn around   // now at (4, 1) facing South|br|
+..    Disable two nets in a row
 
-      Toss |br|
-      Hop once   // now at (4, 2) facing South |br|
-      Toss |br|
-      Hop once   // now at (4, 3) facing South
+..       Toss |br|
+..       Hop once   // now at (4, 2) facing South |br|
+..       Toss |br|
+..       Hop once   // now at (4, 3) facing South
 
-   Get the flower
+..    Get the flower
 
-      Hop once  // now on flower at (4, 4) facing South |br|
-      Pick
+..       Hop once  // now on flower at (4, 4) facing South |br|
+..       Pick
 
-   Go back to (4, 1) and turn around
+..    Go back to (4, 1) and turn around
 
-      Turn around   // now at (4, 4) facing North |br|
-      Hop 3 times   // now at (4, 1) facing North |br|
-      Turn around   // now at (4, 1) facing South
+..       Turn around   // now at (4, 4) facing North |br|
+..       Hop 3 times   // now at (4, 1) facing North |br|
+..       Turn around   // now at (4, 1) facing South
 
 
-Review the Algorithm (Step 5)
-"""""""""""""""""""""""""""""
+.. Review the Algorithm (Step 5)
+.. """""""""""""""""""""""""""""
 
-1. The high-level algorithm helps manage the details.
-2. We used a "turn around" step in example 4.2.  We can use the
-   same logic here.
-3. The act of turning around appears as a step in the high-level
-   algorithm and as part of the "Go back to (4, 1) and turn around"
-   step.  Interesting!
+.. 1. The high-level algorithm helps manage the details.
+.. 2. We used a "turn around" step in example 4.2.  We can use the
+..    same logic here.
+.. 3. The act of turning around appears as a step in the high-level
+..    algorithm and as part of the "Go back to (4, 1) and turn around"
+..    step.  Interesting!
 
 
-Possible Behaviors
-""""""""""""""""""
+.. Possible Behaviors
+.. """"""""""""""""""
 
-1. "Turn around" is used three times
-2. The sequence "Toss, Hop" is used two times in the "Disable
-    nets" step.
+.. 1. "Turn around" is used three times
+.. 2. The sequence "Toss, Hop" is used two times in the "Disable
+..     nets" step.
 
-We will create a custom ``Jeroo`` subclass and write a
-Jeroo method for each of these behaviors, but first, we need to define
-a purpose, preconditions, and postconditions for each method.  This can
-be done informally, because we will write these things in a comment
-block at the beginning of each method.
+.. We will create a custom ``Jeroo`` subclass and write a
+.. Jeroo method for each of these behaviors, but first, we need to define
+.. a purpose, preconditions, and postconditions for each method.  This can
+.. be done informally, because we will write these things in a comment
+.. block at the beginning of each method.
 
-.. note::
+.. .. note::
 
-   Method: ``turnAround()`` |br|
-   Purpose: Make the Jeroo turn 180 degrees |br|
-   Preconditions:
+..    Method: ``turnAround()`` |br|
+..    Purpose: Make the Jeroo turn 180 degrees |br|
+..    Preconditions:
 
-      none
+..       none
 
-   Postconditions:
+..    Postconditions:
 
-      The Jeroo has turned 180 degrees |br|
-      The Jeroo is at the same location
+..       The Jeroo has turned 180 degrees |br|
+..       The Jeroo is at the same location
 
 
-.. note::
+.. .. note::
 
-   Method: ``tossAndHop()`` |br|
-   Purpose: Disable a net and move to the newly cleared location |br|
-   Preconditions:
+..    Method: ``tossAndHop()`` |br|
+..    Purpose: Disable a net and move to the newly cleared location |br|
+..    Preconditions:
 
-      There is a net ahead |br|
-      The Jeroo has at least one flower
+..       There is a net ahead |br|
+..       The Jeroo has at least one flower
 
-   Postconditions:
+..    Postconditions:
 
-      The net has been disabled |br|
-      The Jeroo has one less flower |br|
-      The Jeroo is at the location originally occupied by the net |br|
-      The Jeroo has not changed direction
+..       The net has been disabled |br|
+..       The Jeroo has one less flower |br|
+..       The Jeroo is at the location originally occupied by the net |br|
+..       The Jeroo has not changed direction
 
 
-The last postcondition of the ``tossAndHop()`` method simply
-says that the Jeroo is facing the direction it was facing at the start
-of the method.  It does not prohibit the Jeroo from changing direction
-during the course of the method as long as the Jeroo returns to its
-original direction at the end.
+.. The last postcondition of the ``tossAndHop()`` method simply
+.. says that the Jeroo is facing the direction it was facing at the start
+.. of the method.  It does not prohibit the Jeroo from changing direction
+.. during the course of the method as long as the Jeroo returns to its
+.. original direction at the end.
 
 
-Java Code for "Clear Nets and Pick"
-"""""""""""""""""""""""""""""""""""
+.. Java Code for "Clear Nets and Pick"
+.. """""""""""""""""""""""""""""""""""
 
-As before, we should develop the code as a series of builds.  To
-start this process, create a new project using BlueJ
-use the "New Class..." button to create a new subclass of `Island` called
-``ClearNetsAndPick`` for this example.  Also, create a
-new subclass of ``Jeroo`` called ``ClearingJeroo``
-to hold your Jeroo methods.
-Once you have these classes created, make sure they are compiled.
-Edit the constructor provided in your ``ClearNetsAndPick`` class
-to create and add flowers and nets at the appropriate starting
-locations on the island.
-Then right-click on your ``ClearNetsAndPick`` class and
-create an instance of it, which will then fill the world view.
+.. As before, we should develop the code as a series of builds.  To
+.. start this process, create a new project using BlueJ
+.. use the "New Class..." button to create a new subclass of `Island` called
+.. ``ClearNetsAndPick`` for this example.  Also, create a
+.. new subclass of ``Jeroo`` called ``ClearingJeroo``
+.. to hold your Jeroo methods.
+.. Once you have these classes created, make sure they are compiled.
+.. Edit the constructor provided in your ``ClearNetsAndPick`` class
+.. to create and add flowers and nets at the appropriate starting
+.. locations on the island.
+.. Then right-click on your ``ClearNetsAndPick`` class and
+.. create an instance of it, which will then fill the world view.
 
 
-FIRST BUILD
-"""""""""""
+.. FIRST BUILD
+.. """""""""""
 
-The recommended first build contains three things:
+.. The recommended first build contains three things:
 
-1. The ``myProgram()`` method in your island subclass
-   that creates and sends messages to the Jeroo.
-2. Declaration and instantiation of every Jeroo that will be
-   used.  This implies adding an appropriate constructor to our
-   ``Jeroo`` subclass.
-3. The high-level algorithm in the form of comments.
-4. Skeletons for each of the Jeroo methods in your Jeroo
-   subclass.  These skeletons are often called stubs.
+.. 1. The ``myProgram()`` method in your island subclass
+..    that creates and sends messages to the Jeroo.
+.. 2. Declaration and instantiation of every Jeroo that will be
+..    used.  This implies adding an appropriate constructor to our
+..    ``Jeroo`` subclass.
+.. 3. The high-level algorithm in the form of comments.
+.. 4. Skeletons for each of the Jeroo methods in your Jeroo
+..    subclass.  These skeletons are often called stubs.
 
 
-.. note::
+.. .. note::
 
-   A **method stub**, or just a
-   **stub**, is a bare skeleton of
-   a method that will compile, but is really just a placeholder for
-   the real method definition that will come later.
+..    A **method stub**, or just a
+..    **stub**, is a bare skeleton of
+..    a method that will compile, but is really just a placeholder for
+..    the real method definition that will come later.
 
 
-The ``myProgram()`` method goes inside your
-``ClearNetsAndPick`` class:
+.. The ``myProgram()`` method goes inside your
+.. ``ClearNetsAndPick`` class:
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo kim = new Jeroo(NORTH, 5);
-       this.addObject(kim, 4, 1);
+..    public void myProgram()
+..    {
+..        Jeroo kim = new Jeroo(NORTH, 5);
+..        this.addObject(kim, 4, 1);
 
-       // --- Turn around ---
+..        // --- Turn around ---
 
-       // --- Disable nets ---
+..        // --- Disable nets ---
 
-       // --- Get the flower ---
+..        // --- Get the flower ---
 
-       // --- Go back to (4, 1) and turn around ---
+..        // --- Go back to (4, 1) and turn around ---
 
-   }
+..    }
 
 
-An appropriate constructor and the new Jeroo methods go inside your
-``ClearingJeroo`` class:
+.. An appropriate constructor and the new Jeroo methods go inside your
+.. ``ClearingJeroo`` class:
 
-.. code-block:: java
+.. .. code-block:: java
 
-   // ----------------------------------------------------------
-   /**
-    * Create a new Jeroo.
-    * @param direction The direction the Jeroo is facing.
-    * @param flowers   The number of flowers the Jeroo is holding.
-    */
-   public Jeroo(CompassDirection direction, int flowers)
-   {
-       super(direction, flowers);    // Let the superclass initialize these
-   }
+..    // ----------------------------------------------------------
+..    /**
+..     * Create a new Jeroo.
+..     * @param direction The direction the Jeroo is facing.
+..     * @param flowers   The number of flowers the Jeroo is holding.
+..     */
+..    public Jeroo(CompassDirection direction, int flowers)
+..    {
+..        super(direction, flowers);    // Let the superclass initialize these
+..    }
 
 
-   // ----------------------------------------------------------
-   /**
-    * Turn the jeroo around 180 degrees so it faces the opposite
-    * direction.
-    *
-    * @precondition  None.
-    *
-    * @postcondition The Jeroo has turned 180 degrees.
-    * @postcondition The Jeroo is at the same location.
-    */
-   public void turnAround()
-   {
-   }
+..    // ----------------------------------------------------------
+..    /**
+..     * Turn the jeroo around 180 degrees so it faces the opposite
+..     * direction.
+..     *
+..     * @precondition  None.
+..     *
+..     * @postcondition The Jeroo has turned 180 degrees.
+..     * @postcondition The Jeroo is at the same location.
+..     */
+..    public void turnAround()
+..    {
+..    }
 
 
-   // ----------------------------------------------------------
-   /**
-    * Disable a net and move to the newly cleared location.
-    *
-    * @precondition  There is a net ahead.
-    * @precondition  The Jeroo has at least one flower.
-    *
-    * @postcondition The net has been disabled.
-    * @postcondition The Jeroo has one less flower.
-    * @postcondition The Jeroo is at the location originally occupied by the net.
-    * @postcondition The Jeroo has not changed direction.
-    */
-   public void tossAndHop()
-   {
-   }
+..    // ----------------------------------------------------------
+..    /**
+..     * Disable a net and move to the newly cleared location.
+..     *
+..     * @precondition  There is a net ahead.
+..     * @precondition  The Jeroo has at least one flower.
+..     *
+..     * @postcondition The net has been disabled.
+..     * @postcondition The Jeroo has one less flower.
+..     * @postcondition The Jeroo is at the location originally occupied by the net.
+..     * @postcondition The Jeroo has not changed direction.
+..     */
+..    public void tossAndHop()
+..    {
+..    }
 
 
-SECOND BUILD
-""""""""""""
+.. SECOND BUILD
+.. """"""""""""
 
-This build finishes the ``turnAround()`` method and uses it
-in the ``myProgram()`` method.  It would be wise to test this
-method four times, each time start with Kim facing in a different
-direction.  Once we are comfortable that this method works correctly, we
-can proceed with the next build.
+.. This build finishes the ``turnAround()`` method and uses it
+.. in the ``myProgram()`` method.  It would be wise to test this
+.. method four times, each time start with Kim facing in a different
+.. direction.  Once we are comfortable that this method works correctly, we
+.. can proceed with the next build.
 
-In the ``ClearNetsAndPick`` class:
+.. In the ``ClearNetsAndPick`` class:
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo kim = new Jeroo(NORTH, 5);
-       this.addObject(kim, 4, 1);
+..    public void myProgram()
+..    {
+..        Jeroo kim = new Jeroo(NORTH, 5);
+..        this.addObject(kim, 4, 1);
 
-       // --- Turn around ---
-       kim.turnAround();                 // new code
+..        // --- Turn around ---
+..        kim.turnAround();                 // new code
 
-       // --- Disable nets ---
+..        // --- Disable nets ---
 
-       // --- Get the flower ---
+..        // --- Get the flower ---
 
-       // --- Go back to (4, 1) and turn around ---
+..        // --- Go back to (4, 1) and turn around ---
 
-   }
+..    }
 
 
-In the ``ClearingJeroo`` class:
+.. In the ``ClearingJeroo`` class:
 
-.. code-block:: java
+.. .. code-block:: java
 
-   // ----------------------------------------------------------
-   /**
-    * Turn the jeroo around 180 degrees so it faces the opposite
-    * direction.
-    *
-    * @precondition  None.
-    *
-    * @postcondition The Jeroo has turned 180 degrees.
-    * @postcondition The Jeroo is at the same location.
-    */
-   public void turnAround()
-   {
-       this.turn(LEFT);                  // new code
-       this.turn(LEFT);                  // new code
-   }
+..    // ----------------------------------------------------------
+..    /**
+..     * Turn the jeroo around 180 degrees so it faces the opposite
+..     * direction.
+..     *
+..     * @precondition  None.
+..     *
+..     * @postcondition The Jeroo has turned 180 degrees.
+..     * @postcondition The Jeroo is at the same location.
+..     */
+..    public void turnAround()
+..    {
+..        this.turn(LEFT);                  // new code
+..        this.turn(LEFT);                  // new code
+..    }
 
 
-   // ----------------------------------------------------------
-   /**
-    * Disable a net and move to the newly cleared location.
-    *
-    * @precondition  There is a net ahead.
-    * @precondition  The Jeroo has at least one flower.
-    *
-    * @postcondition The net has been disabled.
-    * @postcondition The Jeroo has one less flower.
-    * @postcondition The Jeroo is at the location originally occupied by the net.
-    * @postcondition The Jeroo has not changed direction.
-    */
-   public void tossAndHop()
-   {
-   }
+..    // ----------------------------------------------------------
+..    /**
+..     * Disable a net and move to the newly cleared location.
+..     *
+..     * @precondition  There is a net ahead.
+..     * @precondition  The Jeroo has at least one flower.
+..     *
+..     * @postcondition The net has been disabled.
+..     * @postcondition The Jeroo has one less flower.
+..     * @postcondition The Jeroo is at the location originally occupied by the net.
+..     * @postcondition The Jeroo has not changed direction.
+..     */
+..    public void tossAndHop()
+..    {
+..    }
 
 
-THIRD BUILD
-"""""""""""
+.. THIRD BUILD
+.. """""""""""
 
-This build finishes the ``tossAndHop()`` method and uses it
-in the ``myProgram()`` method.  Our focus is on destroying the
-two nets.
+.. This build finishes the ``tossAndHop()`` method and uses it
+.. in the ``myProgram()`` method.  Our focus is on destroying the
+.. two nets.
 
-In the ``ClearNetsAndPick`` class:
+.. In the ``ClearNetsAndPick`` class:
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo kim = new Jeroo(NORTH, 5);
-       this.addObject(kim, 4, 1);
+..    public void myProgram()
+..    {
+..        Jeroo kim = new Jeroo(NORTH, 5);
+..        this.addObject(kim, 4, 1);
 
-       // --- Turn around ---
-       kim.turnAround();
+..        // --- Turn around ---
+..        kim.turnAround();
 
-       // --- Disable nets ---
-       kim.tossAndHop();                 // new code
-       kim.tossAndHop();                 // new code
+..        // --- Disable nets ---
+..        kim.tossAndHop();                 // new code
+..        kim.tossAndHop();                 // new code
 
-       // --- Get the flower ---
+..        // --- Get the flower ---
 
-       // --- Go back to (4, 1) and turn around ---
+..        // --- Go back to (4, 1) and turn around ---
 
-   }
+..    }
 
 
-In the ``ClearingJeroo`` class:
+.. In the ``ClearingJeroo`` class:
 
-.. code-block:: java
+.. .. code-block:: java
 
-   // ----------------------------------------------------------
-   /**
-    * Turn the jeroo around 180 degrees so it faces the opposite
-    * direction.
-    *
-    * @precondition  None.
-    *
-    * @postcondition The Jeroo has turned 180 degrees.
-    * @postcondition The Jeroo is at the same location.
-    */
-   public void turnAround()
-   {
-       this.turn(LEFT);
-       this.turn(LEFT);
-   }
+..    // ----------------------------------------------------------
+..    /**
+..     * Turn the jeroo around 180 degrees so it faces the opposite
+..     * direction.
+..     *
+..     * @precondition  None.
+..     *
+..     * @postcondition The Jeroo has turned 180 degrees.
+..     * @postcondition The Jeroo is at the same location.
+..     */
+..    public void turnAround()
+..    {
+..        this.turn(LEFT);
+..        this.turn(LEFT);
+..    }
 
 
-   // ----------------------------------------------------------
-   /**
-    * Disable a net and move to the newly cleared location.
-    *
-    * @precondition  There is a net ahead.
-    * @precondition  The Jeroo has at least one flower.
-    *
-    * @postcondition The net has been disabled.
-    * @postcondition The Jeroo has one less flower.
-    * @postcondition The Jeroo is at the location originally occupied by the net.
-    * @postcondition The Jeroo has not changed direction.
-    */
-   public void tossAndHop()
-   {
-       this.toss();          // new code
-       this.hop();           // new code
-   }
+..    // ----------------------------------------------------------
+..    /**
+..     * Disable a net and move to the newly cleared location.
+..     *
+..     * @precondition  There is a net ahead.
+..     * @precondition  The Jeroo has at least one flower.
+..     *
+..     * @postcondition The net has been disabled.
+..     * @postcondition The Jeroo has one less flower.
+..     * @postcondition The Jeroo is at the location originally occupied by the net.
+..     * @postcondition The Jeroo has not changed direction.
+..     */
+..    public void tossAndHop()
+..    {
+..        this.toss();          // new code
+..        this.hop();           // new code
+..    }
 
 
-FOURTH BUILD (final)
-""""""""""""""""""""
+.. FOURTH BUILD (final)
+.. """"""""""""""""""""
 
-This build finishes the ``myProgram()`` method.  We need
-to check to see that Kim has the correct number of flowers at the
-end.
+.. This build finishes the ``myProgram()`` method.  We need
+.. to check to see that Kim has the correct number of flowers at the
+.. end.
 
-In the ``ClearNetsAndPick`` class:
+.. In the ``ClearNetsAndPick`` class:
 
-.. code-block:: java
+.. .. code-block:: java
 
-   public void myProgram()
-   {
-       Jeroo kim = new Jeroo(NORTH, 5);
-       this.addObject(kim, 4, 1);
+..    public void myProgram()
+..    {
+..        Jeroo kim = new Jeroo(NORTH, 5);
+..        this.addObject(kim, 4, 1);
 
-       // --- Turn around ---
-       kim.turnAround();
+..        // --- Turn around ---
+..        kim.turnAround();
 
-       // --- Disable nets ---
-       kim.tossAndHop();
-       kim.tossAndHop();
+..        // --- Disable nets ---
+..        kim.tossAndHop();
+..        kim.tossAndHop();
 
-       // --- Get the flower ---
-       kim.hop();            // new code
-       kim.pick();           // new code
+..        // --- Get the flower ---
+..        kim.hop();            // new code
+..        kim.pick();           // new code
 
-       // --- Go back to (4, 1) and turn around ---
-       kim.turnAround();     // new code
-       kim.hop(3);           // new code
-       kim.turnAround();     // new code
-   }
+..        // --- Go back to (4, 1) and turn around ---
+..        kim.turnAround();     // new code
+..        kim.hop(3);           // new code
+..        kim.turnAround();     // new code
+..    }
 
 
 Self-Check
@@ -2125,11 +2078,11 @@ subclass used to create the receiver.
 **Polymorphism** means that different receivers can respond to the same method
 call in different ways.
 
-.. raw:: html
+.. .. raw:: html
 
-   <div class="align-center" style="margin-top:1em;">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/jhDUxynEQRI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   </div>
+..    <div class="align-center" style="margin-top:1em;">
+..    <iframe width="560" height="315" src="https://www.youtube.com/embed/jhDUxynEQRI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+..    </div>
 
 
 Syntax Practice 2b: Subclass Constructors
