@@ -232,6 +232,7 @@ Consider the following example:
 .. SourceCode/Java/Introduction/Inheritance
 .. code-block:: java
     :linenos:
+
     class Test {
         public static void main (String[] args) {
             Test test1 = new Test();
@@ -279,8 +280,8 @@ Java InputStream's are used for reading data, one byte at a time, for example:
 
 .. Introduction/InputStreamExample
 .. code-block:: java
-    try( InputStream inputstream = new FileInputStream("file.txt") ) {
 
+    try( InputStream inputstream = new FileInputStream("file.txt") ) {
         int data = inputstream.read();
         while(data != -1) {
             System.out.print((char) data);
@@ -294,7 +295,7 @@ Java InputStream's are used for reading data, one byte at a time, for example:
     suppressed during program execution, which defeats the purpose of raising an Exception 
     in the first place!
 
-Which creates a new FileInputStream instance. 
+This example creates a new FileInputStream instance. 
 FileInputStream is a subclass of InputStream so it is safe to assign an instance of 
 FileInputStream to an InputStream variable.
 
@@ -449,6 +450,7 @@ What output does this program produce?
 .. Introduction/Complex2
 .. code-block:: java
     :linenos:
+
     public class Complex {
         private final double real;  // real number
         private final double imag;  // imaginary number's coefficient
