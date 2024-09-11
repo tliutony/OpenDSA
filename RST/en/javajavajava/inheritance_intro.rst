@@ -161,7 +161,7 @@ it will automatically look for a toString() method of an object and invoke it.
 It is possible to leave out the method call to toString() inside ``System.out.println`` methods.
 
 .. code-block:: java
-    ::linenos::
+    :linenos:
 
     // Equivalent code
     System.out.println(stu.toString());

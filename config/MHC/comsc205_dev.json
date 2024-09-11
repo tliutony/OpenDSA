@@ -96,14 +96,10 @@
     },
     "Intro to Java III: Classes": {
       "java4python/definingclasses": {},
-      "java4python/namingconventions": {},
-      "java4python/commonmistakes": {},
-      "java4python/moredocumentation": {},
+      "MHC/javaInfo": {},
       "MHC/scoping": {}
     },
     "Object Oriented Programming I: Inheritance": {
-      "IntroToSoftwareDesign/InheritanceAndPolymorphism": {},
-      "Design/IntroOO": {},
       "javajavajava/inheritance_intro": {},
       "javajavajava/inheritance_java": {}
     },

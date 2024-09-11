@@ -140,7 +140,7 @@ it invokes the ``toString()`` method that  it finds in the ``Student`` class.
 
 .. note::
 
-    Try modifying your code from earlier with the new toString() method to see the result of the overriden method!
+    Try modifying the code from earlier with the new toString() method to see the result of the overriden method!
 
 
 .. code-block:: java
@@ -269,7 +269,7 @@ Let's take an example where static binding,
 also called *early* binding, is not possible.
 Consider the following method definition:
 
-.. code-block::
+.. code-block:: java
     :linenos:
 
     public void polyMethod(Object obj) {
@@ -277,13 +277,13 @@ Consider the following method definition:
     }
 
 The method call in this method, ``obj.toString()``, can't be bound to the correct implementation of 
-``toString()`` until the method is actually invoked<mdash/>that is,
+``toString()`` until the method is actually invoked -- that is,
 at run time.
-For example,
-suppose we make the following method calls in a program:
+For example, suppose we make the following method calls in a program:
 
 .. code-block:: java
     :linenos:
+    
     Student stu = new Student("Stu");
     polyMethod(stu);
     Team tea = new Team("MHC", "soccer");
@@ -305,127 +305,128 @@ the actual method implementation that is invoked is determined at run time.
 The determination depends on the type of object that was assigned to the variable.
 Thus, we say that the method call ``obj.toString()`` is polymorphic because it is bound to different implementations of ``toString()`` depending on the actual type of the object that is bound to ``obj``.
 
-.. TODO
-<title>Polymorphism and Object-Oriented Design</title>
 
-Now that we understand how inheritance and polymorphism work in Java,
-it will be useful to consider an example that illustrates how these mechanisms can be useful in designing classes and methods.
-We have been using the various ``System.out.print()`` and ``System.out.println()`` methods since Chapter<nbsp/>1.
-The ``print()`` and
-``println()`` methods are examples of
-**overloaded** methods<mdash/>that is,
-methods that have the same name but different  parameter lists.
-Remember that a method's signature involves its name,
-plus the type, number, and order of its parameters.
-Methods that have the same name but different parameters are said to be overloaded.
+.. cutting overloading
+.. Polymorphism and Object-Oriented Design
 
-
-Here are the signatures of some of the different ``print()`` and
-``println()`` methods:
-
-<program language="java"><input>
-print(char c);           println(char c);
-print(int i);            println(int i);
-print(double d);         println(double d);
-print(float f);          println(float f);
-print(String s);         println(String s);
-print(Object o);         println(Object o);
-</input></program>
-
-Basically, there is a ``print()`` and ``println()`` method for every type of primitive data,
-plus methods for printing any type of object.
-When Java encounters an expression involving ``print()`` or ``println()`` it chooses which particular ``print()`` or ``println()`` method to call.
-To determine the correct method, Java relies on the differences in the signatures of the various ``print()`` methods.
-For example,
-because its argument is an ``int``, the expression ``print(5)`` is associated with the method whose signature is ``print(int i)`` be cause its parameter is an ``int``.
+.. Now that we understand how inheritance and polymorphism work in Java,
+.. it will be useful to consider an example that illustrates how these mechanisms can be useful in designing classes and methods.
+.. We have been using the various ``System.out.print()`` and ``System.out.println()`` methods since Chapter<nbsp/>1.
+.. The ``print()`` and
+.. ``println()`` methods are examples of
+.. **overloaded** methods<mdash/>that is,
+.. methods that have the same name but different  parameter lists.
+.. Remember that a method's signature involves its name,
+.. plus the type, number, and order of its parameters.
+.. Methods that have the same name but different parameters are said to be overloaded.
 
 
-Note that there is only one set of ``print()`` and ``println()`` methods for printing ``Object`` s.
-The reason is that polymorphism is used by the ``print(Object o)`` and ``println(Object o)`` methods to print any type of object.
-While we do not have access to the source code for these methods,
-we can make an educated guess that their implementations utilize the polymorphic ``toString()`` method,
-as follows:
+.. Here are the signatures of some of the different ``print()`` and
+.. ``println()`` methods:
 
-<program language="java"><input>
-public void print(Object o) {
-System.out.print(o.toString());
-}
-public void println(Object o) {
-System.out.println(o.toString());
-}
-</input></program>
+.. <program language="java"><input>
+.. print(char c);           println(char c);
+.. print(int i);            println(int i);
+.. print(double d);         println(double d);
+.. print(float f);          println(float f);
+.. print(String s);         println(String s);
+.. print(Object o);         println(Object o);
+.. </input></program>
 
-Here again we have a case where an expression, ``o.toString()``, is bound dynamically to the correct implementation of
-``toString()`` based on the type of ``Object`` that the variable
-``o`` is bound to.
-If we call ``System.out.print(stu)``, where
-``stu`` is a ``Student``, then the ``Student.toString()`` method is invoked.
-On the other hand,
-if we call ``System.out.print(game)``, where ``game`` is a ``OneRowNim``, then the ``OneRowNim.toString()`` method is invoked.
+.. Basically, there is a ``print()`` and ``println()`` method for every type of primitive data,
+.. plus methods for printing any type of object.
+.. When Java encounters an expression involving ``print()`` or ``println()`` it chooses which particular ``print()`` or ``println()`` method to call.
+.. To determine the correct method, Java relies on the differences in the signatures of the various ``print()`` methods.
+.. For example,
+.. because its argument is an ``int``, the expression ``print(5)`` is associated with the method whose signature is ``print(int i)`` be cause its parameter is an ``int``.
 
 
-The beauty of using polymorphism in this way is the flexibility and  extensibility that it allows.
-The ``print()`` and ``println()`` methods can print any type of object,
-even new types of objects that did not exist when these library methods were written.
+.. Note that there is only one set of ``print()`` and ``println()`` methods for printing ``Object`` s.
+.. The reason is that polymorphism is used by the ``print(Object o)`` and ``println(Object o)`` methods to print any type of object.
+.. While we do not have access to the source code for these methods,
+.. we can make an educated guess that their implementations utilize the polymorphic ``toString()`` method,
+.. as follows:
+
+.. <program language="java"><input>
+.. public void print(Object o) {
+.. System.out.print(o.toString());
+.. }
+.. public void println(Object o) {
+.. System.out.println(o.toString());
+.. }
+.. </input></program>
+
+.. Here again we have a case where an expression, ``o.toString()``, is bound dynamically to the correct implementation of
+.. ``toString()`` based on the type of ``Object`` that the variable
+.. ``o`` is bound to.
+.. If we call ``System.out.print(stu)``, where
+.. ``stu`` is a ``Student``, then the ``Student.toString()`` method is invoked.
+.. On the other hand,
+.. if we call ``System.out.print(game)``, where ``game`` is a ``OneRowNim``, then the ``OneRowNim.toString()`` method is invoked.
 
 
-<exercises xml:id="self-study-exercisesA22">
-<title>Self-Study Exercises</title>     
-    <exercise label="testPrintEx">
-    <statement>
-    Run the ``TestPrint`` program below. Override the ``toString()`` 
-    method in the ``TestPrint`` class and rerun.
-    Add a comment describing how it confirms how ``print()`` 
-    and ``println()`` methods are implemented.
-    </statement>
-<program language="java" interactive="activecode"><input>
-public class TestPrint {
-
-public static String NAME="TestPrint";
-
-/* Add a toString() method **/
+.. The beauty of using polymorphism in this way is the flexibility and  extensibility that it allows.
+.. The ``print()`` and ``println()`` methods can print any type of object,
+.. even new types of objects that did not exist when these library methods were written.
 
 
-public static void main(String args[]) {
-System.out.println(new Double(56));
-System.out.println(new TestPrint());
-}
-}
-</input></program>
-<solution>
+.. <exercises xml:id="self-study-exercisesA22">
+.. <title>Self-Study Exercises</title>     
+..     <exercise label="testPrintEx">
+..     <statement>
+..     Run the ``TestPrint`` program below. Override the ``toString()`` 
+..     method in the ``TestPrint`` class and rerun.
+..     Add a comment describing how it confirms how ``print()`` 
+..     and ``println()`` methods are implemented.
+..     </statement>
+.. <program language="java" interactive="activecode"><input>
+.. public class TestPrint {
 
-Running the ``TestPrint`` with the default ``toString()``produces: 
-<pre>
-56
-TestPrint@6ff3c5b5
-</pre>
-Overriding it as shown below produces:
-<pre>
-56
-Hello TestPrint
-</pre>
+.. public static String NAME="TestPrint";
 
-<program language="java"><input>
-public class TestPrint {
-public static String NAME="TestPrint";
-/** Add a toString() method **/
-public String toString() {
-return "Hello" + NAME;
-}
-public static void main(String args[]) 
-{
-System.out.println(56);
-System.out.println(new TestPrint());
-}
-}
-</input></program>
-</solution>
-</exercise>      
-</exercises>
-</subsection>
+.. /* Add a toString() method **/
 
-<subsection xml:id="super">
-<title>Using ``super`` to Refer to the Superclass</title>
+
+.. public static void main(String args[]) {
+.. System.out.println(new Double(56));
+.. System.out.println(new TestPrint());
+.. }
+.. }
+.. </input></program>
+.. <solution>
+
+.. Running the ``TestPrint`` with the default ``toString()``produces: 
+.. <pre>
+.. 56
+.. TestPrint@6ff3c5b5
+.. </pre>
+.. Overriding it as shown below produces:
+.. <pre>
+.. 56
+.. Hello TestPrint
+.. </pre>
+
+.. <program language="java"><input>
+.. public class TestPrint {
+.. public static String NAME="TestPrint";
+.. /** Add a toString() method **/
+.. public String toString() {
+.. return "Hello" + NAME;
+.. }
+.. public static void main(String args[]) 
+.. {
+.. System.out.println(56);
+.. System.out.println(new TestPrint());
+.. }
+.. }
+.. </input></program>
+.. </solution>
+.. </exercise>      
+.. </exercises>
+.. </subsection>
+
+Using the super Keyword to Refer to the Superclass
+---------------------------------------------------
 
 One question that might occur to you is: Once you override the default
 ``toString()`` method,
@@ -439,275 +440,259 @@ suppose that within the ``Student`` class,
 you wanted to concatenate the result of both the default and the new ``toString()`` methods.
 The following expression would accomplish that:
 
-<program language="java"><input>
-super.toString() + toString()
-</input></program>
+.. code-block:: java
+
+    super.toString() + toString();
 
 The ``super`` keyword specifies that the first
 ``toString()`` is the one implemented in the superclass.
-The second
-``toString()`` refers simply to the version implemented within the ``Student`` class.
-We will see additional examples of using the
-``super`` keyword in the following sections.
+The second ``toString()`` refers simply to the version implemented within the ``Student`` class.
+We will see additional examples of using the ``super`` keyword in the following sections.
 
 
-<exercises>
-<title>Self-Study Exercises</title>
-<exercise label="inh-output-ex">
-<title>B subclasses A</title>
-<statement>
+.. <exercises>
+.. <title>Self-Study Exercises</title>
+.. <exercise label="inh-output-ex">
+.. <title>B subclasses A</title>
+.. <statement>
 
-Given the following class definitions, what would be output 
-by the code segment? <var/>
+.. Given the following class definitions, what would be output 
+.. by the code segment? <var/>
 
-<program language="java"  interactive="activecode" ><input>
-public class A {
-public void method() { System.out.print("A"); }
-}
-public class B extends A {
-public void method() { System.out.print("B"); }
-}
-// Determine the output from this code segment
-A a = new A();
-a.method();
-a = new B();
-a.method();
-B b = new B();
-b.method();
-</input></program>
-</statement>
-<setup>
-<var>
-<condition string="ABB">
-    <feedback>
-    Correct.
-    </feedback>
-</condition>
-<condition string=".*">
-    <feedback>
-    Incorrect. Try running the code.
-    </feedback>
-</condition>
-</var>
-</setup>
-<hint>
-Try running the code with codelens. 
-</hint>
-<solution>
-The second time you call ``a.method()``, the variable ``a`` 
-refers to a ``B`` so prints B:
-<pre>ABB</pre>
-</solution>
-</exercise>
+.. <program language="java"  interactive="activecode" ><input>
+.. public class A {
+.. public void method() { System.out.print("A"); }
+.. }
+.. public class B extends A {
+.. public void method() { System.out.print("B"); }
+.. }
+.. // Determine the output from this code segment
+.. A a = new A();
+.. a.method();
+.. a = new B();
+.. a.method();
+.. B b = new B();
+.. b.method();
+.. </input></program>
+.. </statement>
+.. <setup>
+.. <var>
+.. <condition string="ABB">
+..     <feedback>
+..     Correct.
+..     </feedback>
+.. </condition>
+.. <condition string=".*">
+..     <feedback>
+..     Incorrect. Try running the code.
+..     </feedback>
+.. </condition>
+.. </var>
+.. </setup>
+.. <hint>
+.. Try running the code with codelens. 
+.. </hint>
+.. <solution>
+.. The second time you call ``a.method()``, the variable ``a`` 
+.. refers to a ``B`` so prints B:
+.. <pre>ABB</pre>
+.. </solution>
+.. </exercise>
     
-<exercise label="method-ab-ex">
-<title>B subclasses A, Part 2</title>
+.. <exercise label="method-ab-ex">
+.. <title>B subclasses A, Part 2</title>
 
-<statement>
+.. <statement>
 
-Modify class ``B``'s  ``method()`` so that it invokes ``A``'s version of ``method()``
-before printing out <em>B</em>. What would be output in this case? <var/>
+.. Modify class ``B``'s  ``method()`` so that it invokes ``A``'s version of ``method()``
+.. before printing out <em>B</em>. What would be output in this case? <var/>
 
-<program language="java" interactive="activecode"><input>
-class A {
-public void method() { System.out.print("A"); }
-}
-public class B extends A {
+.. <program language="java" interactive="activecode"><input>
+.. class A {
+.. public void method() { System.out.print("A"); }
+.. }
+.. public class B extends A {
         
-public void method() { 
+.. public void method() { 
             
-/* Add code here to call A's method() */
+.. /* Add code here to call A's method() */
 
-    System.out.print("B"); 
-}
+..     System.out.print("B"); 
+.. }
             
-public static void main(String[] args) { 
-    A a = new A();
-    a.method();
-    a = new B();
-    a.method();
-    B b = new B();
-    b.method();
-}
-}
-</input></program>
-</statement>
-<setup>
-<var>
-<condition string="AABAB">
-    <feedback>
-    Correct.
-    </feedback>
-</condition>
-<condition string=".*">
-    <feedback>
-    Incorrect. Try running the code.
-    </feedback>
-</condition>
-</var>
-</setup>
-<hint>
-Try running the code with codelens. Use ``super.method()``. 
-</hint>
-<solution>
-The new implementation of ``B``'s ``method()`` will invoke 
-``A``'s version of the method before printing <em>B</em>,
-giving the ouput:
-<pre>AABAB</pre>
-</solution>
-</exercise>
+.. public static void main(String[] args) { 
+..     A a = new A();
+..     a.method();
+..     a = new B();
+..     a.method();
+..     B b = new B();
+..     b.method();
+.. }
+.. }
+.. </input></program>
+.. </statement>
+.. <setup>
+.. <var>
+.. <condition string="AABAB">
+..     <feedback>
+..     Correct.
+..     </feedback>
+.. </condition>
+.. <condition string=".*">
+..     <feedback>
+..     Incorrect. Try running the code.
+..     </feedback>
+.. </condition>
+.. </var>
+.. </setup>
+.. <hint>
+.. Try running the code with codelens. Use ``super.method()``. 
+.. </hint>
+.. <solution>
+.. The new implementation of ``B``'s ``method()`` will invoke 
+.. ``A``'s version of the method before printing <em>B</em>,
+.. giving the ouput:
+.. <pre>AABAB</pre>
+.. </solution>
+.. </exercise>
 
-<exercise label="inh-valid-ex">
-<title>Which are valid?</title>
-<statement>
+.. <exercise label="inh-valid-ex">
+.. <title>Which are valid?</title>
+.. <statement>
 
-Given the definitions of the classes ``A`` and ``B`` in the 
-previous exercises, such that B is a subclass of A, which of the following statements are 
-valid?
+.. Given the definitions of the classes ``A`` and ``B`` in the 
+.. previous exercises, such that B is a subclass of A, which of the following statements are 
+.. valid?
 
-<program language="java"><input>
-A a = new B();
-a = new A();
-B b = new A();
-b = new B();
-</input></program>
-</statement>
-<choices>
-    <choice correct="yes">
-    <statement>
-        ``A a = new B();``
-    </statement>
-    <feedback>
-        ``B`` is a subclass of ``A`` so this is valid.
-    </feedback>
-    </choice>
-    <choice correct="yes">
-    <statement>
-        ``a = new A();``
-    </statement>
-    <feedback>
-        The variable ``a`` has type ``A``.
-    </feedback>
-    </choice>
-    <choice>
-    <statement>
-        ``B b = new A();``
-    </statement>
-    <feedback>
-        ``A`` is a superclass of ``B`` so this is not valid.
-    </feedback>
-    </choice>
-    <choice correct="yes">
-    <statement>
-        ``b = new B();``
-    </statement>
-    <feedback>
-        The variable ``a`` has type ``B``.
-    </feedback>
-    </choice>
-</choices>
-<solution>
-All except four part C are valid
-</solution>
-</exercise>
-</exercises>
-</subsection>
-<subsection>
-<title>Inheritance and Constructors</title>
+.. <program language="java"><input>
+.. A a = new B();
+.. a = new A();
+.. B b = new A();
+.. b = new B();
+.. </input></program>
+.. </statement>
+.. <choices>
+..     <choice correct="yes">
+..     <statement>
+..         ``A a = new B();``
+..     </statement>
+..     <feedback>
+..         ``B`` is a subclass of ``A`` so this is valid.
+..     </feedback>
+..     </choice>
+..     <choice correct="yes">
+..     <statement>
+..         ``a = new A();``
+..     </statement>
+..     <feedback>
+..         The variable ``a`` has type ``A``.
+..     </feedback>
+..     </choice>
+..     <choice>
+..     <statement>
+..         ``B b = new A();``
+..     </statement>
+..     <feedback>
+..         ``A`` is a superclass of ``B`` so this is not valid.
+..     </feedback>
+..     </choice>
+..     <choice correct="yes">
+..     <statement>
+..         ``b = new B();``
+..     </statement>
+..     <feedback>
+..         The variable ``a`` has type ``B``.
+..     </feedback>
+..     </choice>
+.. </choices>
+.. <solution>
+.. All except four part C are valid
+.. </solution>
+.. </exercise>
+.. </exercises>
+
+Inheritance and Constructors
+----------------------------
 
 Java's inheritance mechanism applies to a class's public and protected instance variables and methods.
 It does not apply to a class's constructors.
 To illustrate some of the implications of this language feature,
 let's define a subclass of ``Student`` called ``CollegeStudent``:
 
-<program language="java"><input>
-public class CollegeStudent extends Student {
-public CollegeStudent() { }
-public CollegeStudent(String s) {
-super(s);
-}
-public String toString() {
-return "My name is " + name +
-        " and I am a CollegeStudent.";
-}
-}
-</input></program>
+.. code-block:: java
+    :linenos:
+
+    public class CollegeStudent extends Student {
+        public CollegeStudent() { }
+            public CollegeStudent(String s) {
+            super(s);
+        }
+    
+        public String toString() {
+            return "My name is " + name +
+            " and I am a CollegeStudent.";
+        }
+    }
 
 Because ``CollegeStudent`` is a subclass of ``Student``, 
-it inherits the public and 
-protected instance methods and variables from ``Student``. 
+it inherits the public and  protected instance methods and variables from ``Student``. 
 So, a ``CollegeStudent`` has an instance variable for ``name`` and it 
 has a public ``getName()`` method.
 
-<figure  xml:id="fig-collstudent">
-<caption>College Student inherits from Student.</caption>
-<image width="35%" source="chptr08/collstudent.png"/>
-</figure>
+.. odsafig:: Images/jjj_collstudent.png
+   :align: center
 
-
-Recall that a ``protected`` element,
-such as the ``name`` variable in the ``Student`` class,
-is accessible only within the class and its subclasses.
-Unlike ``public`` elements,
-it is not accessible to other classes.
-
+.. Recall that a ``protected`` element,
+.. such as the ``name`` variable in the ``Student`` class,
+.. is accessible only within the class and its subclasses.
+.. Unlike ``public`` elements,
+.. it is not accessible to other classes.
 
 Note that ``CollegeStudent`` overrides the ``toString()`` method,
 giving it a more customized implementation.
 The hierarchical relationship between ``CollegeStudent`` and ``Student`` is shown in 
-<xref ref="fig-collstudent">Figure</xref>.
-A ``CollegeStudent`` is a ``Student`` and both are ``Object``s.
+the figure above. A ``CollegeStudent`` is a ``Student`` and both are ``Object``s.
 
 
 Note how we have implemented the ``CollegeStudent(String s)`` constructor.
 Because the superclass's constructors are not inherited,
 we have to implement this constructor in the subclass if we want to be able to assign a ``CollegeStudent``'s name during object construction.
 The method call, ``super(s)``, is used to invoke the superclass constructor and pass it
-<em>s</em>, the student's name.
-The superclass constructor will then assign <em>s</em>
+**s**, the student's name.
+The superclass constructor will then assign **s**
 to the ``name`` variable.
 
 
-As we have noted,
-a subclass does not inherit constructors from its  superclasses.
-However, if the subclass constructor does not explicitly invoke a superclass constructor, Java will automatically invoke the default superclass constructor<mdash/>in this case, ``super()``. By
-**default superclass constructor**
-we mean the constructor that has no parameters.
+As we have noted, a subclass does not inherit constructors from its superclasses.
+However, if the subclass constructor does not explicitly invoke a superclass constructor, Java will automatically invoke the default superclass constructor -- in this case, ``super()``. 
+
+By **default superclass constructor** we mean the constructor that has no parameters.
 For a subclass that is several layers down in the hierarchy,
-this automatic invoking of the ``super()`` constructor will be repeated upwards through the entire class hierarchy.
-Thus when a ``CollegeStudent`` is constructed, Java will automatically call ``Student()`` and ``Object()``. Note that if one of the superclasses does not contain a default constructor,
-this will result in a syntax error.
+this automatic invoking of the ``super()`` constructor will be repeated upwards through the entire class hierarchy. Thus when a ``CollegeStudent`` is constructed, Java will automatically call ``Student()`` and ``Object()``. Note that if one of the superclasses does not contain a default constructor, this will result in a syntax error.
 
-
-If you think about this, it makes good sense.
-How else will the inherited elements of the object be created?
-For example,
-in order for a ``CollegeStudent`` to have a ``name`` variable,
-a ``Student`` object,
-where name is declared, must be created.
+If you think about this, it makes good sense. How else will the inherited elements of the object be created? For example, in order for a ``CollegeStudent`` to have a ``name`` variable, a ``Student`` object, where name is declared, must be created.
 The ``CollegeStudent`` constructor then extends the definition of the ``Student`` class.
 Similarly, in order for a ``Student`` object to have the attributes common to all objects,
 an ``Object`` instance must be created and then extended into a ``Student``.
 
-
 Thus, unless a constructor explicitly calls a superclass constructor, Java will automatically invoke the default superclass constructors.
-It does this <em>before</em> executing the code in its own constructor.
+It does this **before** executing the code in its own constructor.
 
-<!--
-For example,
-if you had two classes, ``A`` and ``B``, where ``B`` is a subclass of ``A``, 
+
+For example, if you had two classes, ``A`` and ``B``, where ``B`` is a subclass of ``A``, 
 then whenever you create an instance of
 ``B``, Java will first invoke ``A``'s constructor before executing the 
 code in ``B``'s constructor.
 Thus, Java's default behavior during construction of ``B`` is equivalent 
 to the following implementation of ``B``'s constructor:
 
-<program language="java"><input>
-public B() {
-A();   // Call the superconstructor
-// Now continue with this constructor's code}
-</input></program>
--->
+.. code-block:: java
+    :linenos:
+
+    public B() {
+        A();   // Call the superconstructor
+        // Now continue with this constructor's code
+    }
 
 Calls to the default constructors are made all the way up the class hierarchy,
 and the superclass constructor is always called before the code 
