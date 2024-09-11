@@ -41,3 +41,135 @@ This **class inheritance** is similar to the classification of natural things.
 A horse is a mammal. Horses inherit the characteristic of being warm blooded by virtue of 
 also being mammals. But they also have specialized attributes -- manes, hooves -- that
 distinguish them from other mammals, such as cows and humans.
+
+java.lang.Object toString()
+--------------------------
+
+The most general class in Java's class hierarchy is the **java.lang.Object** class.
+It is the superclass of all classes that occur in Java programs.
+By default, it is the direct superclass of any class that does not explicitly specify a pedigree in its class definition.
+
+All subclasses of ``Object`` **inherit**
+the ``public`` and ``protected`` methods contained in ``Object``, so all such methods can be thought of as belonging to the subclasses.
+This means that all classes inherit the methods of the ``Object`` class,
+because every class is a subclass of it.
+In this section,
+let's look briefly at how we can use an inherited method and also at how we can
+**override** it--that is,
+redefine the method--if it doesn't exactly suit our purposes.
+
+
+One of the most useful methods in the ``Object`` class is the
+``toString()`` method:
+
+.. code-block:: java
+    :linenos:
+    public class Object {
+        public String toString();
+    }
+
+The ``toString()`` method returns a ``String`` representation of its object.
+For example, ``o1.toString()`` will return a ``String`` that in some sense describes ``o1``.
+
+Suppose we have the following class written:
+
+.. code-block:: java
+    :linenos:
+
+     class Student {
+       private String name;
+       private String email;
+       private int id;
+    
+       public Student(String initName, String initEmail, int initId) {
+          name = initName;
+          email = initEmail;
+          id = initId;
+       }
+    }
+
+.. note::
+    Remember that all Java classes are a subclass of ``Object``!
+
+Because ``Student`` is a subclass of ``Object``, it inherits the
+``toString()`` method.
+To illustrate the default behavior of ``toString()``, let's use it with a ``Student`` instance:
+
+
+.. code-block:: java
+    :linenos:
+
+    Student stu = new Student("Mary Lyon", "mlyon22@mtholyoke.edu", 42);
+    System.out.println(stu.toString());
+
+This code segment creates one ``Student`` instance, named ``stu``. The inherited ``toString()`` method is then invoked on the ``Student`` instance,
+which produces the following output:
+
+
+.. code-block:: java
+
+    Student@7ad041f3
+
+What this experiment shows is that the default definition of ``toString()`` returns some kind of internal representation of its object.
+It looks as if it returns the name of the object's class concatenated with its memory address.
+This may be useful for some applications.
+But for most objects we will want to override the default definition to make the ``toString()`` method return a string that is more appropriate for ``OneRowNim``.
+
+
+What ``String`` should the ``g1.toString()`` method return?
+Let's have it return a ``String`` that reports the ``Student`` instances's current state,
+which are the values stored in the two instance variables.
+
+To **override** a method,
+you simply define a method with the same signature in the subclass.
+If you call ``toString()`` with an instance of the subclass,
+its version of the method will be used.
+In this way, the subclass method overrides the superclass version.
+Thus, ``Student.toString()`` will have the following signature:
+
+.. code-block:: java
+
+    public String toString()
+
+Let us describe the state of a ``Student`` instance very briefly in the string returned by the ``toString()`` method:
+
+.. code-block:: java
+
+    public String toString() { 
+        return "Name: " + name + ", email: " + email + ", id: " + id;
+    }
+
+
+If we add the previous ``toString()`` method to the ``Student`` class and then run the following main method:
+
+.. code-block:: java
+    :linenos:
+
+    public static void main(String[] args) {
+        Student stu = new Student("Mary Lyon", "mlyon22@mtholyoke.edu", 42);
+        System.out.println(stu.toString());
+    }
+
+We get the following output:
+
+.. code-block::
+
+    Name: Mary Lyon, email: mlyon22@mtholyoke.edu, id:42
+
+Since ``System.out.println`` looks for a String to print out, 
+it will automatically look for a toString() method of an object and invoke it. 
+It is possible to leave out the method call to toString() inside ``System.out.println`` methods.
+
+.. code-block:: java
+    ::linenos::
+
+    // Equivalent code
+    System.out.println(stu.toString());
+    System.out.println(stu);
+
+While this new method may not play an important role in the
+``Student`` class,
+it does provide a very brief,
+understandable description of the state of the object.
+This is the reason that the
+``toString()`` method was included in the ``Object`` class.
