@@ -104,7 +104,8 @@
     "Object Oriented Programming I: Inheritance": {
       "IntroToSoftwareDesign/InheritanceAndPolymorphism": {},
       "Design/IntroOO": {},
-      "javajavajava/inheritance": {}
+      "javajavajava/inheritance_intro": {},
+      "javajavajava/inheritance_java": {}
     },
     "Object Oriented Programming II: Abstract Classes": {
       "Design/ADT": {

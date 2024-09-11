@@ -1,5 +1,5 @@
-Inheritance
-===========
+Introduction to Inheritance
+===========================
 
 Class Hierarchy and Inheritance
 -------------------------------
@@ -21,7 +21,7 @@ Notice that the ``Object`` class occurs at the top of the hierarchy.
 It is the most general class.
 It has features that are common to all Java objects.
 
-.. odsafig:: Images/classhier.png
+.. odsafig:: Images/jjj_classhier.png
    :align: center
 
 As you move down the hierarchy,
@@ -173,3 +173,25 @@ it does provide a very brief,
 understandable description of the state of the object.
 This is the reason that the
 ``toString()`` method was included in the ``Object`` class.
+
+Motivating Inheritance and Polymorphism
+---------------------------------------
+
+Among the most important concepts in object oriented programming are the concepts of 
+**inheritance** and **polymorphism**.
+We first compared inheritance to the natural form of inheritance,
+in which horses and cows share certain inherited characteristics,
+such as being warm-blooded, by virtue of their being mammals.
+
+
+We took a more technical look at inheritance above, where we talked about the ``toString()`` method and how it is inherited from the ``Object`` class.
+We illustrated there how subclasses of ``Object`` could override the inherited ``toString()`` method in order to customize it for their purposes.
+We also introduced the idea of polymorphism, in which a method call,
+such as ``obj.toString()``, can have different behaviors depending on the type of object, ``obj``, on which it is called.
+
+In following sections we will take a much closer look at these important object-oriented concepts.
+We will learn how Java's **dynamic binding**
+mechanism works and how it makes polymorphism possible.
+Most importantly, we will see why inheritance and polymorphism are important elements of object-oriented design.
+
+
