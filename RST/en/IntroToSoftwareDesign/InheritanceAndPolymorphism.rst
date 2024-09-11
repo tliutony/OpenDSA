@@ -123,7 +123,7 @@ subclass that represents the island map, while the ``Jeroo``
 class is an actor subclass.  There are also ``Flower``,
 ``Net`` and ``Water`` classes to represent other
 objects on the island.
-There as seven action methods that a ``Jeroo`` understands
+There are seven action methods that a ``Jeroo`` understands
 (three of them require an argument value):
 
 .. raw:: html
@@ -205,7 +205,7 @@ When we instantiate a class, the class'
 initializing the new object's attributes.  So when we create a
 ``Jeroo`` object, its constructor is responsible for
 initializing the number of flowers in its pouch and
-the direction it's facing--it' position is set when you add it to the world.
+the direction it's facing--its position is set when you add it to the world.
 If we do not specify a value
 for one (or more) of the attributes when we create the jeroo, the
 constructor provides defaults for us.
@@ -1367,9 +1367,7 @@ Example: Turn Around
 
 If we wanted to add a method to cause a Jeroo to turn around, we
 need a class to place it in.  We have to create our own subclass of
-``Jeroo`` to hold our code.  In BlueJ, you can use the "New Class..."
-button to create a new subclass of `Jeroo`
-with a name of your own choosing.  In that new subclass, you could add
+``Jeroo`` to hold our code.  In that new subclass, you could add
 a method to turn the jeroo around:
 
 .. code-block:: java
@@ -1473,7 +1471,7 @@ is a special kind of ``Jeroo``. The ``PlantingJeroo``
 class inherits all of
 the methods and attributes from the class ``Jeroo``, and also
 understands any new ones you write, such as the
-``platRowsOfFour()`` method.  Computer scientists sometimes
+``plantRowsOfFour()`` method.  Computer scientists sometimes
 call this an **is-a** relationship,
 because every ``PlantingJeroo`` object *is a*
 ``Jeroo`` at the same time--just a Jeroo that can do more.
