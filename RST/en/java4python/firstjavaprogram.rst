@@ -1,4 +1,4 @@
-Lets look at a Java Program
+Let's look at a Java Program
 ---------------------------
 
 A time-honored tradition in Computer Science is to write a program
@@ -52,6 +52,10 @@ little bit about Java :ref:`Naming Conventions`.
 .. note::
     We suggest for the readings that you copy-pasting the code into your own
     code editor so you can try them out yourself!
+
+
+Compiling and Running
+~~~~~~~~~~~~~~~~~~~~~
 
 The first question you probably have about this little program is “How
 do I run it?” Running a Java program is not as simple as running a
@@ -160,6 +164,9 @@ Just digging in to this one line will take us deep into the world of
 Java, so we are going to start digging but we are not going to dig too
 deeply right away. Much of what could be revealed by this one line is
 better understood through other examples, so be patient.
+
+Java Keywords
+~~~~~~~~~~~~~
 
 The first word, **public** indicates to the Java compiler that this is a
 method that anyone can call. We will see that Java enforces several

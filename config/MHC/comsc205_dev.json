@@ -83,13 +83,14 @@
     "Welcome!": {
       "MHC/courseResources": {}
     },
-    "Intro to Java I: Hello World!": {
+    "Intro to Java I: Data Types and Hello World!": {
       "java4python/introduction" : {},
       "java4python/whylearnjava" : {},
-      "java4python/firstjavaprogram" : {}
+      "java4python/firstjavaprogram" : {},
+      "java4python/javaDataTypes" : {}
     },
-    "Intro to Java II: Loops and Conditionals": {
-      "java4python/javadatatypes" : {},
+    "Intro to Java II: File I/O, Loops, and Conditionals": {
+      "java4python/dataStructuresIO" : {},
       "java4python/conditionals": {},
       "java4python/loopsanditeration": {}
     },
@@ -98,7 +99,7 @@
       "java4python/namingconventions": {},
       "java4python/commonmistakes": {},
       "java4python/moredocumentation": {},
-      "IntroToSoftwareDesign/FileIO": {}
+      "MHC/scoping": {}
     },
     "Object Oriented Programming I: Interfaces and Inheritance": {
       "Design/IntroOO": {},
