@@ -6,6 +6,10 @@ Welcome to COMSC-205: Data Structures! Below are links to resources for the cour
 * `Syllabus <https://comsc205.github.io>`_
 * `Ed Discussion <https://edstem.org/us/courses/61155>`_ 
 
+**Software**
+
+We will program in Java this semester using Visual Studio Code.  You can download Visual Studio for Java `here for a Mac <https://aka.ms/vscode-java-installer-mac>`_, and `here for Windows <https://aka.ms/vscode-java-installer-win>`_.  It is also installed on the computers in Kendade 307 where we hold lab.  You are welcome to use Kendade 307 outside of your scheduled lab time as long as there are no other classes or activities using the room.  (It is generally available in the morning, evening, and weekends.)  The first lab session will help familiarize you with VS Code, and please do stop by Office Hours if you have any issues with your setup!
+
 **Section 01: Barb's Section**
 
 *  Tue Thu 10:30am - 11:45am, Kendade 303

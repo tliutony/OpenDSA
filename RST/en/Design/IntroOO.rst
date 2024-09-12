@@ -14,8 +14,12 @@
 Introduction to Object-Oriented Programming
 ===========================================
 
-Introduction to Object-Oriented Programming
--------------------------------------------
+.. Introduction to Object-Oriented Programming
+.. -------------------------------------------
+
+
+Principles of Object Oriented Programming
+-----------------------------------------
 
 Object-oriented programming (OOP) is a programming paradigm based on the 
 concept of :term:`objects <object>`, which are :term:`data structures
@@ -52,11 +56,9 @@ to operate on data structures, object-oriented programming bundles the two toget
 so an **object**, which is an **instance of a class**, operates on its "own" data structure.
 
 
-Principles of Object Oriented Programming
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are many views on the main features and motivations for object
-oriented programming [#]_ [#]_.
+oriented programming.
 There are 4 principles that apply to most:
 
 :Encapsulation:
@@ -102,16 +104,32 @@ There are 4 principles that apply to most:
     an object we can find in the real world. 
     Encapsulation hides the details of that implementation.
 
-.. [#] `Wikipedia OO fundamental concepts <https://en.wikipedia.org/wiki/Object-oriented_programming#Fundamental_features_and_concepts>`_
-.. [#] `SOLID <http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29>`_ Object oriented design
+.. `Wikipedia OO fundamental concepts <https://en.wikipedia.org/wiki/Object-oriented_programming#Fundamental_features_and_concepts>`_
 
 
 Encapsulation
-~~~~~~~~~~~~~
+-------------
 
 Consider the following example:
 
-.. codeinclude:: Introduction/BadEncapsulation
+.. Copying from path: SourceCode/Java/Introduction/BadEncapsulation
+.. code-block:: java
+    :linenos:
+
+    class BadBoyShipping {
+        public int weight;
+        public String address;
+
+        /* remaining code ommitted ... */
+    }
+
+    class ExploitShipping {
+        public static void main (String[] args) {
+            BadBoyShipping bad = new BadBoyShipping();
+            bad.weight = -3;  // Nothing prevents me from doing this
+        }
+    }
+
 
 It's clearly a bad idea to allow people to set the shipping weight to
 a negative value.
@@ -137,7 +155,33 @@ How do we ensure our code remains flexible and maintainable?
 
 Compare our first example with the following:
 
-.. codeinclude:: Introduction/Encapsulation
+.. TODO continue from here
+.. also look at the wikipedia link
+.. also fix the subsections
+
+.. SourceCode/Java/Introduction/Encapsulation.java
+.. code-block:: java
+    :linenos:
+
+    class Shipping {
+        private int weight;
+
+        public int getWeight () {
+            return weight;
+        }
+
+        public void setWeight (int value) {
+            weight = value;
+        }
+
+    }
+
+    class ExploitShipping {
+        public static void main (String[] args) {
+            Shipping s = new Shipping();
+            s.setWeight(-3);   // Still not the behavior we are looking for
+        }
+    }
 
 You might be thinking 
 "Hey! How is this any better than the first example?"
@@ -155,14 +199,54 @@ Good OO design demands thinking about the future.
 Which brings us to our final example.
 No classes would need to be modified to add the new capability below.
 
-.. codeinclude:: Introduction/GoodEncapsulation
+.. .. codeinclude:: Introduction/GoodEncapsulation
+.. code-block:: java
+    :linenos:
+    class Shipping {
+        // minimum shipping weight in oz.
+        private static final int MIN_WEIGHT = 1;
+        private int weight;
+
+        public int getWeight () {
+            return weight;
+        }
+
+        public void setWeight (int value) {
+            weight = Math.max(MIN_WEIGHT, value);
+        }
+    }
+
+    class ExploitShipping {
+        public static void main (String[] args) {
+            Shipping s = new Shipping();
+            s.setWeight(-3);   // weight is set to MIN_WEIGHT
+        }
+    }
+
 
 Inheritance
-~~~~~~~~~~~
+-----------
 
 Consider the following example:
 
-.. codeinclude:: Introduction/Inheritance
+.. SourceCode/Java/Introduction/Inheritance
+.. code-block:: java
+    :linenos:
+
+    class Test {
+        public static void main (String[] args) {
+            Test test1 = new Test();
+            Test test2 = new Test();
+
+            if (!test1.equals(test2)) {
+                System.out.println("'test1' does not equal 'test2'.");
+            }
+            if (test1 instanceof Object) {
+                System.out.println("'test1' is an Object.");
+            }
+        }
+    }
+
 
 When run, produces the following output::
 
@@ -185,7 +269,6 @@ More importantly, every programmer might implement a different *interface* for b
 needs currently satisfied by 'equals' and 'toString', which would complicate
 the implementation of these common functions between developers.
 
-
 More generically, inheritance promotes code reuse.
 An excellent example is the **InputStream** class.
 The *InputStream* class is the base class (superclass) of 
@@ -195,9 +278,24 @@ and the *PushbackInputStream* among others.
 
 Java InputStream's are used for reading data, one byte at a time, for example:
 
-.. codeinclude:: Introduction/InputStreamExample
+.. Introduction/InputStreamExample
+.. code-block:: java
 
-Which creates a new FileInputStream instance. 
+    try( InputStream inputstream = new FileInputStream("file.txt") ) {
+        int data = inputstream.read();
+        while(data != -1) {
+            System.out.print((char) data);
+            data = inputstream.read();
+        }
+    } catch (Exception e) { }
+
+.. note::
+    The code example above has an **empty** catch block, which is poor practice if
+    this was a real program -- what happens is that the exception is silently 
+    suppressed during program execution, which defeats the purpose of raising an Exception 
+    in the first place!
+
+This example creates a new FileInputStream instance. 
 FileInputStream is a subclass of InputStream so it is safe to assign an instance of 
 FileInputStream to an InputStream variable.
 
@@ -255,7 +353,7 @@ polymorphism in our code.
 
 
 Polymorphism
-~~~~~~~~~~~~
+------------
 
 :term:`Polymorphism` is often referred to as the third pillar 
 of object-oriented programming, after encapsulation and inheritance. 
@@ -287,12 +385,39 @@ two distinct forms:
   different number of arguments or different types of arguments or both.
 
 Run-time Polymorphism
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 Consider our earlier discussion of the class *Object* when we discussed encapsulation.
 What is the result of the following code from [Bloch]_ pg. 74?
 
-.. codeinclude:: Introduction/Complex1
+.. Introduction/Complex1
+.. code-block:: java
+    :linenos:
+
+    public class Complex {
+        private final double real;  // real number
+        private final double imag;  // imaginary number's coefficient
+
+        public Complex(double real, double imag) {
+            this.real = real;
+            this.imag = imag;
+        }
+
+        public static void main(String[] args)
+        {
+            Complex a = new Complex(1, 0);
+            Complex b = new Complex(1, 0);
+
+            if (a.equals(b)) {
+                System.out.println ("'a' equals 'b'.");
+            } else {
+                System.out.println ("'a' and 'b' are not equal.");
+            }
+            System.out.println("'a' is " + a.toString());
+            System.out.println("'b' is " + b.toString());
+        }
+    }
+
 
 .. line-block::
    ``'a' and 'b' are not equal.``
@@ -322,7 +447,50 @@ representation of your objects.
 Compare the previous example with the following.
 What output does this program produce?
 
-.. codeinclude:: Introduction/Complex2
+.. Introduction/Complex2
+.. code-block:: java
+    :linenos:
+
+    public class Complex {
+        private final double real;  // real number
+        private final double imag;  // imaginary number's coefficient
+
+        public Complex(double real, double imag) {
+            this.real = real;
+            this.imag = imag;
+        }
+
+    
+        public boolean equals(Object o) {
+            if (o == this) {
+                return true;
+            }
+            if (!(o instanceof Complex)) {
+                return false;
+            }
+            Complex c = (Complex) o;
+
+            return Double.compare(real, c.real) == 0 && Double.compare(imag, c.imag) == 0;
+        }
+
+        public String toString() {
+            String sign = imag < 0 ? " - " : " + ";
+            return "(" + real + sign + Math.abs(imag) + "i)";
+        }
+
+        public static void main(String[] args) {
+            Complex a = Complex(1, 0);
+            Complex b = Complex(1, 0);
+
+            if (a.equals(b)) {
+                System.out.println ("'a' equals 'b'.");
+            } else {
+                System.out.println ("'a' and 'b' are not equal.");
+            }
+            System.out.println ("'a' = " + a);
+            System.out.println ("'b' = " + b);
+        }
+    }
 
 The class :term:`overrides <run-time polymorphism>` the definitions of ``equals()`` and ``toString()`` 
 providing a more generally useful implementation than provided by the default
@@ -337,7 +505,7 @@ The output is:
 
 
 Compile-time Polymorphism
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 In procedural languages without overloading, it was common to have many functions
 with similar names to perform essentially the same task on different data types.
@@ -355,33 +523,36 @@ of taking the absolute value of a number.  The burden is on the programmer
 of the various ``*abs()`` functions to ensure the correct function is used
 with the appropriate type.
 
-Overloading is a powerful tool, but there are pitfalls.
-Consider the following snippet.
-What does the following program print?
+.. TL: I commented this out as it has a fairly involved use of generics, which
+.. may be confusing to the students as we haven't covered generics yet
 
-.. codeinclude:: Introduction/DataStructureGroup
+.. Overloading is a powerful tool, but there are pitfalls.
+.. Consider the following snippet.
+.. What does the following program print?
 
-You might expect the program to print:
+.. .. codeinclude:: Introduction/DataStructureGroup
 
-.. line-block::
-   ``"List"``
-   ``"Queue"``
-   ``"Unknown group"``
+.. You might expect the program to print:
+
+.. .. line-block::
+..    ``"List"``
+..    ``"Queue"``
+..    ``"Unknown group"``
 
 
-It does not. Why?
+.. It does not. Why?
 
-Because ``group`` is overloaded and the **compiler** determines which
-function to invoke.  For all three types the compile-time type
-of the parameter passed to ``group`` is the same: ``Collection<?>``.
-The type changes at run-time, but this has no effect on overloading.
+.. Because ``group`` is overloaded and the **compiler** determines which
+.. function to invoke.  For all three types the compile-time type
+.. of the parameter passed to ``group`` is the same: ``Collection<?>``.
+.. The type changes at run-time, but this has no effect on overloading.
 
-Keep in mind that overriding methods is far more common in Java than
-overloading, so consider your use of overloading carefully.
+.. Keep in mind that overriding methods is far more common in Java than
+.. overloading, so consider your use of overloading carefully.
 
 
 Abstraction
-~~~~~~~~~~~
+-----------
 
 One of the key advantages of object oriented languages over :term:`procedural` languages is that
 objects act as metaphors for the real-world |---| in other words, objects *model* the real world.

@@ -93,6 +93,15 @@
       "java4python/dataStructuresIO" : {},
       "java4python/conditionals": {},
       "java4python/loopsanditeration": {}
+    },
+    "Intro to Java III: Classes": {
+      "java4python/definingclasses": {},
+      "MHC/javaInfo": {},
+      "MHC/scoping": {}
+    },
+    "Object Oriented Programming I: Inheritance": {
+      "javajavajava/inheritance_intro": {},
+      "javajavajava/inheritance_java": {}
     }
   }
 }
