@@ -160,8 +160,9 @@ examples shown in the table we will use a string variable called “str”
 ========================== ==================================== =============================================================
                     Python                     Java                                                   Description
 ========================== ==================================== =============================================================
-                ``str[3]``        ``str.charAt(3)``             Return character in 3rd  position
-              ``str[2:4]``   ``str.substring(2,4)``             Return substring from 2nd up to but not including 4th
+                ``str[3]``        ``str.charAt(3)``             Return character in index 3 (remember strings are 0-indexed, so this is the 4th character)
+              ``str[2:4]``   ``str.substring(2,4)``             Return substring from index 2 up to but not including index 4
+              ``str[2:]``   ``str.substring(2)``                Return substring from index 2 to the end of the string
               ``len(str)``         ``str.length()``             Return the length of the string
          ``str.find('x')``     ``str.indexOf('x')``             Find the first occurrence of x
            ``str.split()``      ``str.split('\s')``             Split the string on whitespace into a list/array of strings
