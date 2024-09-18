@@ -104,6 +104,7 @@
       "javajavajava/inheritance_java": {}
     },
     "Object Oriented Programming II: Abstract Classes": {
+      "javajavajava/polymorphism_abstract" : {},
       "Design/ADT": {
         "IntroADTSumm": {
           "threshold": 4
