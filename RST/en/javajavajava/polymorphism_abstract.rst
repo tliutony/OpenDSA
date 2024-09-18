@@ -419,7 +419,9 @@ To do this, ``Animal`` subclasses will now ``extend`` the ``Animal`` class and `
 .. code-block:: java
 
     public class Cat extends Animal implements Speakable {
-        public Cat() { super("cat"); }
+        public Cat() { 
+            super("cat"); 
+        }
 
         public String speak() {
             return "meow";
@@ -431,7 +433,9 @@ To do this, ``Animal`` subclasses will now ``extend`` the ``Animal`` class and `
     }
 
     public class Cow extends Animal implements Speakable {
-        public Cow() { super("cow"); }
+        public Cow() { 
+            super("cow"); 
+        }
 
         public String speak() {
             return "moo";
@@ -484,8 +488,22 @@ the following code segment will produce the same results as in the previous sect
     System.out.println(animal.toString()); // A cat goes meow
 
 Although the design is different, both approaches produce the same result.
-We will put off, for now, the question of how one decides whether to use an abstract method or a Java interface.
-We will get to this question in later sections.
+
+.. NOTE: this was adapted from Java, Java, Java section 8.7.8
+Interfaces or Abstract Classes
+------------------------------
+
+With this Animal example, we see that you can get the same functionality from an 
+abstract interface and from an abstract superclass method. 
+When should we put the abstract method in the superclass and when does it belong in an interface?
+
+One important distinction is that Java interfaces provides a means of associating useful methods with a variety of different types of objects, leading to a more flexible object-oriented design.
+Methods defined in an interface exist independently of a particular class hierarchy. By their very nature, interfaces can be attached to any class, which makes them very flexible to use.
+
+Another useful guideline for answering this question is that the superclass should contain the basic shared attributes and methods that define a certain type of object. 
+Thus, when we define methods as abstract in a superclass, they should contribute in a fundamental way toward the basic definition of that type of object, not merely toward one of its **roles** or its functionality.
+
+.. We see this with our Animal example...
 
 .. <exercises>
 .. <exercise label="animalsInterface">
