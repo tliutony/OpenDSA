@@ -104,44 +104,13 @@
       "javajavajava/inheritance_java": {}
     },
     "Object Oriented Programming II: Abstract Classes": {
-      "Design/ADT": {
-        "IntroADTSumm": {
-          "threshold": 4
-        }
-      }
+      "javajavajava/polymorphism_abstract" : {}
     },
-    "Algorithm Analysis and Inputs": {
+    "Algorithm Analysis": {
       "Background/IntroDSA": {},
-      "AlgAnal/AnalPrelim": {
-        "AnalPrelimSumm": {
-          "threshold": 4
-        }
-      },
-      "AlgAnal/AnalIntro": {
-        "CompareGrowth": {
-          "points": 2,
-          "threshold": 3
-        },
-        "GrowthRatesPRO": {
-          "threshold": 3
-        }
-      },
-      "AlgAnal/AnalAsymptotic": {
-        "UpperBoundsSumm": {
-          "threshold": 4
-        }
-      },
-      "AlgAnal/AnalProgram": {
-        "binarySearchPRO": {
-          "exer_options": {
-            "JXOP-code": "none"
-          },
-          "points": 1,
-          "threshold": 1
-        }
-      },
-      "Tutorials/scanning": {},
-      "AlgAnal/AlgAnalSummCS2": {}
+      "MHC/algoIntro" : {},
+      "MHC/algoCompare" : {},
+      "MHC/algoAsymptotic": {}
     },
     "List Interface and Array based Lists": {
       "List/ListADT": {

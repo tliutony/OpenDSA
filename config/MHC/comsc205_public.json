@@ -102,6 +102,9 @@
     "Object Oriented Programming I: Inheritance": {
       "javajavajava/inheritance_intro": {},
       "javajavajava/inheritance_java": {}
+    },
+    "Object Oriented Programming II: Abstract Classes": {
+      "javajavajava/polymorphism_abstract" : {}
     }
   }
 }
