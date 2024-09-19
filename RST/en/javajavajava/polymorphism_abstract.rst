@@ -572,8 +572,8 @@ We would see the following output:
     Come here, Spot!
 
 Another useful guideline for deciding between an abstract method and an interface is that the superclass should contain the basic shared attributes and methods that define a certain type of object. 
-Thus, when we define methods as abstract in a superclass, they should contribute in a fundamental way toward the basic definition of that type of object, not merely toward one of its **roles** or its functionality. In the case of our Animal class example, we may prefer to have the `speak()` method
-be defined in an interface as opposed to being defined as an abstract method in `Animal` as not all animals make noise! We might have a ``Fish`` class that extends ``Animal`` but does not implement ``Speakable``:
+Thus, when we define methods as abstract in a superclass, they should contribute in a fundamental way toward the basic definition of that type of object, not merely toward one of its **roles** or its functionality. In the case of our Animal class example, we may prefer to have the ``speak()`` method
+be defined in an interface as opposed to being defined as an abstract method in ``Animal`` as not all animals make noise! We might have a ``Fish`` class that extends ``Animal`` but does not implement ``Speakable``:
 
 .. code-block:: java
 
