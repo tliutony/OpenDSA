@@ -554,7 +554,7 @@ If we then run the following main method:
 
             arr[0] = new Cow();
             arr[1] = new VoiceAssistant("Siri");
-            arr[2] = new DogOwner("Spot");
+            arr[2] = new DogOwner("Bode");
 
             for (int i = 0; i < arr.length; i++) {
                 System.out.println(arr[i].speak());
@@ -569,7 +569,7 @@ We would see the following output:
 
     moo
     Hi, my name is Siri and I am your virtual assistant. How can I help?
-    Come here, Spot!
+    Come here, Bode!
 
 Another useful guideline for deciding between an abstract method and an interface is that the superclass should contain the basic shared attributes and methods that define a certain type of object. 
 Thus, when we define methods as abstract in a superclass, they should contribute in a fundamental way toward the basic definition of that type of object, not merely toward one of its **roles** or its functionality. In the case of our Animal class example, we may prefer to have the ``speak()`` method
