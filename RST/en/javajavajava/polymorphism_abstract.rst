@@ -118,7 +118,7 @@ which is inherited from the ``Animal`` class.
 .. TODO confirm this is the change we want
 Note that  ``kind`` is declared as a ``private`` variable -- if ``kind`` had been declared
 ``public``, it would be inherited by subclasses but it would also be 
-accessible to every other class, a violation of the information hiding principle.
+accessible to every other class, which would be an undesired exposure of information that should be hidden.
 
 .. it is inherited by all ``Animal`` subclasses but hidden from all other classes.
 
@@ -372,8 +372,7 @@ The difference between implementing a method from an interface and from an abstr
 an abstract superclass but it **implements** an interface.
 
 
-To see how this works,
-we will provide an alternative design for our animal hierarchy.
+To see how this works, we will provide an alternative design for our animal hierarchy.
 Rather than defining ``speak()`` as an abstract method within the ``Animal`` superclass, we will define it as an abstract method in the ``Speakable`` interface, which individual subclasses will implement. 
 See how we define the interface in the code below:
 
@@ -396,7 +395,7 @@ See how we define the interface in the code below:
     }
 
 Note the differences between this definition of ``Animal`` and the previous definition.
-This version no longer contains the abstract ``speak()`` method.
+This version no longer contains the abstract ``speak()`` method, as well as a modified ``toString()`` method.
 Therefore, the class itself is not an abstract class. The ``speak()`` method is 
 not declared in this class, and we instead leave that functionality for the subclasses
 ``Cow`` and ``Cat`` to implement directly. 
@@ -467,15 +466,17 @@ In this case there is only one -- the ``speak()`` method.
 
 In this approach, we allow the ``Cat`` and ``Cow`` subclasses to implement the 
 ``Speakable`` interface and override the ``toString()`` method. 
-The base class Animal only defines general behavior common to all animals, such as identifying their ``kind``, as not all animals speak (Worms and fish are animals, but what do they say?). 
+The base class Animal only defines general behavior common to all animals, such as identifying their ``kind``, as not all animals speak (worms and fish are animals, but what do they say?). 
 The subclasses are responsible for overriding the speak() method and incorporating that behavior into their own toString() implementation.
 
 As defined above, a ``Cat``, by virtue of extending  the ``Animal`` class and 
 implementing the ``Speakable`` interface, is both an ``Animal`` and a ``Speakable``.
 
 In general, a class that implements an interface, has that interface as one of its types.
-Interface implementation is itself a form of inheritance. A Java class can be a direct subclass of only one superclass.
-But it can implement any number of interfaces.
+Interface implementation is itself a form of inheritance. A Java class can be a direct subclass of only one superclass. But it can implement any number of interfaces.
+
+.. note::
+    A key distinction between extending a superclass and implementing an interface is that a class can implement multiple interfaces.
 
 Given these definitions of the ``Cow`` and ``Cat`` subclasses,
 the following code segment will produce the same results as in the previous section.
@@ -498,12 +499,123 @@ abstract interface and from an abstract superclass method.
 When should we put the abstract method in the superclass and when does it belong in an interface?
 
 One important distinction is that Java interfaces provides a means of associating useful methods with a variety of different types of objects, leading to a more flexible object-oriented design.
-Methods defined in an interface exist independently of a particular class hierarchy. By their very nature, interfaces can be attached to any class, which makes them very flexible to use.
+Methods defined in an interface exist independently of a particular class hierarchy. By their very nature, interfaces can be attached to any class, which makes them very flexible to use. 
+For example, we may have classes otherwise unrelated to ``Animal`` implement the ``Speakable`` interface, providing us a useful way to associate the functionality of a variety of objects:
 
-Another useful guideline for answering this question is that the superclass should contain the basic shared attributes and methods that define a certain type of object. 
-Thus, when we define methods as abstract in a superclass, they should contribute in a fundamental way toward the basic definition of that type of object, not merely toward one of its **roles** or its functionality.
+.. code-block:: java
+    :linenos:
 
-.. We see this with our Animal example...
+    public class Cow extends Animal implements Speakable {
+        public Cow() { 
+            super("cow"); 
+        }
+
+        public String speak() {
+            return "moo";
+        }
+
+        public String toString() {
+            return super.toString() + " and I go " + speak();
+        }
+    }
+
+    public class VoiceAssistant implements Speakable {
+        private String name;
+
+        public VoiceAssistant(String name) {
+            this.name = name;
+        }
+
+        public String speak() {
+            return "Hi, my name is " + name + " and I am your virtual assistant. How can I help?";
+        }
+    }
+
+    public class DogOwner implements Speakable {
+        private String dogName;
+
+        public DogOwner(String dogName) {
+            this.dogName = dogName;
+        }
+
+        public String speak() {
+            return "Come here, " + dogName + "!";
+        }
+    }
+
+If we then run the following main method:
+
+.. code-block:: java
+    :linenos:
+
+    public class Main {
+        public static void main(String[] args) {
+            Speakable[] arr = new Speakable[3];
+
+            arr[0] = new Cow();
+            arr[1] = new VoiceAssistant("Siri");
+            arr[2] = new DogOwner("Spot");
+
+            for (int i = 0; i < arr.length; i++) {
+                System.out.println(arr[i].speak());
+            }
+        }
+    }
+
+
+We would see the following output:
+
+.. code-block:: java
+
+    moo
+    Hi, my name is Siri and I am your virtual assistant. How can I help?
+    Come here, Spot!
+
+Another useful guideline for deciding between an abstract method and an interface is that the superclass should contain the basic shared attributes and methods that define a certain type of object. 
+Thus, when we define methods as abstract in a superclass, they should contribute in a fundamental way toward the basic definition of that type of object, not merely toward one of its **roles** or its functionality. In the case of our Animal class example, we may prefer to have the `speak()` method
+be defined in an interface as opposed to being defined as an abstract method in `Animal` as not all animals make noise! We might have a ``Fish`` class that extends ``Animal`` but does not implement ``Speakable``:
+
+.. code-block:: java
+
+    public class Fish extends Animal {
+        public Fish() { 
+            super("fish"); 
+        }
+
+        public String toString() {
+            return super.toString() + " and I swim but don't speak";
+        }
+    }
+
+Our previous design where ``speak()`` was an abstract method in the ``Animal`` class would have forced us to unnaturally have our ``Fish`` class implement ``speak()``. We can then
+organize and group various ``Animal`` objects together in our data structures,
+regardless of whether they speak or not:
+
+.. code-block:: java
+    :linenos:
+
+    public class Main {
+        public static void main(String[] args) {
+            Animal[] arr = new Animal[3];
+
+            arr[0] = new Cow();
+            arr[1] = new Cat();
+            arr[2] = new Fish();
+
+            for (int i = 0; i < arr.length; i++) {
+                System.out.println(arr[i]);
+            }
+        }
+    }
+
+
+.. code-block:: java
+
+    // Output
+    I am a cow and I go moo
+    I am a cat and I go meow
+    I am a fish and I swim but don't speak
+
 
 .. <exercises>
 .. <exercise label="animalsInterface">
