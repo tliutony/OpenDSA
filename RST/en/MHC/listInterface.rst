@@ -164,13 +164,15 @@ One way to do this in Java is to store data values of type
         // Removes the first occurrence of the specified element from this list, if it is present.
         public boolean remove (Object o);
 
-        // Returns true if this list contains the specified element.
-        public boolean contains (Object o);
-
-        // Returns the index of the first occurrence of the specified element in this list,
-        // or -1 if this list does not contain the element.
-        int indexOf (Object o);
     }
+
+.. TL note: I removed these two methods from the interface because they will require some discussion of .equals()
+.. // Returns true if this list contains the specified element.
+.. public boolean contains (Object o);
+
+.. // Returns the index of the first occurrence of the specified element in this list,
+.. // or -1 if this list does not contain the element.
+.. int indexOf (Object o);
 
 Languages that support generics, like Java, give more control over the element types. Here is the same interface but with generics:
 
@@ -180,7 +182,7 @@ Languages that support generics, like Java, give more control over the element t
 
         public void set (int index, E o);
         
-        public E get (int index)
+        public E get (int index);
         
         public int size();
         
@@ -191,10 +193,6 @@ Languages that support generics, like Java, give more control over the element t
         public E remove (int index);
         
         public boolean remove (E o);
-        
-        public boolean contains (E o);
-        
-        public int indexOf (E o);
     }
 
 

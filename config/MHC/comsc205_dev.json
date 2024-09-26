@@ -114,17 +114,7 @@
     },
     "List Interface and Array based Lists": {
       "MHC/listInterface": {},
-      "List/ListArray": {
-        "AlistRemovePRO": {
-          "threshold": 4
-        },
-        "AlistInsertPRO": {
-          "threshold": 3
-        },
-        "ALSumm": {
-          "threshold": 3
-        }
-      }
+      "MHC/listArray": {}
     },
     "Linked Lists I: Pointers": {
       "PointersJava/PointerIntro": {},
