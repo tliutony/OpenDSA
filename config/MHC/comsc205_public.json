@@ -105,6 +105,12 @@
     },
     "Object Oriented Programming II: Abstract Classes": {
       "javajavajava/polymorphism_abstract" : {}
+    },
+    "Algorithm Analysis": {
+      "Background/IntroDSA": {},
+      "MHC/algoIntro" : {},
+      "MHC/algoCompare" : {},
+      "MHC/algoAsymptotic": {}
     }
   }
 }

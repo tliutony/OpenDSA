@@ -113,12 +113,7 @@
       "MHC/algoAsymptotic": {}
     },
     "List Interface and Array based Lists": {
-      "List/ListIntro": {},
-      "List/ListADT": {
-        "List ADT Programming Exercise": {
-          "points": 1
-        }
-      },
+      "MHC/listInterface": {},
       "List/ListArray": {
         "AlistRemovePRO": {
           "threshold": 4
