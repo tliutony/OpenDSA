@@ -113,6 +113,7 @@
       "MHC/algoAsymptotic": {}
     },
     "List Interface and Array based Lists": {
+      "MHC/generics": {},
       "MHC/listInterface": {},
       "MHC/listArray": {}
     },
