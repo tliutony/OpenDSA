@@ -71,10 +71,12 @@ we want; it's just that keeping the elements sorted is not an inherent
 property of being a list.)
 
 Each list element must have some data type.
+
 .. In the simple list implementations discussed in this chapter, all
 .. elements of the list are usually assumed to have the same data type,
 .. although there is no conceptual objection to lists whose elements have
 .. differing data types if the application requires it.
+
 The operations defined as part of the list **interface** do not
 depend on the elemental **data type**.
 For example, the list interface can be used for lists of integers, lists of
@@ -214,6 +216,7 @@ Languages that support generics, like Java, give more control over the element t
 
 The ``MHCList`` member methods allow you to build a list with elements
 in any desired order, and to access any desired position in the list.
+
 .. You might notice that the ``clear`` method is a "convenience" method,
 .. since it could be implemented by means of the other
 .. member functions in the same asymptotic time.

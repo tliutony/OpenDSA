@@ -32,7 +32,7 @@ non-object primitives ended up with Object versions.
 In older versions of Java, it was the programmers responsibility to
 convert back and forth from a primitive to an object whenever necessary.
 This process of converting a primitive to an object was called
-“boxing.” The reverse process is called “unboxing.” In Java 5, the
+“boxing.” The reverse process is called “unboxing.” In Java 5 and onwards, the
 compiler became smart enough to know when to convert back and forth for us automatically 
 and is called “autoboxing”:
 
