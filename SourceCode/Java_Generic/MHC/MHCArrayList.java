@@ -65,7 +65,7 @@ public class MHCArrayList<E> implements MHCList<E> {
         size++; // We've added an element, increase the size of the list
     }
 
-/* *** ODSATag: MHCArrayListAddPos *** */
+    /* *** ODSATag: MHCArrayListAddPos *** */
     // Inserts the specified element at the specified position in this list.
     public void add(int position, E o) {
         if (position < 0 || position > size) {
@@ -83,7 +83,7 @@ public class MHCArrayList<E> implements MHCList<E> {
         elements[position] = o;
         size++; // We've added an element, increase the size of the list
     }
-/* *** ODSAendTag: MHCArrayListAddPos *** */
+    /* *** ODSAendTag: MHCArrayListAddPos *** */
 
     // Removes the element at the specified position in this list, and returns it.
     public E remove(int position) {

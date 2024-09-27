@@ -17,13 +17,16 @@ Array-Based List Implementation
 Full Implementation
 -------------------
 
-Here is an implementation for the array-based list, named ``MHCArrayList``.
+Below is a complete implementation for the array-based list, named ``MHCArrayList``.
 ``MHCArrayList`` must implement all of the methods of the ``MHCList`` interface.
+
+.. note::
+
+    We provide the full implementation for completeness, but we will focusing on only a few methods
+    in the following sections.
 
 .. codeinclude:: MHC/MHCArrayList
    :tag: MHCArrayList
-
-.. TODO modify examples here
 
 .. inlineav:: alistVarsCON ss
    :long_name: Array-based List Variables Slideshow
@@ -43,8 +46,8 @@ Accessing elements using get()
    :keyword: Array-based List
 
 
-Adding elements using add()
----------------------------
+Adding elements to a given position
+-----------------------------------
 
 Because the array-based list implementation is defined to store list
 elements in contiguous cells of the array, the ``add`` and ``remove`` 
@@ -57,62 +60,57 @@ methods must maintain this property.
    :output: show
 
 
+add() Interactive Exericse
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. avembed:: Exercises/List/AlistInsertPRO.html ka
+   :long_name: Array-based List Insert Exercise
+   :keyword: Array-based List
+
+Adding elements to end of list
+------------------------------
+
 .. note::
 
     Notice that we can define two methods named ``add()`` with different behaviors. 
     That's because the two methods have different parameters, so Java can differentiate between which method is being called by the parameter types being passed in.
     This is known as **overloading**.
 
-.. Insert Practice Exericse
-.. ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. .. avembed:: Exercises/List/AlistInsertPRO.html ka
-..    :long_name: Array-based List Insert Exercise
-..    :keyword: Array-based List
+.. inlineav:: alistAppendCON ss
+   :long_name: Array-based List Append Slideshow
+   :links: AV/List/alistCON.css
+   :scripts: AV/List/alistAppendCON.js
+   :output: show
+   :keyword: Array-based List
 
-
-.. Append and Remove
-.. -----------------
-
-.. .. inlineav:: alistAppendCON ss
-..    :long_name: Array-based List Append Slideshow
-..    :links: AV/List/alistCON.css
-..    :scripts: AV/List/alistAppendCON.js
-..    :output: show
-..    :keyword: Array-based List
-
-.. Removing an element from the head of the list is
-.. similar to insert in that all remaining elements  must shift toward
-.. the head by one position to fill in the gap.
-.. If we want to remove the element at position :math:`i`, then
-.. :math:`n - i - 1` elements must shift toward the head, as shown in the
-.. following slideshow. 
-
-.. .. inlineav:: alistRemoveCON ss
-..    :long_name: Array-based List Remove
-..    :links: AV/List/alistCON.css
-..    :scripts: AV/List/alistRemoveCON.js
-..    :output: show
-..    :keyword: Array-based List
-
-.. In the average case, insertion or removal each requires moving half
-.. of the elements, which is :math:`\Theta(n)`.
+Removing elements at a given position
+-------------------------------------
 
 
-.. Remove Practice Exericise
-.. ~~~~~~~~~~~~~~~~~~~~~~~~~
+Removing an element from the beginning of the list is
+similar to ``add()`` in that all remaining elements  must shift toward
+the beginning by one position to fill in the gap.
+If we want to remove the element at position :math:`i`, then
+:math:`n - i - 1` elements must shift toward the head, as shown in the
+following widget. 
 
-.. .. avembed:: Exercises/List/AlistRemovePRO.html ka
-..    :long_name: Array-based List Remove Exercise
-..    :keyword: Array-based List
+.. inlineav:: alistRemoveCON ss
+   :long_name: Array-based List Remove
+   :links: AV/List/alistCON.css
+   :scripts: AV/List/alistRemoveCON.js
+   :output: show
+   :keyword: Array-based List
 
-.. Aside from ``insert`` and ``remove``, the only other operations that
-.. might require more than constant time are the constructor and
-.. ``clear``.
-.. The other methods for Class ``AList`` simply
-.. access the current list element or move the current position.
-.. They all require :math:`\Theta(1)` time.
+In the average case, insertion or removal each requires moving half
+of the elements, which is :math:`O(n/2) = O(n)`.
 
+remove() Interactive Exericse
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. avembed:: Exercises/List/AlistRemovePRO.html ka
+   :long_name: Array-based List Remove Exercise
+   :keyword: Array-based List
 
 .. Array-based List Practice Questions
 .. -----------------------------------

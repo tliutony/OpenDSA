@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html data-require="jsav math AlistInsertPRO">
   <head>
-    <title>Array-Based List Insertion Proficiency Exercise</title>
+    <title>Array-Based List Insertion</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
     <script src="../../khan-exercises/local-only/main.js" ></script>
     <style>
@@ -28,15 +28,15 @@
         <div id="AlistInsertPROp"> <!-- Supresses answer box -->
           <p class="problem">Your task in this exercise is to show the
             behavior for array-based list insertion.
-            In the array displayed below, the "current" position is
+            In the array displayed below, the position is
             <b><var>insert_pos</var></b>.</p>
           <div class="question">
             <p>The value to insert is <b><var>insert_value</var></b>,
-              and it is to be inserted into the "current" position.</p>
+              and it is to be inserted into the given position.</p>
             <p>To move an element, click on it (to highlight it), then
               click on where you want it to go. You can insert the new
               value <b><var>insert_value</var></b> into a highlighted
-              array position by clicking the "Insert" button.</p>
+              array spot by clicking the "Insert" button.</p>
             <input id="reset" type="button" value="Reset" />
             <input id="insert" type="button" value="Insert" />
             <div id="AlistInsertPRO" class="jsavcanvas"></div>
@@ -51,12 +51,12 @@
             </div>
           </div>
           <div class="hints">
-            <p>To shift elements after "current" one position to the
+            <p>To shift elements after <code>position</code> by one to the
               right, the first step could be swapping element
               <var>arr_size - 1</var> with position <var>arr_size</var></p>
             <p>Then, keep swapping element i with i+1 until you make
-              "current" empty for insertion </p>
-            <p>Insert value to "current" position</p>
+              position empty for insertion </p>
+            <p>Insert value to position</p>
           </div>
         </div>
       </div>

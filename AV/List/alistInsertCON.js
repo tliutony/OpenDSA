@@ -70,6 +70,16 @@ $(document).ready(function() {
 
   // Slide 3
   av.umsg(interpret("sc3"));
+  pseudo.setCurrentLine("validPos");
+  av.step();
+
+  // Slide 4
+  av.umsg(interpret("sc4"));
+  pseudo.setCurrentLine("validSize");
+  av.step();
+
+  // Slide 5
+  av.umsg(interpret("sc5"));
   // shift all existing elements one position to the right
   var i;
   for (i = arr.size(); i >= 0; i--) {
@@ -86,8 +96,8 @@ $(document).ready(function() {
   pseudo.highlight("forbody");
   av.step();
 
-  // Slide 4
-  av.umsg(interpret("sc4"));
+  // Slide 6
+  av.umsg(interpret("sc6"));
   arr.value(0, 23);
   arr.highlight([0]);
   arrow2.hide();
@@ -96,16 +106,16 @@ $(document).ready(function() {
   pseudo.setCurrentLine("insert");
   av.step();
 
-  // Slide 5
-  av.umsg(interpret("sc5"));
+  // Slide 7
+  av.umsg(interpret("sc7"));
   pseudo.setCurrentLine("incr");
   arr.unhighlight([0]);
   arrLS.highlight(0);
   arrLS.value(0, 6);
   av.step();
 
-  // Slide 6
-  av.umsg(interpret("sc6"));
+  // Slide 8
+  av.umsg(interpret("sc8"));
   pseudo.setCurrentLine(0);
   av.recorded();
 });

@@ -17,14 +17,14 @@ $(document).ready(function() {
                          {"arrow-end": "classic-wide-long",
                           opacity: 100, "stroke-width": 2});
   arrow1.hide();
-  var label = av.label("Append 23", {before: arr,
+  var label = av.label("Add 23", {before: arr,
                                      left: 140, top: -20}).hide();
 
   var arrMS = av.ds.array([8], {indexed: false, left: 100, top: 85});
-  var labelMaxSize = av.label("maxSize", {before: arrMS, left: 33, top: 89});
+  var labelMaxSize = av.label("capacity", {before: arrMS, left: 33, top: 89});
 
   var arrLS = av.ds.array([5], {indexed: false, left: 100, top: 120});
-  var labelListSize = av.label("listSize", {before: arrLS, left: 42, top: 124});
+  var labelListSize = av.label("size", {before: arrLS, left: 42, top: 124});
 
   // Slide 1
   av.umsg(interpret("sc1"));
@@ -53,6 +53,7 @@ $(document).ready(function() {
   // Slide 4
   av.umsg(interpret("sc4"));
   pseudo.setCurrentLine("assign");
+  pseudo.highlight("size");
   arrLS.value(0, 6);
   arrMS.unhighlight(0);
   arr.value(5, "23");

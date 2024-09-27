@@ -30,19 +30,19 @@ $(document).ready(function() {
                           opacity: 0, "stroke-width": 2});
 
   //arrays "it", "curr", and "listSize" for holding data fields
-  var arrIt = av.ds.array([""], {indexed: false, left: leftMargin + (nodeWidth + 2) * 3,
+  var arrIt = av.ds.array([""], {indexed: false, left: leftMargin + (nodeWidth + 2) * 4,
                                  top: theTop + 70});
-  var labelIt = av.label("it", {before: arrIt, left: 85, top: theTop + 75});
+  var labelIt = av.label("removedElement", {before: arrIt, left: 5, top: theTop + 75});
   arrIt.hide();
   labelIt.hide();
 
   var arrCurr = av.ds.array([1], {indexed: false,
-                                  left: leftMargin + (nodeWidth + 2) * 3, top: theTop + 105});
-  av.label("curr", {before: arrCurr, left: 68, top: theTop + 110});
+                                  left: leftMargin + (nodeWidth + 2) * 4, top: theTop + 105});
+  av.label("position", {before: arrCurr, left: 48, top: theTop + 110});
 
   var arrSize = av.ds.array([5], {indexed: false,
-                                 left: leftMargin + (nodeWidth + 2) * 3, top: theTop + 140});
-  av.label("listSize", {before: arrCurr, left: 46, top: theTop + 145});
+                                 left: leftMargin + (nodeWidth + 2) * 4, top: theTop + 140});
+  av.label("size", {before: arrCurr, left: 46, top: theTop + 145});
 
   // Slide 1
   av.umsg(interpret("sc1"));

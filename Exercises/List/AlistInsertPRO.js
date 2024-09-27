@@ -88,8 +88,8 @@
 
     // Set up the display
     av = new JSAV("AlistInsertPRO");
-    av.ds.array([inPosition], {left: 45, top: 85}); // Array for "curr"
-    av.label("curr", {left: 10, top: 90});
+    av.ds.array([inPosition], {left: 55, top: 85}); // Array for "curr"
+    av.label("position", {left: 0, top: 90});
 
     // (Re-)initialize the displayed array object
     jsavArr = av.ds.array(cloneArr, {indexed: true, center: false, top: 20, left: 5});
