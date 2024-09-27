@@ -161,41 +161,24 @@ One way to do this in Java is to store data values of type
         // Removes the element at the specified position in this list, and returns it.
         public Object remove (int index);
 
-        // Removes the first occurrence of the specified element from this list, if it is present.
-        public boolean remove (Object o);
 
     }
 
-.. TL note: I removed these two methods from the interface because they will require some discussion of .equals()
+.. TL note: I removed these methods from the interface because they will require some discussion of .equals()
+.. // Removes the first occurrence of the specified element from this list, if it is present.
+.. public boolean remove (Object o);
 .. // Returns true if this list contains the specified element.
 .. public boolean contains (Object o);
-
 .. // Returns the index of the first occurrence of the specified element in this list,
 .. // or -1 if this list does not contain the element.
 .. int indexOf (Object o);
 
 Languages that support generics, like Java, give more control over the element types. Here is the same interface but with generics:
 
-.. code-block:: java
-
-    public interface MHCList<E> {
-
-        public void set (int index, E o);
-        
-        public E get (int index);
-        
-        public int size();
-        
-        public void add (E o);
-        
-        public void add (int index, E o);
-        
-        public E remove (int index);
-        
-        public boolean remove (E o);
-    }
-
-
+.. codeinclude:: MHC/MHCList
+   :tag: MHCList
+   
+|
 
 .. The comments given with each member function describe what it is
 .. intended to do.
@@ -239,7 +222,7 @@ A list can be iterated through as follows:
 
 .. code-block:: java
     
-    List theList; // assume theList is initialized
+    MHCList theList; // assume theList is initialized
     Object curElement;
 
     for (int i = 0; i < theList.size(); i++) {

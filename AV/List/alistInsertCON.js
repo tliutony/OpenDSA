@@ -34,16 +34,20 @@ $(document).ready(function() {
   // Create the graphics for maxSize and listSize variables
   var arrMS = av.ds.array([8], {indexed: false, left: 100, top: 90});
   arrMS.hide();
-  var labelMaxSize = av.label("maxSize", {left: 33, top: 94});
+  var labelMaxSize = av.label("capacity", {left: 33, top: 94});
   labelMaxSize.hide();
   var arrLS = av.ds.array([5], {indexed: false, left: 100, top: 125});
   arrLS.hide();
-  var labelListSize = av.label("listSize", {left: 42, top: 129});
+  var labelListSize = av.label("size", {left: 42, top: 129});
   labelListSize.hide();
   var arrCurr = av.ds.array([0], {indexed: false, left: 100, top: 160});
   arrCurr.hide();
-  var labelCurr = av.label("curr", {left: 63, top: 164});
+  var labelCurr = av.label("position", {left: 42, top: 164});
   labelCurr.hide();
+
+  //Buffer for size hack
+  var hidden = av.label("position", {left: 42, top: 200});
+  hidden.hide();
 
   // Slide 1
   av.umsg(interpret("sc1"));
