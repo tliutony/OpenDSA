@@ -28,6 +28,11 @@ Below is a complete implementation for the array-based list, named ``MHCArrayLis
 .. codeinclude:: MHC/MHCArrayList
    :tag: MHCArrayList
 
+.. note::
+
+    Make sure to click through all the animations until the green check mark shows up to see all the content!
+
+
 .. inlineav:: alistVarsCON ss
    :long_name: Array-based List Variables Slideshow
    :links: AV/List/alistCON.css
