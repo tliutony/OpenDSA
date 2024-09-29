@@ -51,7 +51,7 @@ Accessing elements using get()
    :keyword: Array-based List
 
 
-Adding elements to a given position
+Adding elements to a given position: add(int index, E o)
 -----------------------------------
 
 Because the array-based list implementation is defined to store list
@@ -72,8 +72,8 @@ add() Interactive Exericse
    :long_name: Array-based List Insert Exercise
    :keyword: Array-based List
 
-Adding elements to end of list
-------------------------------
+Adding elements to end of list: add(E o)
+----------------------------------------
 
 .. note::
 
@@ -89,8 +89,8 @@ Adding elements to end of list
    :output: show
    :keyword: Array-based List
 
-Removing elements at a given position
--------------------------------------
+Removing elements at a given position: remove(int position)
+-----------------------------------------------------------
 
 
 Removing an element from the beginning of the list is

@@ -28,8 +28,8 @@
       "tags": {
         "sig": 2,
         "check": 4,
-        "assign": 5,
-        "size": 6
+        "assign": 7,
+        "size": 9
       }
     }],
     "c++": [{

@@ -23,7 +23,7 @@ $(document).ready(function() {
   arrow1.hide();
 
   // Label in step 1
-  var label = av.label("Insert 23", {left: arrow1_x - 16, top: -20}).hide();
+  var label = av.label("Add 23", {left: arrow1_x - 16, top: -20}).hide();
 
   //horizontal arrow in step 2
   var arrow2 = av.g.line(leftMargin + 50, 25, leftMargin + 150, 25,

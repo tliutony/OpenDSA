@@ -1,7 +1,7 @@
 {
   "translations" :{
     "en": {
-      "sc1": "Class <code>MHCArrayList</code> stores the list elements in the first <code>size</code> contiguous array positions. In this example, <code>size</code> is 5.",
+      "sc1": "Class <code>MHCArrayList</code> stores the list elements in the first <code>size</code> contiguous array positions. In this example, <code>size</code> is 5 and <code>capacity</code> is 8.",
       "sc2": "Array positions correspond to list positions. In other words, the element at position $i$ in the list is stored at array cell $i$. Here, the element at position 3 in the list (and index 3 in the array) is highlighted.",
       "sc3": "Note that the list begins indexing at position 0, like arrays.",
       "sc4": "Random access to any element in the list is quite easy. Given some position $i$ in the list, the value of the element in that position can be accessed directly through <code>get(i)</code>.",
