@@ -12,18 +12,20 @@ public class MHCArrayList<E> implements MHCList<E> {
     private int size;    // Current number of elements in the list
     /* *** ODSAendTag: MHCArrayListVars *** */
 
+    /* *** ODSATag: MHCArrayListConstructor *** */
     // Constructor
     @SuppressWarnings("unchecked") // Generic array allocation
     public MHCArrayList(int capacity) {
         this.capacity = capacity;
         size = 0;
-        elements = (E[]) new Object[capacity];  // Create elements
+        elements = (E[]) new Object[capacity];  // Initialize elements
     }
-
+    
     // Create a list with the default capacity
     public MHCArrayList() {
         this(DEFAULT_CAPACITY);  // Just call the other constructor
     }  
+    /* *** ODSAendTag: MHCArrayListConstructor *** */
 
     // Replaces the element at the specified position in this list with the specified element.
     public void set(int position, E o) {

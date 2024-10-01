@@ -28,10 +28,23 @@ Below is a complete implementation for the array-based list, named ``MHCArrayLis
 .. codeinclude:: MHC/MHCArrayList
    :tag: MHCArrayList
 
+
+How ArrayLists internally represent data
+----------------------------------------
+
 .. note::
 
     Make sure to click through all the animations until the green check mark shows up to see all the content!
 
+.. inlineav:: alistIntroCON ss
+   :long_name: Array-based List Intro Slideshow
+   :links: AV/List/alistCON.css
+   :scripts: AV/List/alistIntroCON.js
+   :output: show
+   :keyword: Array-based List
+
+Instance variables and constructors
+------------------------------------
 
 .. inlineav:: alistVarsCON ss
    :long_name: Array-based List Variables Slideshow
@@ -40,15 +53,48 @@ Below is a complete implementation for the array-based list, named ``MHCArrayLis
    :output: show
    :keyword: Array-based List
 
-Accessing elements using get()
-------------------------------------
 
-.. inlineav:: alistIntroCON ss
-   :long_name: Array-based List Intro Slideshow
-   :links: AV/List/alistCON.css
-   :scripts: AV/List/alistIntroCON.js
-   :output: show
-   :keyword: Array-based List
+
+Below are the constructors for our ``MHCArrayList`` class:
+
+.. codeinclude:: MHC/MHCArrayList
+   :tag: MHCArrayListConstructor
+
+If we look at the first constructor, we initialize the ``capacity`` of the ArrayList to the specified parameter. Because the programmer is creating a 
+new ``MHCArrayList`` object, there are no data elements stored within it and so the ``size`` of the list begins at 0.
+
+You'll notice that there is something a little unusual going on in the initialization of the ``elements`` array:
+
+.. code-block:: java
+
+   elements = (E[]) new Object[capacity];  // Initialize elements
+
+
+Since the type ``E`` is generic, we actually cannot instantiate an array of type ``E``. 
+We instead have to create an array of ``Object`` and **cast** or "convert" it to a type of ``E[]``, which is done with the parentheses: ``(E[])``. 
+
+.. note::
+
+   We generally want to avoid using casting and instead use polymorphism to work with classes and subclasses. This is one of the few times we'll see casting this semester!
+
+
+You'll also notice a line that begins with ``@`` above the constructor, which is called an **annotation**:
+
+.. code-block:: java
+   
+   @SuppressWarnings("unchecked") // Generic array allocation
+
+We include this because the Java compiler knows that casting to an unknown type ``E[]`` is a risky operation, so it will display a warning message if we compile the code.
+The annotation tells Java not to worry, and that we really do want to make this cast. But this again goes to show that casting should be used sparingly, if at all!
+
+Finally, you'll notice that we have another constructor declared that does not take any parameters. Instead, it uses the ``this`` keyword to call the first constructor to create
+a new ``MHCArrayList`` object with ``DEFAULT_CAPACITY``:
+
+.. code-block:: java
+
+   public MHCArrayList() {
+      this(DEFAULT_CAPACITY);  // Just call the other constructor
+   }  
 
 
 Adding elements to a given position: add(int index, E o)
