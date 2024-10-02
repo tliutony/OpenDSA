@@ -113,22 +113,9 @@
       "MHC/algoAsymptotic": {}
     },
     "List Interface and Array based Lists": {
-      "List/ListADT": {
-        "List ADT Programming Exercise": {
-          "points": 1
-        }
-      },
-      "List/ListArray": {
-        "AlistRemovePRO": {
-          "threshold": 4
-        },
-        "AlistInsertPRO": {
-          "threshold": 3
-        },
-        "ALSumm": {
-          "threshold": 3
-        }
-      }
+      "MHC/generics": {},
+      "MHC/listInterface": {},
+      "MHC/listArray": {}
     },
     "Linked Lists I: Pointers": {
       "PointersJava/PointerIntro": {},
@@ -152,7 +139,6 @@
       "PointersJava/PointersCM": {},
       "PointersJava/Exercises": {},
       "PointersJava/LinkedChains": {},
-      "List/ListIntro": {},
       "List/ListLinked": {
         "LlistRemovePRO": {
           "points": 2

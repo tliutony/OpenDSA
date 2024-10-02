@@ -23,7 +23,7 @@ $(document).ready(function() {
   arrow1.hide();
 
   // Label in step 1
-  var label = av.label("Insert 23", {left: arrow1_x - 16, top: -20}).hide();
+  var label = av.label("Add 23", {left: arrow1_x - 16, top: -20}).hide();
 
   //horizontal arrow in step 2
   var arrow2 = av.g.line(leftMargin + 50, 25, leftMargin + 150, 25,
@@ -34,16 +34,20 @@ $(document).ready(function() {
   // Create the graphics for maxSize and listSize variables
   var arrMS = av.ds.array([8], {indexed: false, left: 100, top: 90});
   arrMS.hide();
-  var labelMaxSize = av.label("maxSize", {left: 33, top: 94});
+  var labelMaxSize = av.label("capacity", {left: 33, top: 94});
   labelMaxSize.hide();
   var arrLS = av.ds.array([5], {indexed: false, left: 100, top: 125});
   arrLS.hide();
-  var labelListSize = av.label("listSize", {left: 42, top: 129});
+  var labelListSize = av.label("size", {left: 42, top: 129});
   labelListSize.hide();
   var arrCurr = av.ds.array([0], {indexed: false, left: 100, top: 160});
   arrCurr.hide();
-  var labelCurr = av.label("curr", {left: 63, top: 164});
+  var labelCurr = av.label("position", {left: 42, top: 164});
   labelCurr.hide();
+
+  //Buffer for size hack
+  var hidden = av.label("position", {left: 42, top: 200});
+  hidden.hide();
 
   // Slide 1
   av.umsg(interpret("sc1"));
@@ -66,6 +70,16 @@ $(document).ready(function() {
 
   // Slide 3
   av.umsg(interpret("sc3"));
+  pseudo.setCurrentLine("validPos");
+  av.step();
+
+  // Slide 4
+  av.umsg(interpret("sc4"));
+  pseudo.setCurrentLine("validSize");
+  av.step();
+
+  // Slide 5
+  av.umsg(interpret("sc5"));
   // shift all existing elements one position to the right
   var i;
   for (i = arr.size(); i >= 0; i--) {
@@ -82,8 +96,8 @@ $(document).ready(function() {
   pseudo.highlight("forbody");
   av.step();
 
-  // Slide 4
-  av.umsg(interpret("sc4"));
+  // Slide 6
+  av.umsg(interpret("sc6"));
   arr.value(0, 23);
   arr.highlight([0]);
   arrow2.hide();
@@ -92,16 +106,16 @@ $(document).ready(function() {
   pseudo.setCurrentLine("insert");
   av.step();
 
-  // Slide 5
-  av.umsg(interpret("sc5"));
+  // Slide 7
+  av.umsg(interpret("sc7"));
   pseudo.setCurrentLine("incr");
   arr.unhighlight([0]);
   arrLS.highlight(0);
   arrLS.value(0, 6);
   av.step();
 
-  // Slide 6
-  av.umsg(interpret("sc6"));
+  // Slide 8
+  av.umsg(interpret("sc8"));
   pseudo.setCurrentLine(0);
   av.recorded();
 });

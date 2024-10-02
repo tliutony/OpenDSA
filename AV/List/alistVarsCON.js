@@ -41,13 +41,13 @@ $(document).ready(function() {
   av.step();
 
   // Slide 7
-  av.umsg(interpret("sc7"));
-  pseudo.setCurrentLine("curr");
-  av.step();
+  // av.umsg(interpret("sc7"));
+  // pseudo.setCurrentLine("curr");
+  // av.step();
 
-  // Slide 8
-  av.umsg(interpret("sc8"));
+  // Slide 7
+  av.umsg(interpret("sc7"));
   pseudo.setCurrentLine(0);    // Clear highlighting
-  pseudo.unhighlight("curr");
+  pseudo.unhighlight("listSize");
   av.recorded();
 });

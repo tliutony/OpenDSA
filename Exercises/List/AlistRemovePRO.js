@@ -80,9 +80,9 @@
     av = new JSAV("AlistRemovePRO");
     // (Re-)initialize the displayed array object
     jsavArr = av.ds.array(cloneArr, {indexed: true, center: false, top: 20, left: 1});
-    av.ds.array([delPosition], {left: 45, top: 90});
-    av.label("curr", {left: 10, top: 95});
-    returnArr = av.ds.array(["null"], {left: 45, top: 125});
+    av.ds.array([delPosition], {left: 50, top: 90});
+    av.label("position", {left: 0, top: 95});
+    returnArr = av.ds.array(["null"], {left: 50, top: 125});
     av.label("return", {left: 1, top: 130});
     av.displayInit();
     av.recorded();

@@ -1,11 +1,12 @@
 {
   "translations" :{
     "en": {
-      "sc1": "Class <code>AList</code> stores the list elements in the first <code>listSize</code> contiguous array positions. In this example, <code>listSize</code> is 5.",
-      "sc2": "Array positions correspond to list positions. In other words, the element at position $i$ in the list is stored at array cell $i$. Here, the element at position 3 in the list (and index 3 in the array) is highlighted.",
-      "sc3": "The head of the list is always at position 0.",
-      "sc4": "Random access to any element in the list is quite easy. Given some position in the list, the value of the element in that position can be accessed directly.",
-      "sc5": "Thus, access to any element using the <code>moveToPos</code> method followed by the <code>getValue</code> method takes constant time."
+      "sc1": "<code>ArrayList</code>s store list elements internally within an array. Specifically, if there are <code>size</code> elements to store, the list places them in the first <code>size</code> contiguous array positions. Here, <code>size</code> is 5.",
+      "sc2": "This array intentionally is bigger than what we need initially, so we can store more data if needed. We call this total amount the <code>capacity</code> of the List. In this example, <code>capacity</code> is 8.",
+      "sc3": "Array positions correspond to list positions. In other words, the element at position $i$ in the list is stored at array cell $i$. Here, the element at position 3 in the list (and index 3 in the array) is highlighted.",
+      "sc4": "Note that the list begins indexing at position 0, like arrays.",
+      "sc5": "It is important to note that the space occupied by the data in the List, which are the first <code>size=5</code> elements...",
+      "sc6": "...is separate from the total <code>capacity=8</code> of the array, which provides space for potentially 3 more elements."
     }
   }
 }

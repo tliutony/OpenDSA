@@ -7,7 +7,7 @@
 }
 
 #alistIntroCON {
-  height: 190px;
+  height: 250px;
 }
 
 #alistIntroCON .jsavoutput.jsavline {
@@ -15,12 +15,12 @@
 }
 
 #alistInsertCON {
-  height: 320px;
+  height: 480px;
 }
 
 #alistInsertCON .jsavcode {
   margin-left: 285px;
-  width: 560px;
+  width: 600px;
 }
 
 #alistInsertCON .jsavlabel{
@@ -32,12 +32,12 @@
 }
 
 #alistAppendCON {
-  height: 270px;
+  height: 350px;
 }
 
 #alistAppendCON .jsavcode {
-  margin-left: 350px;
-  width: 400px;
+  margin-left: 285px;
+  width: 500px;
 }
 
 #alistAppendCON .jsavoutput.jsavline {
@@ -45,7 +45,7 @@
 }
 
 #alistRemoveCON {
-  height: 350px;
+  height: 480px;
 }
 
 #alistRemoveCON .jsavcode {
