@@ -118,27 +118,7 @@
       "MHC/listArray": {}
     },
     "Linked Lists I: Pointers": {
-      "PointersJava/PointerIntro": {},
-      "PointersJava/BasicPointers1": {},
-      "PointersJava/BasicPointers2": {
-        "PointerEX2PRO": {
-          "threshold": 1
-        },
-        "PointerEX1PRO": {
-          "threshold": 1
-        }
-      },
-      "PointersJava/Syntax": {},
-      "PointersJava/LocalMem": {},
-      "PointersJava/Links1": {
-        "PointerEX3PRO": {
-          "threshold": 1
-        }
-      },
-      "PointersJava/Links2": {},
-      "PointersJava/PointersCM": {},
-      "PointersJava/Exercises": {},
-      "PointersJava/LinkedChains": {},
+      "MHC/references": {},
       "List/ListLinked": {
         "LlistRemovePRO": {
           "points": 2
