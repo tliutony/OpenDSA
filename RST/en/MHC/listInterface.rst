@@ -163,7 +163,11 @@ One way to do this in Java is to store data values of type
         // Removes the element at the specified position in this list, and returns it.
         public Object remove (int index);
 
+        // Returns true if this list contains no elements.
+        public boolean isEmpty();
 
+        // Returns a string representation of the list elements.
+        public String toString();
     }
 
 .. TL note: I removed these methods from the interface because they will require some discussion of .equals()

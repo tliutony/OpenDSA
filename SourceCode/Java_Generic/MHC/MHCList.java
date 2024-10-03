@@ -12,5 +12,9 @@ public interface MHCList<E> {
     public void add (int index, E o);
     
     public E remove (int index);
+
+    public boolean isEmpty();
+
+    public String toString();
 }
 /* *** ODSAendTag: MHCList *** */

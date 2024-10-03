@@ -104,5 +104,25 @@ public class MHCArrayList<E> implements MHCList<E> {
         
         return removedElement;
     }
+
+    public boolean isEmpty() {
+        return this.size == 0;
+    }
+
+    // Returns a string representation of the list elements
+    public String toString() {
+        // use square brackets to indicate beginning/end of list
+        String out = "[";
+        for(int i = 0; i < this.size; i++) {
+            out = out + this.elements[i].toString();
+
+            if (i < this.size - 1) {
+                out = out + ", "; // add a comma separator if this is not the last element
+            }
+        }
+        out = out + "]";
+
+        return out;
+    }
 }
 /* *** ODSAendTag: MHCArrayList *** */
