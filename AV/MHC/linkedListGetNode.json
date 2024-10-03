@@ -1,0 +1,28 @@
+{
+    "translations": {
+      "en": {
+        "sc1": "We'll find the node at index 2 with <code>getNode(2)</code>.",
+        "sc2": "First, we check if the index is valid.",
+        "sc3": "We then start our traversal at the <code>head</code> node.",
+        "sc4": "We walk the linked list until we get to the index we want.",
+        "sc5": "Then we return <code>nextNode</code>."
+      }
+    },
+    "code": {
+      "java_generic": [{
+        "url": "../../../SourceCode/Java_Generic/MHC/MHCLinkedList.java",
+        "lineNumbers": false,
+        "startAfter": "/* *** ODSATag: getNode *** */",
+        "endBefore": "/* *** ODSAendTag: getNode *** */",
+        "tags": {
+          "sig": 2,
+          "checkIndex": 3,
+          "nextNode": 7,
+          "for1": 8,
+          "for2": 9,
+          "for3": 10,
+          "return": 11
+        }
+      }]
+    }
+  }

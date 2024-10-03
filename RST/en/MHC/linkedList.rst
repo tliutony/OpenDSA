@@ -1,8 +1,8 @@
 Linked Lists
 ============
 
-Linked Lists
-------------
+Nodes
+-----
 
 In this module we present one of the two traditional implementations
 for lists, usually called a :term:`linked list`.
@@ -132,7 +132,7 @@ named ``MHCLinkedList``.
 
 .. note::
 
-    We'll go over the rest of the implementation in lecture and in Lab 5 this week!
+    We'll go over the rest of the implementation in lecture and in Lab 5!
 
 .. codeinclude:: MHC/MHCLinkedList
    :tag: MHCLinkedList
@@ -180,6 +180,37 @@ useful to first think about how to add to the beginning of the list, and also ho
    :scripts: AV/List/llist.js AV/MHC/linkedListAddAfter.js
    :output: show
    :keyword: Linked List   
+
+Linked List Traversal and getNode()
+-----------------------------------
+
+Unlike ArrayLists, we don't have direct access to elements at a specified index position.
+Instead, we have to traverse and walk down the Linked List to find the element at a position:
+
+.. inlineav:: linkedListGetNode ss
+   :long_name: Linked List getNode
+   :links: AV/List/llistCON.css
+   :scripts: AV/List/llist.js AV/MHC/linkedListGetNode.js
+   :output: show
+   :keyword: Linked List
+
+
+Linked List add(int position, E element)
+----------------------------------------
+
+Putting everything together, we can implement the List ``add(int position, E element)`` method:
+
+.. codeinclude:: MHC/MHCLinkedList
+   :tag: add
+
+
+.. .. inlineav:: linkedListAdd ss
+..    :long_name: Linked List add
+..    :links: AV/List/llistCON.css
+..    :scripts: AV/List/llist.js AV/MHC/linkedListAdd.js
+..    :output: show
+..    :keyword: Linked List
+
 
 .. Linked List Remove
 .. ------------------

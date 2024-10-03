@@ -80,6 +80,18 @@
   position: relative;
 }
 
+#linkedListGetNode .jsavcode{
+  top: 145px;
+  width: 600px;
+  position: relative;
+}
+
+#linkedListAdd .jsavcode{
+  top: 145px;
+  width: 600px;
+  position: relative;
+}
+
 #llistRemoveCON {
   height: 515px;
 }
