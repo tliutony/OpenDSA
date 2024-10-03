@@ -75,9 +75,10 @@ You just need to realize that assignment operations like
 ``b`` are arrays or objects,
 **which is different from the behavior that you get if** ``a`` **and**
 ``b`` **are primitive objects like int**.
-Assignments and parameters with arrays and objects are intrinsically
-shallow or shared |---|, which is discussed in the Shallow vs. Deep
-Copying section below.
+
+.. Assignments and parameters with arrays and objects are intrinsically
+.. shallow or shared |---|, which is discussed in the Shallow vs. Deep
+.. Copying section below.
 
 
 Referencing and Dereferencing
@@ -254,10 +255,7 @@ communication between parts of a program.
 Shallow and Deep Comparing: .equals() vs ==
 -------------------------------------------
 
-Related to copying correctly (shallow means to copy the reference
-itself, deep means to copy the object being referenced), 
-
-T different levels that we might use to compare things when objects are
+There are different levels that we might use to compare things when objects are
 involved.
 One possibility is that we just want to know if two reference
 variables are referencing the same object.

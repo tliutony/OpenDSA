@@ -19,7 +19,7 @@ Linked Lists
 
 In this module we present one of the two traditional implementations
 for lists, usually called a :term:`linked list`.
-The linked list uses :term:`dynamic memory allocation`,
+The linked list uses **dynamic memory allocation**,
 that is, it allocates memory for new list elements as needed.
 The following diagram illustrates the linked list concept.
 Here there are three :term:`nodes <node>` that

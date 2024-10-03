@@ -117,18 +117,9 @@
       "MHC/listInterface": {},
       "MHC/listArray": {}
     },
-    "Linked Lists I: Pointers": {
+    "Linked Lists I ": {
       "MHC/references": {},
-      "List/ListLinked": {
-        "LlistRemovePRO": {
-          "points": 2
-        }
-      },
-      "List/ListElement": {
-        "ListSumm": {
-          "threshold": 3
-        }
-      }
+      "MHC/linkedList": {}
     },
     "Linked Lists II: Doubly Linked": {
       "List/ListDouble": {},
@@ -139,15 +130,6 @@
         "LLSumm": {
           "points": 2,
           "threshold": 6
-        }
-      },
-      "List/ListSumm": {
-        "ListChapterSumm": {
-          "points": 2,
-          "threshold": 10
-        },
-        "ListdsSumm": {
-          "points": 2
         }
       }
     },

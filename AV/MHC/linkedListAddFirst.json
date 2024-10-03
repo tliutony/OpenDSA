@@ -1,0 +1,26 @@
+{
+    "translations": {
+      "en": {
+        "sc1": "Adding at the front of the list is relatively simple. Here we're adding 15.",
+        "sc2": "Create a new Node where its value is 15 and <code>next</code> points to the old head.",
+        "sc3": "On the same line, we update <code>head</code> to point to this new Node.",
+        "sc4": "Next, check if <code>tail</code> is null. If tail is null, that means that the list was previously empty, and so we would update tail to point to the same node as head.",
+        "sc5": "Finally, increase the list size by 1."
+      }
+    },
+    "code": {
+      "java_generic": [{
+        "url": "../../../SourceCode/Java_Generic/MHC/MHCLinkedList.java",
+        "lineNumbers": false,
+        "startAfter": "/* *** ODSATag: addFirst *** */",
+        "endBefore": "/* *** ODSAendTag: addFirst *** */",
+        "tags": {
+          "sig": 2,
+          "sethead": 3,
+          "nulltail": 5,
+          "numElements": 9
+        }
+      }]
+    }
+  }
+  
