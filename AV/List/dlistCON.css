@@ -2,6 +2,10 @@
   height: 95px;
 }
 
+#doubleLinkedListDiagram .jsavcanvas {
+  height: 95px;
+}
+
 #dlistInsertCON {
   height: 395px;
 }
@@ -16,6 +20,21 @@
   top: 130px;
 }
 
+#doubleLinkedListAddAfter {
+  height: 395px;
+}
+
+#doubleLinkedListAddAfter .jsavoutput.jsavline {
+  height: 20px;
+}
+
+#doubleLinkedListAddAfter .jsavcode{
+  width: 510px;
+  position: relative;
+  top: 130px;
+}
+
+
 #dlistAppendCON {
   height: 410px;
 }
@@ -26,6 +45,20 @@
 
 #dlistAppendCON .jsavcode{
   width: 510px;
+  position: relative;
+  top: 135px;
+}
+
+#doubleLinkedListAddLast {
+  height: 550px;
+}
+
+#doubleLinkedListAddLast .jsavoutput.jsavline {
+  height: 30px;
+}
+
+#doubleLinkedListAddLast .jsavcode{
+  width: 600px;
   position: relative;
   top: 135px;
 }
