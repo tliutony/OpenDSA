@@ -1,0 +1,32 @@
+{
+  "translations": {
+    "en": {
+      "sc1": "We are calling <code>addAfter(node, 15)</code>.",
+      "sc2": "If the node to insert after is the tail, we call <code>addLast(15)</code>.",
+      "sc3": "Otherwise, we create a new node with the value 15.",
+      "sc4": "Set the new node's <code>prev</code> field to point to <code>node</code>.",
+      "sc5": "Set the new node's <code>next</code> field to point to the <code>node</code>'s <code>next</code> field.",
+      "sc6": "Set the <code>node</code>'s <code>next</code> field to point to the new node.",
+      "sc7": "Set the node after the new node's <code>prev</code> field to point to the new node.",
+      "sc8": "Increase the list size by 1. This operation is O(1)!"
+    }
+  },
+  "code": {
+    "java_generic": [{
+      "url": "../../../SourceCode/Java_Generic/MHC/MHCDLinkedList.java",
+      "lineNumbers": false,
+      "startAfter": "/* *** ODSATag: addAfter *** */",
+      "endBefore": "/* *** ODSAendTag: addAfter *** */",
+      "tags": {
+        "sig": 1,
+        "ifTail": 2,
+        "newNode": 6,
+        "newSetPrev": 7,
+        "newSetNext": 8,
+        "nodeSetNext": 9,
+        "nextSetPrev": 10,
+        "numElements": 11
+      }
+    }]
+  }
+}

@@ -11,7 +11,7 @@ public class MHCDLinkedList<E> {
 
 /* *** ODSATag: addLast *** */
 private void addLast(E element) {
-    Node<E> newNode = new Node<>(element, null, null);
+    Node<E> newNode = new Node<>(element);
     // If the list is empty, the new node is both the head and tail
     if (head == null) {
         head = newNode;
@@ -26,6 +26,22 @@ private void addLast(E element) {
 }   
 /* *** ODSAendTag: addLast *** */
 
+/* *** ODSATag: addAfter *** */
+private void addAfter(Node<E> node, E value) {
+    if (node == tail) {
+        addLast(value);
+    }
+    else {
+        Node<E> newNode = new Node<E>(value);
+        newNode.setPrev(node);
+        newNode.setNext(node.getNext());
+        node.setNext(newNode);
+        newNode.getNext().setPrev(newNode);
+        numElements++;
+    }
+}
+/* *** ODSAendTag: addAfter *** */
+
     class Node<E> {
         private E data; // Value for this node
         private Node<E> next; // Pointer to next node in list
@@ -38,9 +54,10 @@ private void addLast(E element) {
             next = nextNode;
         }
     
-        Node(Node<E> prevNode, Node<E> nextNode) {
-            prev = prevNode;
-            next = nextNode;
+        Node(E element) {
+            data = element;
+            prev = null;
+            next = null;
         }
     
         // return the value held in Node

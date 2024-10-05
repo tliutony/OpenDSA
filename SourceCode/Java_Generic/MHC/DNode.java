@@ -12,9 +12,10 @@ class Node<E> {
         next = nextNode;
     }
 
-    Node(Node<E> prevNode, Node<E> nextNode) {
-        prev = prevNode;
-        next = nextNode;
+    Node(E element) {
+        data = element;
+        prev = null;
+        next = null;
     }
 
     // return the value held in Node

@@ -35,12 +35,16 @@ Node class implementation
 -------------------------
 
 Here is the complete implementation for a
-``DNode`` class to be used with doubly linked lists.
+``Node`` class to be used with doubly linked lists.
 This code is a little longer than that for the singly linked list node
 implementation since the doubly linked list nodes have an extra data member:
 
 .. codeinclude:: MHC/DNode
    :tag: DNode
+
+
+Note that the ``Node`` class is a generic class, so it can be used to store any type of data.
+Also notice that the ``Node`` class has a constructor that takes a single argument, which is the data to be stored in the node -- with this constructor, the ``prev`` and ``next`` variables are set to ``null``.
 
 addLast() implementation
 -------------------------
@@ -65,6 +69,13 @@ While the code for these methods might be a little longer than their
 singly linked list counterparts (since there is an extra pointer in
 each node to deal with), they tend to be easier to understand.
 
+.. inlineav:: doubleLinkedListAddAfter ss
+   :long_name: Doubly Linked List Add After
+   :links: DataStructures/DoubleLinkList.css AV/List/dlistCON.css
+   :scripts: DataStructures/DoubleLinkList.js AV/List/dlist.js AV/MHC/doubleLinkedListAddAfter.js
+   :output: show   
+   :keyword: Doubly Linked List
+
 .. inlineav:: dlistInsertCON ss
    :long_name: Doubly Linked List Insert
    :links: DataStructures/DoubleLinkList.css AV/List/dlistCON.css
@@ -75,8 +86,10 @@ each node to deal with), they tend to be easier to understand.
    
    
 
-Remove
-~~~~~~
+remove() a given node
+--------------------
+
+Here, we look at a slightly different ``remove`` method, where we pass in the node to be removed as an argument. This method demonstrates the benefit of maintaining a ``prev`` pointer in the node structure.
 
 .. inlineav:: dlistRemoveCON ss
    :long_name: Doubly Linked List Remove
@@ -84,14 +97,21 @@ Remove
    :scripts: DataStructures/DoubleLinkList.js AV/List/dlist.js AV/List/dlistRemoveCON.js
    :output: show
    :keyword: Doubly Linked List
-   
-   
-The primary disadvantage of the doubly linked list as compared to the
-singly linked list is the additional space used.
-The doubly linked list requires two pointers per node, and so in the
-implementation presented it requires twice as much overhead as
-the singly linked list.
 
+In a singly linked list, removing a node is not straightforward because you need to somehow locate the node before the node to be removed. This is not necessary in a doubly linked list, as you can directly access the previous node using the ``prev`` pointer.
+
+Summarizing list operation efficiency
+--------------------------------------
+
+Here's a summary of the efficiency of common operations for singly and doubly linked lists: TODO decide on which operations to include here
+
+.. Note that for singly linked lists, addLast and removeLast operations are O(n) because they require traversing the entire list to reach the last element. In contrast, doubly linked lists maintain a tail pointer, allowing these operations to be performed in constant time.
+.. Add at position and remove at position are O(n) for both list types because in the worst case, you might need to traverse the entire list to reach the desired position.
+
+You'll notice that the doubly linked list has the same efficiency or better for all operations. 
+The primary disadvantage of the doubly linked list as compared to the singly linked list is the additional space used.
+The doubly linked list requires two pointers per node, and so in the
+implementation presented it requires twice as much overhead as the singly linked list.
 
 .. Mangling Pointers
 .. ~~~~~~~~~~~~~~~~~
