@@ -116,6 +116,10 @@
       "MHC/generics": {},
       "MHC/listInterface": {},
       "MHC/listArray": {}
+    },
+    "Linked Lists I ": {
+      "MHC/references": {},
+      "MHC/linkedList": {}
     }
   }
 }

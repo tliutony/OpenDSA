@@ -231,26 +231,6 @@ communication between parts of a program.
 .. In the deep case, the smiley face is copied, and each method gets
 .. their own.
 
-.. .. _shallowdeepFig:
-
-.. .. inlineav:: shallowdeepCON dgm
-..    :links: AV/Pointers/shallowdeepCON.css
-..    :scripts: AV/Pointers/shallowdeepCON.js
-..    :align: center
-..    :keyword: Pointers
-
-.. |
-
-.. .. inlineav:: shallowdeepExampleCON ss
-..    :long_name: Shallow Deep Copy Slideshow
-..    :links: AV/Pointers/shallowdeepExampleCON.css
-..    :scripts: AV/Pointers/shallowdeepExampleCON.js
-..    :output: show
-..    :keyword: Pointers
-
-.. .. avembed:: Exercises/Pointers/PointerEX2PRO.html ka
-..    :keyword: Pointers
-
 
 Shallow and Deep Comparing: .equals() vs ==
 -------------------------------------------
@@ -314,11 +294,9 @@ Before that, the reference is bad and must not be used.
 In our memory drawings, the bad reference value is drawn as a diagonal
 line between the corners of the reference variable's box.
 
-.. _numptrxxxFig:
-
-.. inlineav:: empRefnullCON dgm
+.. inlineav:: empRefnullCON2 dgm
    :links: AV/Pointers/empRefnullCON.css
-   :scripts: AV/Pointers/empRefnullCON.js
+   :scripts: AV/Pointers/empRefnullCON2.js
    :align: center
    :keyword: Pointers
 
