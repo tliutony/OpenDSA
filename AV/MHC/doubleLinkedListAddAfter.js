@@ -68,7 +68,6 @@ $(document).ready(function() {
   newNode.edgeToPrev().show();
   av.step();
 
-
   // Slide 5
   av.umsg(interpret("sc5"));
   pseudo.setCurrentLine("newSetNext");

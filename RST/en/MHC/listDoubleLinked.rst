@@ -83,18 +83,20 @@ each node to deal with), they tend to be easier to understand.
    :output: show   
    :keyword: Doubly Linked List
 
-   
-   
 
 remove() a given node
 --------------------
 
 Here, we look at a slightly different ``remove`` method, where we pass in the node to be removed as an argument. This method demonstrates the benefit of maintaining a ``prev`` pointer in the node structure.
 
-.. inlineav:: dlistRemoveCON ss
+.. note::
+
+    We haven't shown how to implement ``removeFirst()`` and ``removeLast()`` methods for doubly linked lists. How would you implement them?
+
+.. inlineav:: doubleLinkedListRemoveNode ss
    :long_name: Doubly Linked List Remove
    :links: DataStructures/DoubleLinkList.css AV/List/dlistCON.css
-   :scripts: DataStructures/DoubleLinkList.js AV/List/dlist.js AV/List/dlistRemoveCON.js
+   :scripts: DataStructures/DoubleLinkList.js AV/List/dlist.js AV/MHC/doubleLinkedListRemoveNode.js
    :output: show
    :keyword: Doubly Linked List
 

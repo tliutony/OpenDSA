@@ -77,6 +77,20 @@
   top: 130px;
 }
 
+#doubleLinkedListRemoveNode {
+  height: 600px;
+}
+
+#doubleLinkedListRemoveNode .jsavoutput.jsavline {
+  height: 20px;
+}
+
+#doubleLinkedListRemoveNode .jsavcode{
+  width: 650px;
+  position: relative;
+  top: 130px;
+}
+
 #dlistPrevCON {
   height: 280px;
 }

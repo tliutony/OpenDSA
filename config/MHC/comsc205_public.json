@@ -120,6 +120,9 @@
     "Linked Lists I ": {
       "MHC/references": {},
       "MHC/linkedList": {}
+    },
+    "Linked Lists II: Doubly Linked": {
+      "MHC/listDoubleLinked": {}
     }
   }
 }

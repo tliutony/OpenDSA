@@ -42,6 +42,26 @@ private void addAfter(Node<E> node, E value) {
 }
 /* *** ODSAendTag: addAfter *** */
 
+/* *** ODSATag: removeNode *** */
+private void remove(Node<E> node) {
+    // If the node is the head, remove it by calling removeFirst()
+    if (head == node) { 
+        removeFirst(); 
+    }
+    // If the list has only one element, remove it by calling removeLast()
+    else if (head == tail) { 
+        removeLast(); 
+    }
+    // Otherwise, remove the node by updating its prev and next nodes
+    else {
+        node.getNext().setPrev(node.getPrev());
+        node.getPrev().setNext(node.getNext());
+        numElements--;
+    }
+}
+/* *** ODSAendTag: removeNode *** */
+
+
     class Node<E> {
         private E data; // Value for this node
         private Node<E> next; // Pointer to next node in list
