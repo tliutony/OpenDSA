@@ -23,13 +23,9 @@ linked list), and a second pointer to the "previous" node preceding it:
    :align: center
    :keyword: Doubly Linked List
 
-The most common reason to use a doubly linked list is
-because it is easier to implement than a singly linked list.
-While the code for the doubly linked operations tend to be a little longer
-than for the singly linked version, because we now maintain a previous and next pointer
-our methods become more "symmetric," which tends to make them easier to implement and debug. 
-Whether a list implementation is doubly or singly linked should
-be hidden from the ``List`` class user.
+While the code for the doubly linked operations tend to be a little longer than for the singly linked version, because we now maintain a previous and next pointer
+our methods become more "symmetric," which can make them easier to implement and debug. 
+Whether a list implementation is doubly or singly linked should be hidden from the ``List`` class user.
  
 Node class implementation
 -------------------------
@@ -63,7 +59,7 @@ Let's walk through the ``addLast()`` method for a doubly linked list.
 
 .. note::
 
-   It is important to get the new Node's ``prev`` set before we change what ``tail`` points to. In general, we should get the new Node's ``prev`` and ``next`` set **before** changing the pointers of nodes already in the list.
+   It is important to set the new Node's ``prev`` before we change what ``tail`` points to. In general, we should set the new Node's ``prev`` and ``next`` **before** changing the pointers of nodes already in the list.
 
 addAfter() implementation
 -------------------------
