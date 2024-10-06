@@ -13,9 +13,9 @@ The **singly linked list** allows
 for direct access from a list node only to the next node in the list.
 A **doubly linked list** allows convenient access from a list node
 to the next node and also to the preceding node on the list.
-The doubly linked list node accomplishes this in the obvious way by
-storing two pointers: one to the node following it (as in the singly
-linked list), and a second pointer to the node preceding it:
+The doubly linked list node accomplishes this by
+storing **two** pointers instead one: one to the "next" node following it (as in the singly
+linked list), and a second pointer to the "previous" node preceding it:
 
 .. inlineav:: doubleLinkedListDiagram dgm
    :links: DataStructures/DoubleLinkList.css AV/List/dlistCON.css
@@ -25,9 +25,9 @@ linked list), and a second pointer to the node preceding it:
 
 The most common reason to use a doubly linked list is
 because it is easier to implement than a singly linked list.
-While the code for the doubly linked implementation is a little longer
-than for the singly linked version, it tends to be a bit more
-"obvious" in its intention, and so easier to implement and debug.
+While the code for the doubly linked operations tend to be a little longer
+than for the singly linked version, because we now maintain a previous and next pointer
+our methods become more "symmetric," which tends to make them easier to implement and debug. 
 Whether a list implementation is doubly or singly linked should
 be hidden from the ``List`` class user.
  
@@ -61,25 +61,19 @@ Let's walk through the ``addLast()`` method for a doubly linked list.
    :keyword: Doubly Linked List
 
 
+.. note::
+
+   It is important to get the new Node's ``prev`` set before we change what ``tail`` points to. In general, we should get the new Node's ``prev`` and ``next`` set **before** changing the pointers of nodes already in the list.
+
 addAfter() implementation
 -------------------------
 
 The following illustrates the ``addAfter()`` method for a doubly linked list.
-While the code for these methods might be a little longer than their
-singly linked list counterparts (since there is an extra pointer in
-each node to deal with), they tend to be easier to understand.
 
 .. inlineav:: doubleLinkedListAddAfter ss
    :long_name: Doubly Linked List Add After
    :links: DataStructures/DoubleLinkList.css AV/List/dlistCON.css
    :scripts: DataStructures/DoubleLinkList.js AV/List/dlist.js AV/MHC/doubleLinkedListAddAfter.js
-   :output: show   
-   :keyword: Doubly Linked List
-
-.. inlineav:: dlistInsertCON ss
-   :long_name: Doubly Linked List Insert
-   :links: DataStructures/DoubleLinkList.css AV/List/dlistCON.css
-   :scripts: DataStructures/DoubleLinkList.js AV/List/dlist.js AV/List/dlistInsertCON.js
    :output: show   
    :keyword: Doubly Linked List
 

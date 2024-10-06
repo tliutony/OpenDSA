@@ -155,7 +155,7 @@ One way to do this in Java is to store data values of type
         public int size();
 
         // Appends the specified element to the end of this list.
-        public void add (Object o); 
+        public boolean add (Object o); 
 
         // Inserts the specified element at the specified position in this list.
         public void add (int index, Object o);

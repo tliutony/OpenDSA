@@ -58,13 +58,16 @@ public class MHCArrayList<E> implements MHCList<E> {
     }
 
     // Appends the specified element to the end of this list.
-    public void add(E o) {
+    public boolean add(E o) {
         // If the array is full, make it bigger.
         if (size >= capacity) {
             grow();
         }
         elements[size] = o;
         size++; // We've added an element, increase the size of the list
+        
+        // indicate that the add was successful
+        return true;
     }
 
     /* *** ODSATag: MHCArrayListAddPos *** */
