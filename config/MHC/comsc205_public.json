@@ -111,6 +111,18 @@
       "MHC/algoIntro" : {},
       "MHC/algoCompare" : {},
       "MHC/algoAsymptotic": {}
+    },
+    "List Interface and Array based Lists": {
+      "MHC/generics": {},
+      "MHC/listInterface": {},
+      "MHC/listArray": {}
+    },
+    "Linked Lists I ": {
+      "MHC/references": {},
+      "MHC/linkedList": {}
+    },
+    "Linked Lists II: Doubly Linked": {
+      "MHC/listDoubleLinked": {}
     }
   }
 }

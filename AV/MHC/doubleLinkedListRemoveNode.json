@@ -1,0 +1,31 @@
+{
+  "translations": {
+    "en": {
+      "sc1": "Now we will look at the remove method. Here is the linked list before we remove <code>node</code> with value 8.",
+      "sc2": "If <code>node</code> is the head, we call <code>removeFirst()</code>.",
+      "sc3": "If the list has only one element, we call <code>removeLast()</code>.",
+      "sc4": "Otherwise, we proceed by modifying the <code>prev</code> and <code>next</code> of the nodes surrounding <code>node</code>.",
+      "sc5": "The \"next\" node's <code>prev</code> field is set to point to <code>node.getPrev()</code>.",
+      "sc6": "The \"previous\" node's <code>next</code> field is set to point to <code>node.getNext()</code>.",
+      "sc7": "Since <code>node</code> is no longer pointed to by any other node, it is no longer part of the list.",
+      "sc8": "Finally, decrement number of elements by 1."
+    }
+  },
+  "code": {
+    "java_generic": [{
+      "url": "../../../SourceCode/Java_Generic/MHC/MHCDLinkedList.java",
+      "lineNumbers": false,
+      "startAfter": "/* *** ODSATag: removeNode *** */",
+      "endBefore": "/* *** ODSAendTag: removeNode *** */",
+      "tags": {
+        "sig": 1,
+        "headCheck": 3,
+        "tailCheck": 7,
+        "else": 11,
+        "setNextsPrev": 12,
+        "setPrevsNext": 13,
+        "numElements": 14
+      }
+    }]
+  }
+}

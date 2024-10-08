@@ -117,59 +117,12 @@
       "MHC/listInterface": {},
       "MHC/listArray": {}
     },
-    "Linked Lists I: Pointers": {
-      "PointersJava/PointerIntro": {},
-      "PointersJava/BasicPointers1": {},
-      "PointersJava/BasicPointers2": {
-        "PointerEX2PRO": {
-          "threshold": 1
-        },
-        "PointerEX1PRO": {
-          "threshold": 1
-        }
-      },
-      "PointersJava/Syntax": {},
-      "PointersJava/LocalMem": {},
-      "PointersJava/Links1": {
-        "PointerEX3PRO": {
-          "threshold": 1
-        }
-      },
-      "PointersJava/Links2": {},
-      "PointersJava/PointersCM": {},
-      "PointersJava/Exercises": {},
-      "PointersJava/LinkedChains": {},
-      "List/ListLinked": {
-        "LlistRemovePRO": {
-          "points": 2
-        }
-      },
-      "List/ListElement": {
-        "ListSumm": {
-          "threshold": 3
-        }
-      }
+    "Linked Lists I ": {
+      "MHC/references": {},
+      "MHC/linkedList": {}
     },
     "Linked Lists II: Doubly Linked": {
-      "List/ListDouble": {},
-      "List/ListAnalysis": {
-        "ListOverhead": {
-          "threshold": 3
-        },
-        "LLSumm": {
-          "points": 2,
-          "threshold": 6
-        }
-      },
-      "List/ListSumm": {
-        "ListChapterSumm": {
-          "points": 2,
-          "threshold": 10
-        },
-        "ListdsSumm": {
-          "points": 2
-        }
-      }
+      "MHC/listDoubleLinked": {}
     },
     "Program Design and Debugging I": {
       "Tutorials/debugmethods": {},

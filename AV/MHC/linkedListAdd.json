@@ -1,0 +1,28 @@
+{
+    "translations": {
+      "en": {
+        "sc1": "We'll first add to the beginning of the list: <code>add(0, 42)</code>.",
+        "sc2": "Like always, we check if the index is valid.",
+        "sc3": "If the index is 0, we can call our <code>addFirst()</code> method.",
+        "sc4": "We walk the linked list until we get to the index we want.",
+        "sc5": "Then we return <code>nextNode</code>."
+      }
+    },
+    "code": {
+      "java_generic": [{
+        "url": "../../../SourceCode/Java_Generic/MHC/MHCLinkedList.java",
+        "lineNumbers": false,
+        "startAfter": "/* *** ODSATag: add *** */",
+        "endBefore": "/* *** ODSAendTag: add *** */",
+        "tags": {
+          "sig": 2,
+          "checkIndex": 3,
+          "addFirst": 7,
+          "for1": 8,
+          "for2": 9,
+          "for3": 10,
+          "return": 11
+        }
+      }]
+    }
+  }

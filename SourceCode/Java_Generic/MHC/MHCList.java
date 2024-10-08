@@ -7,10 +7,14 @@ public interface MHCList<E> {
     
     public int size();
     
-    public void add (E o);
+    public boolean add (E o);
     
     public void add (int index, E o);
     
     public E remove (int index);
+
+    public boolean isEmpty();
+
+    public String toString();
 }
 /* *** ODSAendTag: MHCList *** */

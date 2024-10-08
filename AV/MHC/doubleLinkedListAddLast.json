@@ -1,0 +1,32 @@
+{
+  "translations": {
+    "en": {
+      "sc1": "We will add the value 15 to the end of the list.",
+      "sc2": "Create a new <code>Node</code> with value 15 and null for both the <code>next</code> and <code>prev</code> fields.",
+      "sc3": "If the list is empty, the new node is both the head and tail.",
+      "sc4": "Otherwise, the new node will be the new tail.",
+      "sc5": "Set the <code>next</code> field of the current tail to point to the new node.",
+      "sc6": "Set the <code>prev</code> field of the new node to point to the current tail.",
+      "sc7": "Set the <code>tail</code> pointer to the new node.",
+      "sc8": "Increase the list size by 1."
+    }
+  },
+  "code": {
+    "java_generic": [{
+      "url": "../../../SourceCode/Java_Generic/MHC/MHCDLinkedList.java",
+      "lineNumbers": false,
+      "startAfter": "/* *** ODSATag: addLast *** */",
+      "endBefore": "/* *** ODSAendTag: addLast *** */",
+      "tags": {
+        "sig": 1,
+        "createNode": 2,
+        "ifEmpty": 4,
+        "newTail": 7,
+        "setNext": 9,
+        "setPrev": 10,
+        "updateTail": 11,
+        "numElements": 13
+      }
+    }]
+  }
+}

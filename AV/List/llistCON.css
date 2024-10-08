@@ -69,6 +69,29 @@
   width: 510px;
 }
 
+#linkedListAddFirst .jsavcode{
+  margin-left: 338px;
+  width: 510px;
+}
+
+#linkedListAddAfter .jsavcode{
+  top: 145px;
+  width: 600px;
+  position: relative;
+}
+
+#linkedListGetNode .jsavcode{
+  top: 145px;
+  width: 600px;
+  position: relative;
+}
+
+#linkedListAdd .jsavcode{
+  top: 145px;
+  width: 600px;
+  position: relative;
+}
+
 #llistRemoveCON {
   height: 515px;
 }

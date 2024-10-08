@@ -31,13 +31,13 @@ $(document).ready(function() {
   av.step();
 
   // Slide 5
-  av.umsg(interpret("sc5"));
-  pseudo.setCurrentLine("curr");
-  av.step();
+  // av.umsg(interpret("sc5"));
+  // pseudo.setCurrentLine("curr");
+  // av.step();
 
   // Slide 6
   av.umsg(interpret("sc6"));
-  pseudo.setCurrentLine("listSize");
+  pseudo.setCurrentLine("numElements");
   av.step();
 
   // Slide 7

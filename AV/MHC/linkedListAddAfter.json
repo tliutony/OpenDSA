@@ -1,0 +1,29 @@
+{
+    "translations": {
+      "en": {
+        "sc1": "The linked list before addAfter(). 15 is the value to be added, and <code>node</code> is the Node we want to add after.",
+        "sc2": "Create a new Node with value 15.",
+        "sc3": "The <code>next</code> field of the new list node is assigned to point to what <code>node.getNext()</code> points to.",
+        "sc4": "<code>node</code>'s <code>next</code> field is assigned to point to the new Node.",
+        "sc5": "The new Node is in its correct position in the list.",
+        "sc6": "We check if <code>node</code> was the same as the <code>tail</code> node, note the == ! If so, we also need to update <code>tail</code>.",
+        "sc7": "Finally, increase the list size by 1."
+      }
+    },
+    "code": {
+      "java_generic": [{
+        "url": "../../../SourceCode/Java_Generic/MHC/MHCLinkedList.java",
+        "lineNumbers": false,
+        "startAfter": "/* *** ODSATag: addAfter *** */",
+        "endBefore": "/* *** ODSAendTag: addAfter *** */",
+        "tags": {
+          "sig": 2,
+          "newNode": 3,
+          "setNext": 4,
+          "checkTail": 5,
+          "numElements": 8
+        }
+      }]
+    }
+  }
+  

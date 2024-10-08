@@ -155,7 +155,7 @@ One way to do this in Java is to store data values of type
         public int size();
 
         // Appends the specified element to the end of this list.
-        public void add (Object o); 
+        public boolean add (Object o); 
 
         // Inserts the specified element at the specified position in this list.
         public void add (int index, Object o);
@@ -163,7 +163,11 @@ One way to do this in Java is to store data values of type
         // Removes the element at the specified position in this list, and returns it.
         public Object remove (int index);
 
+        // Returns true if this list contains no elements.
+        public boolean isEmpty();
 
+        // Returns a string representation of the list elements.
+        public String toString();
     }
 
 .. TL note: I removed these methods from the interface because they will require some discussion of .equals()

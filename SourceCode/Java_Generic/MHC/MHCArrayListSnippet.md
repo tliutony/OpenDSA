@@ -23,7 +23,7 @@ public void add(int position, E o) {
 ```java
 /* *** ODSATag: MHCArrayListAddEnd *** */
 // Appends the specified element to the end of this list.
-public void add(E o) {
+public boolean add(E o) {
   // If the array is full, make it bigger.
   if (size >= capacity) {
       grow();
@@ -31,6 +31,9 @@ public void add(E o) {
   elements[size] = o;
   // We've added an element, increase the size of the list
   size++; 
+
+  // indicate that the add was successful
+  return true;
 }
 /* *** ODSAendTag: MHCArrayListAddEnd *** */
 ```
