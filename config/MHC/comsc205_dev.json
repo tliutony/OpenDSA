@@ -122,16 +122,7 @@
       "MHC/linkedList": {}
     },
     "Linked Lists II: Doubly Linked": {
-      "MHC/listDoubleLinked": {},
-      "List/ListAnalysis": {
-        "ListOverhead": {
-          "threshold": 3
-        },
-        "LLSumm": {
-          "points": 2,
-          "threshold": 6
-        }
-      }
+      "MHC/listDoubleLinked": {}
     },
     "Program Design and Debugging I": {
       "Tutorials/debugmethods": {},

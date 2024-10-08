@@ -95,12 +95,32 @@ In a singly linked list, removing a node is not straightforward because you need
 Summarizing list operation efficiency
 --------------------------------------
 
-Here's a summary of the efficiency of common operations for singly and doubly linked lists: TODO decide on which operations to include here
+Here's a summary of the efficiency some operations for singly and doubly linked lists:
 
-.. Note that for singly linked lists, addLast and removeLast operations are O(n) because they require traversing the entire list to reach the last element. In contrast, doubly linked lists maintain a tail pointer, allowing these operations to be performed in constant time.
-.. Add at position and remove at position are O(n) for both list types because in the worst case, you might need to traverse the entire list to reach the desired position.
+.. table:: Efficiency of List Operations
+   :widths: auto
 
-You'll notice that the doubly linked list has the same efficiency or better for all operations. 
+   +--------------+------------------+------------------+
+   | Operation    | Singly Linked    | Doubly Linked    |
+   +==============+==================+==================+
+   | addFirst     | O(1)             | O(1)             |
+   +--------------+------------------+------------------+
+   | addLast      | O(1)             | O(1)             |
+   +--------------+------------------+------------------+
+   | addAfter     | O(1)             | O(1)             |
+   +--------------+------------------+------------------+
+   | addBefore    | O(n)             | O(1)             |
+   +--------------+------------------+------------------+
+   | removeFirst  | O(1)             | O(1)             |
+   +--------------+------------------+------------------+
+   | removeLast   | O(n)             | O(1)             |
+   +--------------+------------------+------------------+
+   | removeAfter  | O(1)             | O(1)             |
+   +--------------+------------------+------------------+
+   | removeBefore | O(n)             | O(1)             |
+   +--------------+------------------+------------------+
+
+You'll notice that the doubly linked list has the same efficiency or better for all of these operations. 
 The primary disadvantage of the doubly linked list as compared to the singly linked list is the additional space used.
 The doubly linked list requires two pointers per node, and so in the
 implementation presented it requires twice as much overhead as the singly linked list.

@@ -28,7 +28,7 @@ Because a list node is a distinct object (as opposed to simply a cell
 in an array), it is good practice to make a separate list node class.
 (We can also re-use the list node class to implement linked
 implementations for the :ref:`stack <stack> <Stack>` and
-:ref:`queue <queue> <Queue>` data structures.
+:ref:`queue <queue> <Queue>` data structures.)
 Here is an implementation for list nodes, called the ``Node`` class.
 Objects in the ``Node`` class contain an ``data`` field to
 store the element value, and a ``next`` field to store a pointer to
