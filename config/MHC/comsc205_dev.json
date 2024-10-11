@@ -124,12 +124,13 @@
     "Linked Lists II: Doubly Linked": {
       "MHC/listDoubleLinked": {}
     },
-    "Program Design and Debugging I": {
+    "Testing Code": {
+      "MHC/testing": {},
+      "IntroToSoftwareDesign/SoftwareTesting": {}
+    },
+    "Program Design and Debugging": {
       "Tutorials/debugmethods": {},
       "Tutorials/2114_java_commenting": {}
-    },
-    "Program Design and Debugging II: Testing Principles": {
-      "IntroToSoftwareDesign/SoftwareTesting": {}
     },
     "Stacks": {
       "List/StackArray": {},
