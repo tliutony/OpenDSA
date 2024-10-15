@@ -464,9 +464,6 @@ only written five new lines of code rather than five hundred, or five
 thousand.
 
 
-Writing Your First Software Test
---------------------------------
-
 Writing software tests for each method as you go is your best defense for
 confirming you understand what your code does, confirming your code behaves
 the way you intend, and finding problems as soon as possible so they won't
@@ -474,4 +471,102 @@ cause trouble later. The longer you put off testing, the harder it is to
 find problems, and the more bugs you'll have to fix--if you let too many
 pile up, it gets increasingly challenging to get your code to work at all.
 
-.. TODO add example of testing boundary condition for white box testing, and linked lists
+
+Example: testing remove(int position) for Linked List
+-----------------------------------------------------
+
+Suppose we are testing the ``remove(int position)`` method of our singly linked list ``MHCLinkedList``:
+
+.. code-block:: java
+    :linenos:
+
+    // Removes the element at the specified position in this list, and returns it.
+    public E remove(int position) {
+        // if position is invalid, throw error
+        if (position < 0 || position >= numElements) {
+            throw new IndexOutOfBoundsException(position);
+        }   
+
+        // Case where we're removing the head element, call our removeFirst method.
+        if(position == 0) {
+            return removeFirst();
+        }  
+        else {
+            // Otherwise, find the node just before the one we want to remove
+            Node<E> prevNode = getNode(position - 1);
+            Node<E> toRemove = prevNode.getNext();
+
+            // Update prevNode's "next" pointer to refer to toRemove's "next" pointer
+            prevNode.setNext(toRemove.getNext());
+
+            // If we're removing the last element, make sure to update "tail"
+            if (toRemove == tail) {
+                tail = prevNode;
+            }
+
+            // Decrease the size of the list
+            numElements--; 
+
+            // Return the value removed
+            return toRemove.getValue();
+        }
+    }
+
+When glass-box or white-box testing, we need to cover all possible conditional "if-else" paths through the code. For this remove method, that looks like:
+
+- **Test case 1 [line 4]:** the position is invalid, specifically if the position is negative
+- **Test case 2 [line 4]:** the position is invalid, specifically if the position is larger than the number of elements in the list
+- **Test case 3 [line 9]:** we're removing the head
+- **Test case 4 [line 12]:** we're removing something in the middle
+- **Test case 5 [line 21]:** we're removing the tail
+
+We then create a separate class with a main method that will create a LinkedList for us to exercise all of these test cases, 
+and include print statements that check what we expect the output to be vs. what actually occurs:
+
+.. code-block:: java
+
+    public class TestLinkedListRemove() {
+        public static void main(String args[]) {
+            MHCLinkedList<String> list = new MHCLinkedList<>();
+
+            // Prepare the list for testing: "apple" -> "banana" -> "cherry"
+            list.add("apple");
+            list.add("banana");
+            list.add("cherry");
+
+            // Test case 1, invalid negative position
+            try {
+                list.remove(-1);
+                System.out.println("An IndexOutOfBoundsException should have been thrown!");
+            }
+            catch (IndexOutOfBoundsException e) {
+                System.out.println("IndexOutOfBoundsException correctly thrown for remove(-1)");
+            }
+
+            // Test case 2, invalid position larger than list
+            try {
+                list.remove(4);
+                System.out.println("An IndexOutOfBoundsException should have been thrown!");
+            }
+            catch (IndexOutOfBoundsException e) {
+                System.out.println("IndexOutOfBoundsException correctly thrown for remove(4)");
+            }
+
+            // Test case 3: remove head
+            String removedValue = list.remove(0); // removes "apple", list should be "banana" -> "cherry"
+            System.out.println("Expected removed value: apple, Actual: " + removedValue);
+            System.out.println("Expected new head: banana, Actual: " + list.get(0));
+
+            // Test case 4: remove from middle
+            list.add(1, "date"); // list is now: "banana" -> "date" -> "cherry"
+            removedValue = list.remove(1); // removes "date", list should be "banana" -> "cherry"
+            System.out.println("Expected removed value: date, Actual: " + removedValue);
+            System.out.println("Expected new element at position 1: cherry, Actual: " + list.get(1));
+
+            // Test case 5: remove tail
+            removedValue = list.remove(1); // removes "cherry", which is the tail
+            // list should just be "banana" now
+            System.out.println("Expected removed value: cherry, Actual: " + removedValue);
+            System.out.println("Expected new tail: banana, Actual: " + list.get(list.size()-1));
+        }
+    }
