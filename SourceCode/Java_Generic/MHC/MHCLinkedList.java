@@ -9,7 +9,7 @@ public class MHCLinkedList<E> implements MHCList<E> {
     /* *** ODSATag: addFirst *** */
     // Adds to the beginning of the list.
     private void addFirst(E value) {
-        head = new Node<E> (value, head);
+        head = new Node<E>(value, head);
         
         if (tail == null) {
             tail = head;
@@ -65,6 +65,5 @@ public class MHCLinkedList<E> implements MHCList<E> {
         }
     }
     /* *** ODSAendTag: add *** */
-
 }
 /* *** ODSAendTag: MHCLinkedList *** */
