@@ -129,8 +129,7 @@
       "IntroToSoftwareDesign/SoftwareTesting": {}
     },
     "Program Design and Debugging": {
-      "Tutorials/debugmethods": {},
-      "Tutorials/2114_java_commenting": {}
+      "MHC/exceptions": {}
     },
     "Stacks": {
       "List/StackArray": {},
