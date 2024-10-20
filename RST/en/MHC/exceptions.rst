@@ -185,7 +185,7 @@ In this case, the ``doRead()`` method contains a ``readLine()`` expression, whic
 
 .. note:: 
 
-   **Where to Use ``throws``**: Unless a checked exception, such as an ``IOException``, is caught and handled by a method, it must be declared with a ``throws`` clause within the method and within any method that calls that method.
+   **Where to use** ``throws``: Unless a checked exception, such as an ``IOException``, is caught and handled by a method, it must be declared with a ``throws`` clause within the method and within any method that calls that method.
 
 The alternative approach would be to *catch* the ``IOException`` within the body of the method. We will discuss this approach in the next section.
 
@@ -194,10 +194,10 @@ Unchecked Exceptions
 
 An **unchecked exception** is any exception belonging to a subclass of ``RuntimeException``. Unchecked exceptions are not checked by the compiler. The possibility that some statement or expression will lead to an ``ArithmeticException`` or ``NullPointerException`` is extremely difficult to detect at compile time. The designers of Java decided that forcing programmers to declare such exceptions would not significantly improve the correctness of Java programs.
 
-Therefore, unchecked exceptions do **not** have to be handled within a program. And they do not have to be declared in a ``throws`` clause. As shown in the chapter's early divide-by-zero exception example, unchecked exceptions are handled by Java's default exception handlers, unless your program takes specific steps to handle them directly. In many cases leaving the handling of such exceptions up to Java may be the best course of action, as we will see in :ref:`sec-robust`.
+Therefore, unchecked exceptions do **not** have to be handled within a program. And they do not have to be declared in a ``throws`` clause. As shown in the chapter's early divide-by-zero exception example, unchecked exceptions are handled by Java's default exception handlers, unless your program takes specific steps to handle them directly. In many cases leaving the handling of such exceptions up to Java may be the best course of action.
 
-The ``Exception`` Class
-~~~~~~~~~~~~~~~~~~~~~~~
+The Exception Class
+~~~~~~~~~~~~~~~~~~~~
 
 The ``java.lang.Exception`` class itself is quite simple, consisting of just two constructor methods (see the figure below). The ``Throwable`` class, from which ``Exception`` is derived, is the root class of Java's exception and error hierarchy. It contains definitions for the ``getMessage()`` and ``printStackTrace()`` methods, which are two methods that we will use frequently in our error-handling routines.
 
