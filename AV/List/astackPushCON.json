@@ -1,10 +1,9 @@
 {
   "translations": {
     "en": {
-      "sc1": "Method <code>push</code> is easy.",
-      "sc2": "<code>top</code> is at the first free position, which is at position 4. Since this is less than <code>maxSize</code> (which is 8), we can proceed.",
-      "sc3": "Method <code>push</code> simply places an element into the array position indicated by top.",
-      "sc4": "Then Increment top by one position."
+      "sc1": "Method <code>push</code> is straightforward because we are using an ArrayList and can use its <code>add</code> method.",
+      "sc2": "Calling <code>add</code> without a position parameter adds to the end of the ArrayList, which in this case is index 4.",
+      "sc3": "We have now pushed the value 10 onto the stack. Because we are using an ArrayList, adding to the end of the stack is efficient, $O(1)$."
     }
   },
   "code": {
@@ -20,10 +19,10 @@
       }
     }],
     "java_generic": [{
-      "url": "../../../SourceCode/Java_Generic/Lists/AStack.java",
+      "url": "../../../SourceCode/Java_Generic/MHC/ArrayListStack.java",
       "lineNumbers": false,
-      "startAfter": "/* *** ODSATag: AStackPush *** */",
-      "endBefore": "/* *** ODSAendTag: AStackPush *** */",
+      "startAfter": "/* *** ODSATag: ArrayListStackPush *** */",
+      "endBefore": "/* *** ODSAendTag: ArrayListStackPush *** */",
       "tags": {
         "sig": 1,
         "full": 2,

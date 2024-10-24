@@ -15,21 +15,21 @@ $(document).ready(function() {
   var leftMargin = 20;
   var topMargin = 0;
   var arr = av.ds.array([12, 45, 5, 81, "", "", "", ""],
-                        {indexed: true, left: leftMargin, top: topMargin});
+                        {indexed: true, left: leftMargin, top: topMargin + 50});
   arr.addClass([4, 5, 6, 7], "unused");
 
-  var topArr = av.ds.array([4], {left: leftMargin + 100, top: topMargin + 55});
-  av.label("top", {left: leftMargin + 73, top: topMargin + 58});
+  var topArr = av.ds.array([3], {left: leftMargin + 120, top: topMargin + 105});
+  av.label("top of stack index", {left: leftMargin, top: topMargin + 108});
   var arrReturn = av.ds.array([""], {left: leftMargin + 100,
-                                     top : topMargin + 90});
+                                     top : topMargin + 143});
   arrReturn.hide();
   var labelReturn = av.label("return", {left: leftMargin + 55,
-                                        top : topMargin + 93});
+                                        top : topMargin + 148});
   labelReturn.hide();
 
   // Slide 1
   av.umsg(interpret("sc1"));
-  arr.highlight(4);
+  arr.highlight(3);
   pseudo.setCurrentLine("sig");
   av.displayInit();
 
@@ -54,6 +54,9 @@ $(document).ready(function() {
   av.effects.copyValue(arr, 3, arrReturn, 0);
   arrReturn.highlight();
   topArr.unhighlight(0);
+  topArr.value(0, 2);
+  arr.unhighlight(3);
   arr.value(3, "");
+  arr.addClass(3, "unused");
   av.recorded();
 });
