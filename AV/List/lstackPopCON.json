@@ -1,7 +1,7 @@
 {
   "translations": {
     "en": {
-      "sc1": "Method <code>pop</code> is similar to the ArrayList-based stack's pop method by remoing from the end of the LinkedList.",
+      "sc1": "Method <code>pop</code> is similar to the ArrayList-based stack's pop method by removing from the end of the LinkedList.",
       "sc2": "First we check if the stack is empty. If it is, we throw a EmptyStackException. Otherwise, we proceed.",
       "sc3": "We call <code>removeLast()</code> to remove the last node from the LinkedList, and return the removed element.",
       "sc4": "Note that we do not call <code>remove(int position)</code> because our implementation of <code>remove()</code> would walk from the head to the tail, which is an $O(n)$ operation. Since we have access to the tail pointer, <code>removeLast()</code> runs in constant $O(1)$ time."
