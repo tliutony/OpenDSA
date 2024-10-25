@@ -1,12 +1,9 @@
 {
   "translations": {
     "en": {
-      "sc1": "Here is the <code>push</code> operation. First we see the linked stack before <code>push</code>",
-      "sc2": "Create a new node.",
-      "sc3": "Set the value of the new node.",
-      "sc4": "Modify the <code>next</code> field of the newly created link node to point to the top of the stack",
-      "sc5": "Then set top to point to the new link node.",
-      "sc6": "Increase stack size by 1."
+      "sc1": "Here is the <code>push</code> operation. First we see the linked list stack before <code>push</code>.",
+      "sc2": "Like we did with the ArrayList-based stack, we call add() without a specified index, which adds the item to the end of the list. Here, we push 10 onto the stack.",
+      "sc3": "Since we have access to the tail pointer, pushing on a linked list-based stack is $O(1)$."
     }
   },
   "code": {
@@ -22,10 +19,10 @@
       }
     }],
     "java_generic": [{
-      "url": "../../../SourceCode/Java_Generic/Lists/LStack.java",
+      "url": "../../../SourceCode/Java_Generic/MHC/LinkedListStack.java",
       "lineNumbers": false,
-      "startAfter": "/* *** ODSATag: LStackPush *** */",
-      "endBefore": "/* *** ODSAendTag: LStackPush *** */",
+      "startAfter": "/* *** ODSATag: LinkedListStackPush *** */",
+      "endBefore": "/* *** ODSAendTag: LinkedListStackPush *** */",
       "tags": {
         "sig": 1,
         "new": 2,

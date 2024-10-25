@@ -1,12 +1,10 @@
 {
   "translations": {
     "en": {
-      "sc1": "Method <code>pop</code> is also quite simple.",
-      "sc2": "<code>top</code> points to the first node. Since <code>top</code> is not equal to <code>null</code>, we proceed.",
-      "sc3": "Variable <code>it</code> stores the top node's value as it is removed from the stack.",
-      "sc4": "The stack is updated by setting <code>top</code> to point to the next link in the stack. The old node becomes garbage.",
-      "sc5": "Decrease the stack size by 1.",
-      "sc6": "The element value is returned."
+      "sc1": "Method <code>pop</code> is similar to the ArrayList-based stack's pop method by remoing from the end of the LinkedList.",
+      "sc2": "First we check if the stack is empty. If it is, we throw a EmptyStackException. Otherwise, we proceed.",
+      "sc3": "We call <code>removeLast()</code> to remove the last node from the LinkedList, and return the removed element.",
+      "sc4": "Note that we do not call <code>remove(int position)</code> because our implementation of <code>remove()</code> would walk from the head to the tail, which is an $O(n)$ operation. Since we have access to the tail pointer, <code>removeLast()</code> runs in constant $O(1)$ time."
     }
   },
   "code": {
@@ -25,16 +23,13 @@
       }
     }],
     "java_generic": [{
-      "url": "../../../SourceCode/Java_Generic/Lists/LStack.java",
+      "url": "../../../SourceCode/Java_Generic/MHC/LinkedListStack.java",
       "lineNumbers": false,
-      "startAfter": "/* *** ODSATag: LStackPop *** */",
-      "endBefore": "/* *** ODSAendTag: LStackPop *** */",
+      "startAfter": "/* *** ODSATag: LinkedListStackPop *** */",
+      "endBefore": "/* *** ODSAendTag: LinkedListStackPop *** */",
       "tags": {
         "sig": 1,
-        "null": 2,
-        "it": 3,
-        "top": 4,
-        "size": 5,
+        "isEmpty": 2,
         "return": 6
       }
     }]

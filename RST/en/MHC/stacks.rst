@@ -1,8 +1,8 @@
 Stacks
 ======
 
-Stack Terminology and Implementation
-------------------------------------
+Stack Terminology and Interface
+-------------------------------
 
 The :term:`stack` is a list-like structure
 in which elements may be inserted or removed from only one end.
@@ -27,7 +27,8 @@ The accessible element of the stack is called the ``top`` element.
 Elements are not said to be inserted, they are :term:`pushed <push>`
 onto the stack.
 When removed, an element is said to be :term:`popped <pop>` from the
-stack.
+stack. Finally, if we want to know what is at the top of the stack without
+removing it, we can **peek** at it.
 
 Below is a stack interface:
 
@@ -71,8 +72,8 @@ The main important design decision to be made is which end of the array should r
    :output: show
    :keyword: Array-based Stack Implementation
 
-Push Operation
-~~~~~~~~~~~~~~~
+ArrayList Push Operation
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. inlineav:: astackPushCON ss
    :long_name: Array stack push slideshow
@@ -81,8 +82,8 @@ Push Operation
    :output: show
    :keyword: Array-based Stack Implementation
 
-Pop Operation
-~~~~~~~~~~~~~
+ArrayList Pop Operation
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. inlineav:: astackPopCON ss
    :long_name: Array stack pop slideshow
@@ -91,3 +92,82 @@ Pop Operation
    :output: show
    :keyword: Array-based Stack Implementation
 
+
+LinkedList-Based Stack
+---------------------
+
+Next, we look at implementing a stack using a LinkedList. Like the ArrayList-based stack, we will treat the **end** of the LinkedList as the top of the stack and use the LinkedList's methods to implement the Stack interface:
+
+.. note::
+
+    This means that ``tail`` is always the top of the stack!
+
+.. codeinclude:: MHC/LinkedListStack
+   :tag: LinkedListStack
+
+Note that we use the ``getLast()`` method to implement ``peek()``, which gets the top element of the stack:
+
+.. codeinclude:: MHC/LinkedListStack
+   :tag: LinkedListStackPeek
+
+.. note::
+    We haven't yet written ``getLast()`` in our LinkedList class thus far this semester, but since we have access to the ``tail`` pointer, its implementation is straightforward:
+
+    .. code-block:: java
+
+        // NOTE: this would be part of the LinkedList class, 
+        // where we have access to the tail instance variable
+        public E getLast() {
+            return tail.getValue();
+        }
+
+LinkedList Push Operation
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. inlineav:: lstackPushCON ss
+   :long_name: Linked stack push
+   :links: DataStructures/DoubleLinkList.css AV/List/lstackCON.css
+   :scripts: DataStructures/DoubleLinkList.js AV/List/dlist.js AV/List/llist.js AV/List/lstackPushCON.js 
+   :output: show
+   :keyword: Linked Stack Implementation
+
+LinkedList Pop Operation
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. inlineav:: lstackPopCON ss
+   :long_name: Linked stack pop
+   :links: DataStructures/DoubleLinkList.css AV/List/lstackCON.css
+   :scripts: DataStructures/DoubleLinkList.js AV/List/dlist.js AV/List/llist.js AV/List/lstackPopCON.js 
+   :output: show
+   :keyword: Linked Stack Implementation
+
+
+Comparison of ArrayList-Based and LinkedList-Based Stacks
+------------------------------------------------------------
+
+.. table:: Efficiency of Stack Operations
+   :align: center
+
+   +--------------+------------------+------------------+
+   | Operation    | ArrayList-Based  | LinkedList-Based |
+   +==============+==================+==================+
+   | push         | O(1)             | O(1)             |
+   +--------------+------------------+------------------+
+   | pop          | O(1)             | O(1)             |
+   +--------------+------------------+------------------+
+   | peek         | O(1)             | O(1)             |
+   +--------------+------------------+------------------+
+   | size()       | O(1)             | O(1)             |
+   +--------------+------------------+------------------+
+   | isEmpty()    | O(1)             | O(1)             |
+   +--------------+------------------+------------------+
+
+All operations for the ArrayList-based and LinkedList-based stack implementations
+take constant time, so from a time efficiency perspective,
+neither has a significant advantage.
+
+Another basis for comparison is the total **space**
+required. The analysis is similar to that done for list implementations.
+The ArrayList-based stack must declare a fixed-size array initially, and so some of that space is wasted whenever the stack is not full.
+The LinkedList-based stack can shrink and grow but requires the overhead of a
+**Node** field for every element.
