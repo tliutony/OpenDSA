@@ -129,6 +129,9 @@
     },
     "Exceptions": {
       "MHC/exceptions": {}
+    },
+    "Stacks": {
+      "MHC/stacks": {}
     }
   }
 }

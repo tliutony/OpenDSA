@@ -23,12 +23,10 @@ which stands for "Last-In, First-Out."
 Note that one implication of the LIFO policy is that stacks
 remove elements in reverse order of their arrival.
 
-The accessible element of the stack is called the ``top`` element.
-Elements are not said to be inserted, they are :term:`pushed <push>`
-onto the stack.
-When removed, an element is said to be :term:`popped <pop>` from the
-stack. Finally, if we want to know what is at the top of the stack without
-removing it, we can **peek** at it.
+The accessible element of the stack is called the "top" of the stack.
+Elements are not said to be inserted, they are **pushed** onto the stack.
+When removed, an element is said to be **popped** from the stack.
+Finally, if we want to know what is at the top of the stack without removing it, we can **peek** at it.
 
 Below is a stack interface:
 
