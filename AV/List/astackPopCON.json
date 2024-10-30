@@ -1,10 +1,10 @@
 {
   "translations": {
     "en": {
-      "sc1": "Now, for the implementation of <code>pop</code>. <code>top</code> is at the first free position, which is index 4 on the array.",
-      "sc2": "Since <code>top</code> is not 0 (which would indicate an empty stack), we proceed.",
-      "sc3": "<code>pop</code> first decrements <code>top<code> by 1 position.",
-      "sc4": "Then it removes and returns the <code>top</code> element."
+      "sc1": "Now, for the implementation of <code>pop</code>. We will use the <code>remove</code> method of the ArrayList.",
+      "sc2": "Since the stack is not empty, we proceed. If the stack were empty, we would throw a <code>EmptyStackException</code>.",
+      "sc3": "We call <code>remove</code> with the index of the top element. Since we treat the end of the ArrayList as the top of the stack, we use <code>size() - 1</code>.",
+      "sc4": "Note that we return the removed element. This is the element that was on the top of the stack. Because we are removing from the <b>end</b> of the ArrayList, the cost is $O(1)$."
     }
   },
   "code": {
@@ -20,14 +20,14 @@
       }
     }],
     "java_generic": [{
-      "url": "../../../SourceCode/Java_Generic/Lists/AStack.java",
+      "url": "../../../SourceCode/Java_Generic/MHC/ArrayListStack.java",
       "lineNumbers": false,
-      "startAfter": "/* *** ODSATag: AStackPop *** */",
-      "endBefore": "/* *** ODSAendTag: AStackPop *** */",
+      "startAfter": "/* *** ODSATag: ArrayListStackPop *** */",
+      "endBefore": "/* *** ODSAendTag: ArrayListStackPop *** */",
       "tags": {
         "sig": 1,
         "empty": 2,
-        "return": 3
+        "return": 5
       }
     }]
   }

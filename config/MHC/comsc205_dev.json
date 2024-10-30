@@ -128,13 +128,11 @@
       "MHC/testing": {},
       "IntroToSoftwareDesign/SoftwareTesting": {}
     },
-    "Program Design and Debugging": {
-      "Tutorials/debugmethods": {},
-      "Tutorials/2114_java_commenting": {}
+    "Exceptions": {
+      "MHC/exceptions": {}
     },
     "Stacks": {
-      "List/StackArray": {},
-      "List/StackLinked": {}
+      "MHC/stacks": {}
     },
     "Queues": {
       "List/Queue": {},

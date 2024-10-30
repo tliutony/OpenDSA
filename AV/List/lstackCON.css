@@ -3,31 +3,32 @@
 }
 
 #lstackPushCON {
-  height: 210px;
+  height: 300px;
 }
 
 #lstackPushCON .jsavoutput.jsavline {
-  height: 15px;
+  height: 40px;
 }
 
 #lstackPushCON .jsavcode{
   position: relative;
-  top: 0;
+  top: 20px;
   left: 196px;
-  width: 450px;
+  width: 400px;
+  height: 100px;
 }
 
 #lstackPopCON {
-  height: 250px;
+  height: 300px;
 }
 
 #lstackPopCON .jsavoutput.jsavline {
-  height: 30px;
+  height: 55px;
 }
 
 #lstackPopCON .jsavcode{
   position: relative;
-  top: -20px;
+  top: 0px;
   left: 195px;
   width: 450px;
 }

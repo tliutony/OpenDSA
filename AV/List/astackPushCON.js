@@ -16,8 +16,8 @@ $(document).ready(function() {
   var arr = av.ds.array([12, 45, 5, 81, "", "", "", ""],
                         {indexed: true, top: topMargin, left: 20});
   arr.addClass([4, 5, 6, 7], "unused");
-  var topArr = av.ds.array([4], {left: leftMargin + 50, top: topMargin + 60});
-  av.label("top", {left: leftMargin + 20, top: topMargin + 60});
+  var topArr = av.ds.array([3], {left: leftMargin + 125, top: topMargin + 70});
+  av.label("top of stack index", {left: leftMargin, top: topMargin + 70});
 
   // The purpose of this "array" is only to hold a value,
   // it will always remain hidden.
@@ -39,16 +39,23 @@ $(document).ready(function() {
 
   // Slide 3
   av.umsg(interpret("sc3"));
-  pseudo.setCurrentLine("copy");
-  av.effects.copyValue(arrCopy, 0, arr, 4);
-  arr.removeClass(4, "unused");
-  av.step();
-
-  // Slide 4
-  av.umsg(interpret("sc4"));
-  topArr.value(0, 5);
+  topArr.value(0, 4);
   topArr.highlight(0);
-  arr.unhighlight(4);
-  arr.highlight(5);
+  av.effects.copyValue(arrCopy, 0, arr, 4);
   av.recorded();
+
+  // // Slide 3
+  // av.umsg(interpret("sc3"));
+  // pseudo.setCurrentLine("copy");
+  // av.effects.copyValue(arrCopy, 0, arr, 4);
+  // arr.removeClass(4, "unused");
+  // av.step();
+
+  // // Slide 4
+  // av.umsg(interpret("sc4"));
+  // topArr.value(0, 5);
+  // topArr.highlight(0);
+  // arr.unhighlight(4);
+  // arr.highlight(5);
+  // av.recorded();
 });

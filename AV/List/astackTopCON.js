@@ -35,7 +35,7 @@ $(document).ready(function() {
 
   // Array and label for "top" variable
   var topArr = av.ds.array([0], {left: leftMargin - 100, top: topMargin});
-  av.label("top", {left: leftMargin - 130, top: topMargin + 5});
+  av.label("top of stack index", {left: leftMargin - 230, top: topMargin + 5});
 
   // Slide 1
   av.umsg(interpret("sc1"));
@@ -64,24 +64,26 @@ $(document).ready(function() {
   arrow2.hide();
   arrow3.show();
   topArr.value(0, 2);
-  av.step();
-
-  // Slide 5
-  av.umsg(interpret("sc5"));
-  arr.value(0, "");
-  arr.value(1, "");
-  arr.value(2, "");
-  arr.addClass([0, 1, 2], "unused");
-  arrow3.hide();
-  arrow1.show();
-  topArr.value(0, 0);
-  arr.highlight(0);
-  av.step();
-
-  // Slide 6
-  av.umsg(interpret("sc6"));
-  arr.unhighlight(0);
-  topArr.value(0, -1);
-  arr.unhighlight(0);
   av.recorded();
+
+  // av.step();
+  
+  // // Slide 5
+  // av.umsg(interpret("sc5"));
+  // arr.value(0, "");
+  // arr.value(1, "");
+  // arr.value(2, "");
+  // arr.addClass([0, 1, 2], "unused");
+  // arrow3.hide();
+  // arrow1.show();
+  // topArr.value(0, 0);
+  // arr.highlight(0);
+  // av.step();
+
+  // // Slide 6
+  // av.umsg(interpret("sc6"));
+  // arr.unhighlight(0);
+  // topArr.value(0, -1);
+  // arr.unhighlight(0);
+  
 });

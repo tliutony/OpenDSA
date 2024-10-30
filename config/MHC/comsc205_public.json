@@ -126,6 +126,12 @@
     },
     "Testing Code": {
       "MHC/testing": {}
+    },
+    "Exceptions": {
+      "MHC/exceptions": {}
+    },
+    "Stacks": {
+      "MHC/stacks": {}
     }
   }
 }

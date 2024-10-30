@@ -34,7 +34,7 @@ public class MHCLinkedList<E> implements MHCList<E> {
     /* *** ODSATag: getNode *** */
     // Find and return the node at the specified index.
     public Node<E> getNode(int index) {
-        if (index < 0 || index > numElements) {
+        if (index < 0 || index >= numElements) {
             throw new IndexOutOfBoundsException(index);
         }
 
@@ -49,7 +49,7 @@ public class MHCLinkedList<E> implements MHCList<E> {
     /* *** ODSATag: add *** */
     // Inserts the specified element at the specified position in this list.
     public void add(int index, E value) {
-        if (index < 0 || index > numElements) {
+        if (index < 0 || index >= numElements) {
             throw new IndexOutOfBoundsException(index);
         }
 
