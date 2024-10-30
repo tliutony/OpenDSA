@@ -24,15 +24,15 @@ $(document).ready(function() {
   arr.addClass([4, 5, 6, 7, 8, 9], "unused");
   // Create the graphics for front and rear boxes
   var arrFront = av.ds.array([0], {indexed: false, left: 200, top: topMargin});
-  av.label("front", {left: 161, top: topMargin + 4});
+  av.label("first", {left: 161, top: topMargin + 4});
   arrFront.addClass([0], "special");
   arr.addClass([0], "special");
   var arrRear = av.ds.array([3], {indexed: false, left: 200, top: topMargin + 35});
-  av.label("rear", {left: 166, top: topMargin + 39});
+  av.label("last", {left: 166, top: topMargin + 39});
   arrRear.addClass([0], "processing");
   arr.addClass([3], "processing");
   var arrSize = av.ds.array([4], {indexed: false, left: 200, top: topMargin + 70});
-  av.label("listSize", {left: 145, top: topMargin + 74});
+  av.label("size", {left: 145, top: topMargin + 74});
   av.step();
 
   // Slide 3

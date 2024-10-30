@@ -72,9 +72,8 @@ The ``enqueue()`` method adds an item to the end of the queue:
    :output: show   
    :keyword: Linked Queues
 
-
 dequeue()
-~~~~~~~~
+~~~~~~~~~~
 
 The ``dequeue()`` method removes and returns the item at the front of the queue:
 
@@ -84,3 +83,63 @@ The ``dequeue()`` method removes and returns the item at the front of the queue:
    :scripts: AV/List/llist.js AV/List/lqueueDequeueCON.js
    :output: show 
    :keyword: Linked Queues
+
+Because we are using a singly linked list with head and tail pointers, our ``enqueue()`` and ``dequeue()`` operations are both constant time operations. Can we achieve this same performance with an array-based queue?
+
+Attempting an ArrayList Queue
+------------------------------
+
+Our first attempt might be to use an ArrayList to store the queue, much like we did for the LinkedList-based implementation above. However, we run into a problem:
+
+.. inlineav:: aqueueFirstCON ss
+   :long_name: Array-based Queue Positions Slideshow
+   :links: AV/List/aqueueCON.css
+   :scripts: AV/List/aqueueFirstCON.js
+   :output: show
+   :keyword: Array-based Queues
+
+What we see is that no matter which end we choose to represent the front of the queue, we end up with a performance hit for either the ``enqueue()`` or ``dequeue()`` operations: one of them ends up being $O(n)$ time!
+
+Circular Array-Based Queue
+--------------------------
+
+Let's instead try to implement a queue building off an array. We explicitly keep track of the ``first`` and ``last`` positions of the queue, as well as the ``size`` of the queue:
+
+.. code-block:: java
+
+    // instance variables for our array-based queue
+    private E[] values;
+    private int first;
+    private int last;
+    private int size;
+
+In particular, because we now maintain a ``first`` and ``last`` index, we can have the "front" of the queue shift around as elements are enqueued and dequeued:
+
+.. inlineav:: aqueueDriftCON ss
+   :long_name: Array-based Queue Drift Slideshow
+   :links: AV/List/aqueueCON.css
+   :scripts: AV/List/aqueueDriftCON.js
+   :output: show
+   :keyword: Array-based Queues
+
+|
+
+.. inlineav:: aqueueBadCON ss
+   :long_name: Array-based Queue Bad Representation Slideshow
+   :links: AV/List/aqueueCON.css
+   :scripts: AV/List/aqueueBadCON.js
+   :output: show
+   :keyword: Array-based Queues
+
+Because of this drifting, we can only call ``enqueue()`` **n** times (where **n** is the length of our array) before we run out of space!
+
+This problem can be fixed by treating the array as **circular**, where we "wrap around" the array once we get to the end of it:
+
+.. inlineav:: aqueueCircularCON ss
+   :long_name: Circular Array-based Queue Slideshow
+   :links: AV/List/aqueueCON.css
+   :scripts: DataStructures/CircularQueue.js AV/List/aqueueCircularCON.js
+   :output: show
+   :keyword: Array-based Queues
+
+Throughout all of this, we maintain a ``size`` variable to keep track of when the array backing the queue is at capacity.

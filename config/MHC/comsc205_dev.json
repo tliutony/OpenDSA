@@ -135,6 +135,7 @@
       "MHC/stacks": {}
     },
     "Queues": {
+      "MHC/queues": {},
       "List/Queue": {},
       "List/QueueLinked": {}
     },

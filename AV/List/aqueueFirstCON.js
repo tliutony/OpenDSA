@@ -15,11 +15,11 @@ $(document).ready(function() {
 
   // Create the graphics for front and rear boxes
   var arrFront = av.ds.array([""], {indexed: false, left: 200, top: topMargin});
-  av.label("front", {left: 163, top: topMargin + 4});
+  av.label("first", {left: 163, top: topMargin + 4});
   var arrRear = av.ds.array([""], {indexed: false, left: 200, top: topMargin + 35});
-  av.label("rear", {left: 168, top: topMargin + 39});
+  av.label("last", {left: 168, top: topMargin + 39});
   av.ds.array([4], {indexed: false, left: 200, top: topMargin + 70});
-  av.label("listSize", {left: 147, top: topMargin + 74});
+  av.label("size", {left: 147, top: topMargin + 74});
 
   var arr = av.ds.array([12, 45, 5, 81, "", "", "", ""],
                           {indexed: true, top: topMargin, left: leftMargin});
