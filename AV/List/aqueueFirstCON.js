@@ -31,12 +31,13 @@ $(document).ready(function() {
 
   // Slide 2
   av.umsg(interpret("sc2"));
-  arrFront.value(0, 3);
+  arrFront.value(0, 0);
   arrFront.addClass([0], "special");
-  arr.addClass([3], "special");
-  arrRear.value(0, 0);
+  arr.addClass([0], "special");
+
+  arrRear.value(0, 3);
   arrRear.addClass([0], "processing");
-  arr.addClass([0], "processing");
+  arr.addClass([3], "processing");
   av.step();
 
   // Slide 3
@@ -45,12 +46,13 @@ $(document).ready(function() {
 
   // Slide 4
   av.umsg(interpret("sc4"));
-  arrFront.value(0, 0);
-  arr.removeClass([3], "special");
-  arr.addClass([3], "processing");
-  arrRear.value(0, 3);
-  arr.removeClass([0], "processing");
-  arr.addClass([0], "special");
+  arrFront.value(0, 3);
+  arr.removeClass([3], "processing");
+  arr.addClass([3], "special");
+  arrRear.value(0, 0);
+  arr.removeClass([0], "special");
+  arr.addClass([0], "processing");
+  
   av.step();
 
   // Slide 5
