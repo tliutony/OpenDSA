@@ -39,16 +39,16 @@ $(document).ready(function() {
   var av = new JSAV(av_name);
   var pseudo = av.code(code[0]);
 
-  var leftMargin = 10;
+  var leftMargin = 20;
   var topMargin = 50;
-  av.label("it", {left: leftMargin + 20, top: topMargin + 55});
+  av.label("return", {left: leftMargin-10, top: topMargin + 55});
   var arrIt = av.ds.array([" "], {left: leftMargin + 30, top: topMargin + 50});
   var list = av.ds.list({nodegap: 30, left: leftMargin, top: topMargin});
-  list.addFirst(30).addFirst(21).addFirst(3).addFirst("null");
+  list.addFirst(30).addFirst(21).addFirst(3);
   list.layout();
 
-  av.pointer("front", list.get(0));
-  av.pointer("rear", list.get(3));
+  var head = av.pointer("head", list.get(0));
+  var tail = av.pointer("tail", list.get(2));
 
   // Slide 1
   av.umsg(interpret("sc1"));
@@ -62,43 +62,36 @@ $(document).ready(function() {
 
   // Slide 3
   av.umsg(interpret("sc3"));
-  var node1 = list.get(1).highlight();
+  pseudo.setCurrentLine("removeFirst");
+  var node1 = list.get(0).highlight();
   av.effects.copyValue(node1, arrIt, 0);
-  arrIt.highlight();
-  pseudo.setCurrentLine("copy");
   av.step();
 
   // Slide 4
   av.umsg(interpret("sc4"));
   node1.unhighlight();
-  arrIt.unhighlight();
-  var dashLine = arrowAround(list.get(1));
-  pseudo.setCurrentLine("setNext");
-  list.get(0).edgeToNext().hide();
-  av.step();
-
-  // Slide 5
-  list.remove(1);
+  list.remove(0);
   list.get(0).edgeToNext().show();
-  dashLine.hide();
-  list.layout();
-  av.step();
-
-  // Slide 6
-  av.umsg(interpret("sc6"));
-  list.get(1).highlight();
-  pseudo.setCurrentLine("endcheck");
-  av.step();
-
-  // Slide 7
-  av.umsg(interpret("sc7"));
-  list.get(1).unhighlight();
-  pseudo.setCurrentLine("size");
-  av.step();
-
-  // Slide 8
-  av.umsg(interpret("sc8"));
+  head.target(list.get(0));
   arrIt.highlight();
-  pseudo.setCurrentLine("return");
   av.recorded();
+
+
+  // // Slide 6
+  // av.umsg(interpret("sc6"));
+  // list.get(1).highlight();
+  // pseudo.setCurrentLine("endcheck");
+  // av.step();
+
+  // // Slide 7
+  // av.umsg(interpret("sc7"));
+  // list.get(1).unhighlight();
+  // pseudo.setCurrentLine("size");
+  // av.step();
+
+  // // Slide 8
+  // av.umsg(interpret("sc8"));
+  // arrIt.highlight();
+  // pseudo.setCurrentLine("return");
+  // av.recorded();
 });

@@ -18,7 +18,7 @@
 }
 
 #lqueueEnqueueCON .jsavoutput.jsavline {
-  height: 20px;
+  height: 40px;
 }
 
 #lqueueEnqueueCON .jsavcode{
@@ -33,7 +33,7 @@
 }
 
 #lqueueDequeueCON .jsavoutput.jsavline {
-  height: 20px;
+  height: 40px;
 }
 
 #lqueueDequeueCON .jsavcode{
