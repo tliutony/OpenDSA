@@ -143,3 +143,72 @@ This problem can be fixed by treating the array as **circular**, where we "wrap 
    :keyword: Array-based Queues
 
 Throughout all of this, we maintain a ``size`` variable to keep track of when the array backing the queue is at capacity.
+
+Keeping this representation in mind, let's implement the ``MHCQueue`` interface using a circular array. Below is the full implementation:
+
+.. codeinclude:: MHC/CircularArrayQueue
+   :tag: CircularArrayQueue
+
+Circular Queue Instance Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The instance variables for our circular queue are as follows:
+
+.. codeinclude:: MHC/CircularArrayQueue
+   :tag: CircularArrayQueueInstanceVars
+
+Much like how we did for our implementation of ArrayList, we maintain an array of generic values to store our data. We also maintain ``first`` and ``last`` indices to keep track of the front and back of the queue, as well as a ``size`` variable to keep track of how many elements are in the queue. 
+
+Also, just like an ArrayList, we need to be able to dynamically grow our array when it becomes full. We use the ``capacity`` variable to keep track of the current capacity of our array, and we use the ``grow()`` method to resize our array when it becomes full.
+
+.. note::
+
+    We'll walk through the ``grow()`` implementation in lecture!
+
+Circular queue enqueue()
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``enqueue()`` method adds an item to the end of the queue:
+
+.. inlineav:: circularQueueEnqueue ss
+   :long_name: Circular Queue Enqueue
+   :links: AV/List/aqueueCON.css
+   :scripts: AV/MHC/circularQueueEnqueue.js
+   :output: show
+   :keyword: Array-based Queues
+
+Circular queue dequeue()
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``dequeue()`` method removes and returns the item at the front of the queue:
+
+.. inlineav:: circularQueueDequeue ss
+   :long_name: Circular Queue Dequeue
+   :links: AV/List/aqueueCON.css
+   :scripts: AV/MHC/circularQueueDequeue.js
+   :output: show
+   :keyword: Array-based Queues
+
+
+Comparison of Circular Array and LinkedList Queue Implementations
+-------------------------------------------------------------------
+
+.. table:: Efficiency of Queue Operations
+    :align: center
+
+    +--------------+-----------------------+------------------------+
+    | Operation    | Circular Array-Based  | LinkedList-Based       |
+    +==============+=======================+========================+
+    | enqueue()    | O(1)                  | O(1)                   |
+    +--------------+-----------------------+------------------------+
+    | dequeue()    | O(1)                  | O(1)                   |
+    +--------------+-----------------------+------------------------+
+    | front()      | O(1)                  | O(1)                   |
+    +--------------+-----------------------+------------------------+
+    | size()       | O(1)                  | O(1)                   |
+    +--------------+-----------------------+------------------------+
+    | isEmpty()    | O(1)                  | O(1)                   |
+    +--------------+-----------------------+------------------------+
+
+
+Like the stack, the circular array-based queue and the linked list-based queue have the same time efficiency for all operations. We would then choose the implementation based on other factors, such as memory usage or the frequency of ``grow()`` operations. The circular array-based queue must declare a fixed-size array initially, and so some of that space is wasted whenever the queue is not full. The linked list-based queue can shrink and grow but requires the overhead of a **Node.next** field for every element.

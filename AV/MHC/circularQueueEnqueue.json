@@ -1,0 +1,27 @@
+{
+    "translations" :{
+      "en": {
+        "sc1": "Here we show the same circular queue as before, this time in its \"normal\" array representation. Note that due to the position of <code>first</code> and <code>last</code>, the queue's ordered values are 20, 5, 12, 17.Let's walk through the process of enqueuing a new item, the value 3: <code>enqueue(3)</code>.",
+        "sc2": "First, like when we wrote the ArrayList, we need to check if the queue is full. If size equals capacity, we need to <code>grow()</code> the array.",
+        "sc3": "We update the <code>last</code> index to the next available position. Since <code>capacity</code> is 12, we wrap around the end of the array and <code>last</code> is updated to 0: <code>(11 + 1) % 12 = 0</code>.",
+        "sc4": "Now we can add the new item to the queue.",
+        "sc5": "Finally, we update the <code>size</code> to reflect the new size of the queue."
+      }
+    },
+    "code": {
+      "java_generic": [{
+        "url": "../../../SourceCode/Java_Generic/MHC/CircularArrayQueue.java",
+        "lineNumbers": false,
+        "startAfter": "/* *** ODSATag: enqueue *** */",
+        "endBefore": "/* *** ODSAendTag: enqueue *** */",
+        "tags": {
+          "sig": 1,
+          "grow": 3,
+          "lastUpdate": 9,
+          "valueUpdate": 12,
+          "sizeUpdate": 15
+        }
+    }]
+  }
+  }
+  
