@@ -1,11 +1,12 @@
 {
   "translations" :{
     "en": {
-      "sc1": "The \"drifting queue\" problem can be solved by pretending that the array is circular and so allow the queue to continue directly from the highest-numbered position in the array to the lowest-numbered position.",
-      "sc2": "This is easily implemented through use of the modulus operator (denoted by % in many programming languages). In this way, positions in the array are numbered from 0 through <code>size-1</code>, and position <code>size-1</code> is defined to immediately precede position 0.",
+      "sc1": "The \"drifting queue\" problem can be solved by treating the array as circular. This allows the queue to continue directly from the highest-numbered position in the array to the lowest-numbered position.",
+      "sc2": "This is implemented through use of the modulus operator (denoted by % in many programming languages). In this way, positions in the array are numbered from 0 through <code>size-1</code>, and position <code>size-1</code> is defined to immediately precede position 0.",
       "sc3": "We will draw the circular queue with array positions increasing in the clockwise direction.",
-      "sc4": "Here is a queue with the four numbers 20, 5, 12, and 17 enqueued.",
-      "sc5": "The queue after elements 20 and 5 are dequeued, following which 3, 30, and 4 are enqueued."
+      "sc4": "Here is a queue with the four numbers 20, 5, 12, and 17 enqueued. Notice that the <code>first</code> index is at 8 and the <code>last</code> index is at 11.",
+      "sc5": "If we dequeue 20, the <code>first</code> index will move to 9.",
+      "sc6": "Next, we enqueue the value 3. If we're moving clockwise through the circle, the <code>last</code> index will move to 0. We calculate this new index by taking the current <code>last</code> index (11) and adding 1, then taking the modulus with the total array capacity (12) to ensure it wraps around the array correctly: <code>(11 + 1) % 12 = 0</code>."
     }
   }
 }

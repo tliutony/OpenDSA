@@ -1,0 +1,29 @@
+{
+    "translations" :{
+      "en": {
+        "sc1": "Now let's suppose we've enqueued and dequeued a number of values, and <code>first</code> is now at index 11. The queue as ordered is [17, 3, 4, 5], note how we wrap around! Let's walk through the process of dequeuing an item: <code>dequeue()</code>.",
+        "sc2": "First, we need to check if the queue is empty. If so, we throw a <code>NoSuchElementException</code>.",
+        "sc3": "We get the value from the front of the queue and store it in <code>item</code>.",
+        "sc4": "We then update the <code>first</code> index to the next available position. Since <code>capacity</code> is 12, we wrap around the end of the array and <code>first</code> is updated to 0: <code>(11 + 1) % 12 = 0</code>",
+        "sc5": "Next, we update the <code>size</code> to reflect the new size of the queue.",
+        "sc6": "Finally, we return the value stored in <code>item</code>."
+      }
+    },
+    "code": {
+      "java_generic": [{
+        "url": "../../../SourceCode/Java_Generic/MHC/CircularArrayQueue.java",
+        "lineNumbers": false,
+        "startAfter": "/* *** ODSATag: dequeue *** */",
+        "endBefore": "/* *** ODSAendTag: dequeue *** */",
+        "tags": {
+          "sig": 1,
+          "empty": 2,
+          "get": 7,
+          "firstUpdate": 11,
+          "sizeUpdate": 14,
+          "return": 16
+        }
+    }]
+  }
+  }
+  

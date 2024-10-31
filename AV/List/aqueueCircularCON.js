@@ -9,6 +9,14 @@ $(document).ready(function() {
       interpret = config.interpreter;       // get the interpreter
   var av = new JSAV(av_name);
 
+  // Add labels for first, last, and size
+  var arrFront = av.ds.array([8], {indexed: false, left: 200, top: 4});
+  var arrRear = av.ds.array([11], {indexed: false, left: 200, top: 39});
+  var arrSize = av.ds.array([4], {indexed: false, left: 200, top: 74});
+  var firstLabel = av.label("first", {left: 163, top: 4});
+  var lastLabel = av.label("last", {left: 168, top: 39});
+  var sizeLabel = av.label("size", {left: 147, top: 74});
+
   // center coordinate
   var cx = 400, cy = 150;
 
@@ -25,6 +33,14 @@ $(document).ready(function() {
   var cir = av.circular(cx, cy, r1, r2, 12, {"stroke-width": 2});
   curve.hide();
 
+
+  arrFront.hide();
+  arrRear.hide();
+  arrSize.hide();
+  firstLabel.hide();
+  lastLabel.hide();
+  sizeLabel.hide();
+
   // Slide 1
   av.umsg(interpret("sc1"));
   av.displayInit();
@@ -40,29 +56,41 @@ $(document).ready(function() {
 
   // Slide 4
   av.umsg(interpret("sc4"));
+  arrFront.show();
+  arrRear.show();
+  arrSize.show();
+  firstLabel.show();
+  lastLabel.show();
+  sizeLabel.show();
   curve.hide();
   cir.value(8, "20");
   cir.value(9, "5");
   cir.value(10, "12");
   cir.value(11, "17");
-  var frontP = cir.pointer("front", 8);
-  var rearP = cir.pointer("rear", 11);
+  var frontP = cir.pointer("first", 8);
+  var rearP = cir.pointer("last", 11);
   av.step();
 
   // Slide 5
   av.umsg(interpret("sc5"));
   cir.value(8, " ");
-  cir.value(9, " ");
-  cir.value(0, "3");
-  cir.value(1, "30");
-  cir.value(2, "4");
-  cir.value(10, "12");
-  cir.value(11, "17");
   frontP.arrow.hide();
   frontP.label.hide();
+  frontP = cir.pointer("first", 9);
+  arrFront.value(0, 9);
+  arrSize.value(0, 3);
+  arrFront.highlight();
+  av.step();
+
+  // Slide 6
+  av.umsg(interpret("sc6"));
+  arrFront.unhighlight();
   rearP.arrow.hide();
   rearP.label.hide();
-  cir.pointer("front", 10);
-  cir.pointer("rear", 2);
+  rearP = cir.pointer("last", 0);
+  arrRear.value(0, 0);
+  cir.value(0, "3");
+  arrRear.highlight();
+  arrSize.value(0, 4);
   av.recorded();
 });

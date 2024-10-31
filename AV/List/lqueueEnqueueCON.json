@@ -2,10 +2,9 @@
   "translations": {
     "en": {
       "sc1": "Let's look at how the <code>enqueue</code> operation works.",
-      "sc2": "We will enqueue the the value 10. Create a new node with this value.",
-      "sc3": "The <code>next</code> field of the <code>rear</code> node is assigned to point to the new node.",
-      "sc4": "Advance <code>rear</code> to point to the new link node.",
-      "sc5": "Increase <code>size</code> by 1."
+      "sc2": "We will enqueue the the value 10. We call addLast() to add a node to the end of the list.",
+      "sc3": "The addLast() method updates the ``next`` pointer of the current last node to point to the new node, and then updates the ``tail`` pointer to point to the new node.",
+      "sc4": "We treat the <code>head</code> pointer as the front of the queue, and the <code>tail</code> pointer as the back of the queue, so the linked list operations map directly to the queue operations."
     }
   },
   "code": {
@@ -22,15 +21,13 @@
       }
     }],
     "java_generic": [{
-      "url": "../../../SourceCode/Java_Generic/Lists/LQueue.java",
+      "url": "../../../SourceCode/Java_Generic/MHC/LinkedListQueue.java",
       "lineNumbers": false,
-      "startAfter": "/* *** ODSATag: LQueueEnqueue *** */",
-      "endBefore": "/* *** ODSAendTag: LQueueEnqueue *** */",
+      "startAfter": "/* *** ODSATag: enqueue *** */",
+      "endBefore": "/* *** ODSAendTag: enqueue *** */",
       "tags": {
-        "sig": 2,
-        "setNext": 3,
-        "rear": 4,
-        "size": 5
+        "sig": 1,
+        "addLast": 2
       }
     }]
   }

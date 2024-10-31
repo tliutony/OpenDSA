@@ -14,14 +14,14 @@ $(document).ready(function() {
   var leftMargin = 10;
   var topMargin = 40;
   var list = av.ds.list({nodegap: 30, left: leftMargin, top: topMargin});
-  list.addFirst(30).addFirst(21).addFirst(3).addFirst("null");
+  list.addFirst(30).addFirst(21).addFirst(3);
   var newNode = list.newNode("10");
   newNode.css({top: topMargin + 20});
   list.layout();
   newNode.hide();
 
-  av.pointer("front", list.get(0));
-  var rearP = av.pointer("rear", list.get(3));
+  av.pointer("head", list.get(0));
+  var rearP = av.pointer("tail", list.get(2));
 
   // Slide 1
   av.umsg(interpret("sc1"));
@@ -31,10 +31,10 @@ $(document).ready(function() {
   // Slide 2
   av.umsg(interpret("sc2"));
   list.layout();
-  pseudo.setCurrentLine("setNext");
+  pseudo.setCurrentLine("addLast");
   newNode.show();
   newNode.highlight();
-  var endNode = list.get(3);
+  var endNode = list.get(2);
   endNode.next(newNode);
   endNode.edgeToNext().hide();
   list.layout({updateTop: false});
@@ -44,18 +44,12 @@ $(document).ready(function() {
   av.umsg(interpret("sc3"));
   newNode.unhighlight();
   endNode.edgeToNext().show();
-  list.layout({updateTop: false});
+  //list.layout({updateTop: false});
+  list.layout();
+  rearP.target(list.get(3));
   av.step();
 
   // Slide 4
   av.umsg(interpret("sc4"));
-  list.layout();
-  rearP.target(list.get(4));
-  pseudo.setCurrentLine("rear");
-  av.step();
-
-  // Slide 5
-  av.umsg(interpret("sc5"));
-  pseudo.setCurrentLine("size");
   av.recorded();
 });

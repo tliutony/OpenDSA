@@ -18,15 +18,15 @@ $(document).ready(function() {
   arr.addClass([0, 1, 2, 7, 8, 9], "unused");
   // Create the graphics for front and rear boxes
   var arrFront = av.ds.array([3], {indexed: false, left: 200, top: topMargin});
-  av.label("front", {left: 163, top: topMargin + 4});
+  av.label("first", {left: 163, top: topMargin + 4});
   arrFront.addClass([0], "special");
   arr.addClass([3], "special");
   var arrRear = av.ds.array([6], {indexed: false, left: 200, top: topMargin + 35});
-  av.label("rear", {left: 168, top: topMargin + 39});
+  av.label("last", {left: 168, top: topMargin + 39});
   arrRear.addClass([0], "processing");
   arr.addClass([6], "processing");
   var arrSize = av.ds.array([4], {indexed: false, left: 200, top: topMargin + 70});
-  av.label("listSize", {left: 147, top: topMargin + 74});
+  av.label("size", {left: 147, top: topMargin + 74});
 
   // Slide 1
   av.umsg(interpret("sc1"));

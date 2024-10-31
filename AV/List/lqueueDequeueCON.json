@@ -2,12 +2,9 @@
   "translations": {
     "en": {
       "sc1": "Now for the <code>dequeue</code> operation.",
-      "sc2": "First check that the Queue is not empty.",
-      "sc3": "Store dequeued value.",
-      "sc4": "Advance front to point to the new link node.",
-      "sc6": "Check that the next node of <code>front</code> is not empty. If it were, this would be a special case requiring <code>rear</code> to be adjusted.",
-      "sc7": "Decrease the size by 1.",
-      "sc8": "Return the dequeued value."
+      "sc2": "First we check that the queue is not empty, and throw a <code>NoSuchElementException</code> if it is.",
+      "sc3": "Again, we can rely on the linked list operations to do the work. Here, we use the <code>removeFirst()</code> method to remove the item at the front of the queue, which also updates the <code>head</code> pointer.",
+      "sc4": "Return the value removed by <code>removeFirst()</code>, which is the dequeued value."
     }
   },
   "code": {
@@ -26,17 +23,14 @@
       }
     }],
     "java_generic": [{
-      "url": "../../../SourceCode/Java_Generic/Lists/LQueue.java",
+      "url": "../../../SourceCode/Java_Generic/MHC/LinkedListQueue.java",
       "lineNumbers": false,
-      "startAfter": "/* *** ODSATag: LQueueDequeue *** */",
-      "endBefore": "/* *** ODSAendTag: LQueueDequeue *** */",
+      "startAfter": "/* *** ODSATag: dequeue *** */",
+      "endBefore": "/* *** ODSAendTag: dequeue *** */",
       "tags": {
-        "sig": 2,
-        "empty": 3,
-        "copy": 4,
-        "setNext": 5,
-        "endcheck": 6,
-        "return": 7
+        "sig": 1,
+        "empty": 2,
+        "removeFirst": 6
       }
     }]
   }

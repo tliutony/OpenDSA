@@ -132,6 +132,9 @@
     },
     "Stacks": {
       "MHC/stacks": {}
+    },
+    "Queues": {
+      "MHC/queues": {}
     }
   }
 }
