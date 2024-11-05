@@ -17,7 +17,7 @@ public class CircularArrayQueue<E> implements MHCQueue<E> {
         capacity = 10; // default capacity to 10
         values = (E[]) new Object[capacity];
         first = 0;
-        last = 0;
+        last = capacity - 1;
         size = 0;
     }
 
