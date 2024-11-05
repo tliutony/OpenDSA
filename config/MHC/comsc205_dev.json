@@ -139,32 +139,9 @@
       "List/Queue": {},
       "List/QueueLinked": {}
     },
-    "Recursion I and Binary Search": {
-      "Searching/SearchIntro": {},
-      "Searching/BinarySearch": {},
+    "Recursion I": {
       "RecurTutor/RecIntro": {},
-      "RecurTutor/Write": {},
-      "RecurTutor/Trace": {},
-      "RecurTutor/TracingEx": {
-        "RecTraceSummbckwrdFlow": {
-          "threshold": 1
-        },
-        "RecTraceSummFuncErr": {
-          "threshold": 1
-        },
-        "RecTraceSummFwdFlow": {
-          "threshold": 1
-        },
-        "RecTraceSummHard": {
-          "threshold": 1
-        },
-        "RecTraceSummHowmany": {
-          "threshold": 1
-        },
-        "RecTraceSummTwoRC": {
-          "threshold": 1
-        }
-      }
+      "RecurTutor/Write": {}
     },
     "Recursion II: Recursive Data Structures and Backtracking": {
       "RecurTutor/CodeCompletionEx": {
