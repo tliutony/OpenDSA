@@ -139,9 +139,8 @@
       "List/Queue": {},
       "List/QueueLinked": {}
     },
-    "Recursion I": {
-      "RecurTutor/RecIntro": {},
-      "RecurTutor/Write": {}
+    "Recursion and Search": {
+      "MHC/recursion": {}
     },
     "Recursion II: Recursive Data Structures and Backtracking": {
       "RecurTutor/CodeCompletionEx": {
