@@ -140,7 +140,8 @@
       "List/QueueLinked": {}
     },
     "Recursion and Search": {
-      "MHC/recursion": {}
+      "MHC/recursion": {},
+      "MHC/searching": {}
     },
     "Recursion II: Recursive Data Structures and Backtracking": {
       "RecurTutor/CodeCompletionEx": {
