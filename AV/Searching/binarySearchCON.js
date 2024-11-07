@@ -20,21 +20,27 @@ $(document).ready(function () {
   av.displayInit();
 
   // Slide 2
-  arr.highlight([0, 15]);
   av.umsg(interpret("sc2"));
   pseudo.unhighlight("sig");
+  pseudo.highlight("empty");
+  av.step();
+
+  // Slide 3
+  arr.highlight([0, 15]);
+  av.umsg(interpret("sc3"));
+  pseudo.unhighlight("empty");
   pseudo.highlight("init");
   av.step();
 
   // Slide 3
-  av.umsg(interpret("sc3"));
+  av.umsg(interpret("sc4"));
   arr.addClass(7, "processing");
   pseudo.unhighlight("init");
   pseudo.setCurrentLine("compute");
   av.step();
 
   // Slide 4
-  av.umsg(interpret("sc4"));
+  av.umsg(interpret("sc5"));
   arr.removeClass(7, "processing").highlight(8);
   arr.unhighlight(0);
   arr.addClass([0, 1, 2, 3, 4, 5, 6, 7], "deemph");
@@ -42,13 +48,13 @@ $(document).ready(function () {
   av.step();
 
   // Slide 5
-  av.umsg(interpret("sc5"));
+  av.umsg(interpret("sc6"));
   arr.addClass(11, "processing");
   pseudo.setCurrentLine("compute");
   av.step();
 
   // Slide 6
-  av.umsg(interpret("sc6"));
+  av.umsg(interpret("sc7"));
   arr.removeClass(11, "processing").highlight(10);
   arr.unhighlight(15);
   arr.addClass([11, 12, 13, 14, 15], "deemph");
@@ -56,13 +62,13 @@ $(document).ready(function () {
   av.step();
 
   // Slide 7
-  av.umsg(interpret("sc7"));
+  av.umsg(interpret("sc8"));
   arr.addClass(9, "processing");
   pseudo.setCurrentLine("compute");
   av.step();
 
   // Slide 8
-  av.umsg(interpret("sc8"));
+  av.umsg(interpret("sc9"));
   arr.removeClass(9, "processing");
   arr.unhighlight(10);
   arr.addClass([9, 10, 11], "deemph");
@@ -70,29 +76,29 @@ $(document).ready(function () {
   av.step();
 
   // Slide 9
-  av.umsg(interpret("sc9"));
+  av.umsg(interpret("sc10"));
   arr.addClass(8, "processing");
   pseudo.setCurrentLine("compute");
   av.step();
 
   // Slide 10
-  av.umsg(interpret("sc10"));
+  av.umsg(interpret("sc11"));
   arr.removeClass(8, "processing");
   arr.addClass(8, "special");
   pseudo.setCurrentLine("found");
   av.step();
 
   // Slide 11
-  av.umsg(interpret("sc11"));
+  av.umsg(interpret("sc12"));
   pseudo.setCurrentLine(0); // Clears both "previous" and "current" line highlight
   pseudo.highlight("while");
-  pseudo.highlight("return");
+  //pseudo.highlight("return");
   av.step();
 
   // Slide 12
   pseudo.unhighlight("while");
   pseudo.unhighlight("return");
-  av.umsg(interpret("sc12"));
+  av.umsg(interpret("sc13"));
   arr.removeClass(true, "deemph");
   arr.unhighlight([7, 9]);
   arr.addClass([7, 9, 11], "special");

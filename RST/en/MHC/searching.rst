@@ -15,6 +15,10 @@ If the value is not in the array, eventually you will reach the end.
 We will call this an :term:`unsuccessful search`.
 Here is a simple implementation for linear search.
 
+.. note::
+
+   This is identical in behavior to the ``indexOf`` method we have seen before.
+
 .. codeinclude:: Searching/Sequential
       :tag: Sequential
 
@@ -74,15 +78,10 @@ Here is an illustration of the binary search method.
    :output: show
    :keyword: Search; Binary Search
 
-With the right math techniques, we can show that the
-cost of binary search on an array of :math:`n` values is at most
-:math:`\log n`.
+The cost of binary search on an array of :math:`n` values is at most
+:math:`\log n`, or :math:`O(\log n)`.
 This is because we are repeatedly splitting the size of the subarray
 that we must look at in half.
 We stop (in the worst case) when we reach a subarray of size 1.
 And we can only cut the value of :math:`n` in half :math:`\log n`
 times before we reach 1.
-
-.. avembed:: AV/Searching/binarySearchPRO.html pe
-   :long_name: Binary Search Proficiency Exercise
-   :keyword: Search; Binary Search

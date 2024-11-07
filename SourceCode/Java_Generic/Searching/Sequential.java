@@ -6,15 +6,17 @@ public class Sequential {
 static boolean SUCCESS = true;
 
 /* *** ODSATag: Sequential *** */
-// Return the position of an element in array A with value K.
-// If K is not in A, return A.length.
-static int sequential(int[] A, int K) {
-  for (int i=0; i<A.length; i++) { // For each element
-    if (A[i] == K) {               // if we found it
-       return i;                 //   return this position
+// Return the position of an element in array array with the given value.
+// If value is not in array, return -1.
+static int linearSearch(int[] array, int value) {
+    for (int i=0; i<array.length; i++) {
+        // If we find the value, return the index
+        if (array[i] == value) {               
+            return i;                 
+        }
     }
-  }
-  return A.length;               // Otherwise, return the array length
+    // If we complete the loop without finding the value, return -1
+    return -1;
 }
 /* *** ODSAendTag: Sequential *** */
 

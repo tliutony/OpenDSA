@@ -6,18 +6,37 @@ public class Bsearch {
 static boolean SUCCESS = true;
 
 /* *** ODSATag: BinarySearch *** */
-// Return the position of an element in sorted array A with value K.
-// If K is not in A, return A.length.
-public static int binarySearch(int[] A, int K) {
-  int low = 0;
-  int high = A.length - 1;
-  while(low <= high) {                  // Stop when low and high meet
-    int mid = (low + high) / 2;         // Check middle of subarray
-    if( A[mid] < K) low = mid + 1;      // In right half
-    else if(A[mid] > K) high = mid - 1; // In left half
-    else return mid;                    // Found it
+public static int binarySearch(int[] values, int value) {
+  // Base case - empty array
+  if (values.length == 0) {
+      return -1;
   }
-  return A.length;                      // Search value not in A
+
+  // Recursive case - call helper method
+  return binarySearchHelper(values, value, 0, values.length - 1);
+}
+
+private static int binarySearchHelper(int[] values, int value, int low, int high) {
+  // Base case - value not found
+  if (low > high) {
+      return -1;
+  }
+
+  // Find the middle index
+  int middle = (low + high) / 2;
+  // Base case - value found
+  if (values[middle] == value) {
+      return middle;
+  }
+
+  // Recursive case - search lower half
+  if (values[middle] > value) {
+      return binarySearchHelper(values, value, low, middle - 1);
+  }
+  else {
+      // Recursive case - search upper half
+      return binarySearchHelper(values, value, middle + 1, high);
+  }
 }
 /* *** ODSAendTag: BinarySearch *** */
 
