@@ -135,6 +135,10 @@
     },
     "Queues": {
       "MHC/queues": {}
+    },
+    "Recursion and Search": {
+      "MHC/recursion": {},
+      "MHC/searching": {}
     }
   }
 }
