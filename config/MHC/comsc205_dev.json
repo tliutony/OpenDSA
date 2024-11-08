@@ -139,34 +139,13 @@
       "List/Queue": {},
       "List/QueueLinked": {}
     },
-    "Recursion I and Binary Search": {
-      "Searching/SearchIntro": {},
-      "Searching/BinarySearch": {},
-      "RecurTutor/RecIntro": {},
-      "RecurTutor/Write": {},
-      "RecurTutor/Trace": {},
-      "RecurTutor/TracingEx": {
-        "RecTraceSummbckwrdFlow": {
-          "threshold": 1
-        },
-        "RecTraceSummFuncErr": {
-          "threshold": 1
-        },
-        "RecTraceSummFwdFlow": {
-          "threshold": 1
-        },
-        "RecTraceSummHard": {
-          "threshold": 1
-        },
-        "RecTraceSummHowmany": {
-          "threshold": 1
-        },
-        "RecTraceSummTwoRC": {
-          "threshold": 1
-        }
-      }
+    "Recursion I": {
+      "MHC/recursion": {}
     },
-    "Recursion II: Recursive Data Structures and Backtracking": {
+    "Recursion II and Search": {
+      "MHC/searching": {}
+    },
+    "Recursion Practice": {
       "RecurTutor/CodeCompletionEx": {
         "Recursion Programming Exercise: Add odd values": {
           "points": 1

@@ -94,14 +94,14 @@ $(document).ready(function() {
   var peseudo8 = av.code($.extend({lineNumbers: false, top: 10, left: 70}, code[7]));
   peseudo8.highlight("bc");
   peseudo8.highlight("rc");
-  av.step();
+  av.recorded();
 
   // Slide 17
-  av.umsg(interpret("sc17"));
-  av.label("Usual Format:", {left: 70, top: -20});
-  av.label("Alternative Format:", {left: 430, top: -20});
-  var peseudo9 = av.code($.extend({lineNumbers: false, top: 10, left: 430}, code[8]));
-  peseudo9.highlight("rc");
-  peseudo9.highlight("bc");
-  av.recorded();
+  // av.umsg(interpret("sc17"));
+  // av.label("Usual Format:", {left: 70, top: -20});
+  // av.label("Alternative Format:", {left: 430, top: -20});
+  // var peseudo9 = av.code($.extend({lineNumbers: false, top: 10, left: 430}, code[8]));
+  // peseudo9.highlight("rc");
+  // peseudo9.highlight("bc");
+  // av.recorded();
 });
