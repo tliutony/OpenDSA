@@ -136,8 +136,10 @@
     "Queues": {
       "MHC/queues": {}
     },
-    "Recursion and Search": {
-      "MHC/recursion": {},
+    "Recursion I": {
+      "MHC/recursion": {}
+    },
+    "Recursion II and Search": {
       "MHC/searching": {}
     }
   }

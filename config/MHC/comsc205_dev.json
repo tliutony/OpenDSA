@@ -139,11 +139,13 @@
       "List/Queue": {},
       "List/QueueLinked": {}
     },
-    "Recursion and Search": {
-      "MHC/recursion": {},
+    "Recursion I": {
+      "MHC/recursion": {}
+    },
+    "Recursion II and Search": {
       "MHC/searching": {}
     },
-    "Recursion II: Recursive Data Structures and Backtracking": {
+    "Recursion Practice": {
       "RecurTutor/CodeCompletionEx": {
         "Recursion Programming Exercise: Add odd values": {
           "points": 1
