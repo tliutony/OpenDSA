@@ -201,19 +201,10 @@
       "RecurTutor/RecSummaryEx": {}
     },
     "Binary Trees": {
-      "Binary/BinaryTreeIntro": {},
-      "Binary/BinaryTree": {
-        "DefSumm": {
-          "points": 2,
-          "threshold": 8
-        },
-        "Treeprobs": {
-          "threshold": 4
-        }
-      },
-      "Binary/BinaryTreeNodeSpace": {},
-      "Binary/BinaryTreeImpl": {},
-      "Binary/RecursiveDS": {},
+      "MHC/binaryTrees": {},
+      "MHC/binaryTreeImplementation": {}
+    },
+    "Traversals and Binary Search Trees": {
       "Binary/BinaryTreeTraversal": {
         "btTravPreorderPRO": {
           "exer_options": {
@@ -238,9 +229,7 @@
         }
       },
       "Binary/WritingTraversals": {},
-      "Binary/BinaryChapSumm": {}
-    },
-    "Binary Search Trees": {
+      "Binary/BinaryChapSumm": {},
       "Binary/BST": {
         "BSTSumm": {
           "threshold": 2

@@ -141,6 +141,10 @@
     },
     "Recursion II and Search": {
       "MHC/searching": {}
+    },
+    "Binary Trees": {
+      "MHC/binaryTrees": {},
+      "MHC/binaryTreeImplementation": {}
     }
   }
 }
