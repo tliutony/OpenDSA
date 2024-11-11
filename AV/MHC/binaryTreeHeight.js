@@ -23,18 +23,24 @@ $(document).ready(function () {
 
     // Slide 3
     av.umsg(interpret("sc3"));
-    pseudo.setCurrentLine("base_case");
+    //pseudo.setCurrentLine("base_case");
+    pseudo.highlight("base_case");
     av.step();
 
     // Slide 4
     av.umsg(interpret("sc4"));
-    pseudo.setCurrentLine("recurse");
+    pseudo.highlight("recurse");
+    pseudo.unhighlight("base_case");
     av.step();
 
     // Slide 5
     av.umsg(interpret("sc5"));
+    pseudo.highlight("max");
+    pseudo.unhighlight("recurse");
     av.step();
     // Slide 6
     av.umsg(interpret("sc6"));
+    pseudo.highlight("return");
+    pseudo.unhighlight("max");
     av.recorded();
 });

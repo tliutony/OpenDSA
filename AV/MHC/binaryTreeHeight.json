@@ -3,9 +3,9 @@
       "en": {
         "sc1": "Let's apply the idea of recursion to the height() method.",
         "sc2": "In our public method, all we have to do is recursively call the private height() helper method on the root node.",
-        "sc3": "In our helper method, our <b>base case</b> is when the current node is null. If so, we return 0 because an empty node has a height of 0.",
+        "sc3": "In our private helper method, our <b>base case</b> is when the current node is null. If so, we return 0 because an empty node has a height of 0.",
         "sc4": "Otherwise, we recursively call the height() method on the left and right children of the current node.",
-        "sc5": "We use <code>Math.max</code> to find the height of the taller subtree between left and right, which are determined by the recursive calls.",
+        "sc5": "We then check which subtree is taller, essentially taking the maximum of the two recursive calls.",
         "sc6": "Finally, we return the height of the taller subtree plus 1 for the current node."
       }
     },
@@ -19,7 +19,9 @@
           "sig": 1,
           "public_return": 2,
           "base_case": [7,8,9],
-          "recurse": [13,14]
+          "recurse": [13,14],
+          "max": [16, 18],
+          "return": [17, 19]
         }
     }]
   }

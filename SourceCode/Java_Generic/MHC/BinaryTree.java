@@ -38,8 +38,14 @@ public class BinaryTree<T> {
 
         // recursive case: height is 1 (for the current node),
         // plus the height of the taller subtree
-        return 1 + Math.max(this.height(node.getLeft()), 
-                            this.height(node.getRight()));
+        int leftHeight = this.height(node.getLeft());
+        int rightHeight = this.height(node.getRight());
+        
+        if (leftHeight > rightHeight) {
+            return 1 + leftHeight;
+        } else {
+            return 1 + rightHeight;
+        }
     }
     /* *** ODSAendTag: height *** */
 
