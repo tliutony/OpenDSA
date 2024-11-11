@@ -145,61 +145,6 @@
     "Recursion II and Search": {
       "MHC/searching": {}
     },
-    "Recursion Practice": {
-      "RecurTutor/CodeCompletionEx": {
-        "Recursion Programming Exercise: Add odd values": {
-          "points": 1
-        },
-        "Recursion Programming Exercise: Count Characters": {
-          "points": 1
-        },
-        "Recursion Programming Exercise: Cummulative Sum": {
-          "points": 1
-        },
-        "Recursion Programming Exercise: GCD": {
-          "points": 1
-        },
-        "Recursion Programming Exercise: Largest": {
-          "points": 1
-        },
-        "Recursion Programming Exercise: Multiply": {
-          "points": 1
-        },
-        "Recursion Programming Exercise: Sum Of the Digits": {
-          "points": 1
-        },
-        "Recursion Programming Exercise: log": {
-          "points": 1
-        }
-      },
-      "RecurTutor/HarderWrite": {},
-      "RecurTutor/WritingEx": {
-        "Recursion Programming Exercise: Cannonballs": {
-          "points": 1
-        },
-        "Recursion Programming Exercise: Check Palindrome": {
-          "points": 1
-        },
-        "Recursion Programming Exercise: Pascal Triangle": {
-          "points": 1
-        },
-        "Recursion Programming Exercise: Subset Sum": {
-          "points": 1
-        }
-      },
-      "RecurTutor/HarderCodeCompletionEx": {
-        "Recursion Programming Exercise: Decimal to Binary": {
-          "points": 1
-        },
-        "Recursion Programming Exercise: Is Reverse": {
-          "points": 1
-        },
-        "Recursion Programming Exercise: Minimum of array": {
-          "points": 1
-        }
-      },
-      "RecurTutor/RecSummaryEx": {}
-    },
     "Binary Trees": {
       "MHC/binaryTrees": {},
       "MHC/binaryTreeImplementation": {}
