@@ -10,6 +10,9 @@ $(document).ready(function() {
 //  var pseudo = av.code($.extend({top: 0, left: 200}, code[0]));
   var pseudo = av.code(code[0]);
 
+  av.label("value", {left: 100, top: 450});
+  var valueBox = av.ds.array([30], {indexed: false, top: 447, left: 140});
+
   var bt = av.ds.binarytree({visible: true, nodegap: 15});
   bt.root(37);
   var rt = bt.root();
@@ -29,7 +32,7 @@ $(document).ready(function() {
   newedge.addClass("rededge");
   bt.layout();
 
-  var rt1 = av.pointer("rt", bt.root(), {anchor: "right top", top: -10});
+  var rt1 = av.pointer("node", bt.root(), {anchor: "right top", top: -10});
 
   // Slide 1
   av.umsg(interpret("sc1"));

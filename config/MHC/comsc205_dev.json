@@ -150,6 +150,8 @@
       "MHC/binaryTreeImplementation": {}
     },
     "Traversals and Binary Search Trees": {
+      "MHC/treeTraversal": {},
+      "MHC/bstInsert": {},
       "Binary/BinaryTreeTraversal": {
         "btTravPreorderPRO": {
           "exer_options": {

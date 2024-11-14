@@ -2,36 +2,36 @@ static boolean SUCCESS = true;
 
 // Visit nodes via inorder traversal
 /* *** ODSATag: inorder *** */
-static <E> void inorder(BinNode<E> rt) {
-  if (rt == null) { return; }
-  inorder(rt.left());
-  visit(rt);
-  inorder(rt.right());
+public void inorder(BinaryTreeNode<T> node) {
+  if (node == null) { return; }
+  inorder(node.left());
+  visit(node);
+  inorder(node.right());
 }
 /* *** ODSAendTag: inorder *** */
 
 // Visit nodes via postorder traversal
 /* *** ODSATag: postorder *** */
-static <E> void postorder(BinNode<E> rt) {
-  if (rt == null) { return; }
-  postorder(rt.left());
-  postorder(rt.right());
-  visit(rt);
+public void postorder(BinaryTreeNode<T> node) {
+  if (node == null) { return; }
+  postorder(node.left());
+  postorder(node.right());
+  visit(node);
 }
 /* *** ODSAendTag: postorder *** */
 
 // Visit nodes via preorder traversal
 /* *** ODSATag: preorder *** */
-static <E> void preorder(BinNode<E> rt) {
-  preorder(rt.left());
-  preorder(rt.right());
-  if (rt == null) { return; }
-  visit(rt);
+public void preorder(BinaryTreeNode<T> node) {
+  if (node == null) { return; }
+  visit(node);
+  preorder(node.left());
+  preorder(node.right());
 }
 /* *** ODSAendTag: preorder *** */
 
-static <E> void visit(BinNode<E> rt) {
-  System.out.print(rt.value() + " ");
+public void visit(BinaryTreeNode<T> node) {
+  System.out.print(node.getValue() + " ");
 }
 
 /* *** ODSATag: count *** */
