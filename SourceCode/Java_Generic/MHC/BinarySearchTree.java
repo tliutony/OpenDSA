@@ -81,23 +81,23 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
     /* *** ODSAendTag: BSTremoveMax *** */
 
-    /* *** ODSATag: BSTremove *** */
-    public T remove(T value) {
-        if (!contains(value)) {
+    public T remove(T toRemove) {
+        if (!contains(toRemove)) {
             return null;
         }
 
-        root = remove(root, value);
-        return value;
+        root = remove(root, toRemove);
+        return toRemove;
     }
 
-    private BinaryTreeNode<T> remove(BinaryTreeNode<T> node, T value) {
-        //base case:  value is not in the tree
+    /* *** ODSATag: BSTremove *** */
+    private BinaryTreeNode<T> remove(BinaryTreeNode<T> node, T toRemove) {
+        // base case:  value is not in the tree
         if (node == null) {
             return null;
         }
         // compare the value to the current node's value
-        int comparison = value.compareTo(node.getValue());
+        int comparison = toRemove.compareTo(node.getValue());
 
         //base case:  we found the value in the current node
         if (comparison == 0) {
@@ -136,12 +136,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
         // Recursive case:  the value is less than the current node's value, so we search the left subtree
         else if (comparison < 0) {
-            node.setLeft(remove(node.getLeft(), value));
+            node.setLeft(remove(node.getLeft(), toRemove));
             return node;
         }
         // Recursive case:  the value is greater than the current node's value, so we search the right subtree
         else {
-            node.setRight(remove(node.getRight(), value));
+            node.setRight(remove(node.getRight(), toRemove));
             return node;
         }
     }

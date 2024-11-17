@@ -46,6 +46,23 @@
   top: 35px;
 }
 
+#BSTremoveLeaf {
+  height: 750px;
+}
+
+#BSTremoveLeaf .jsavoutput.jsavline {
+  height: 40px;
+}
+
+#BSTremoveLeaf .jsavcode {
+  margin-left: 310px;
+}
+
+#BSTremoveLeaf .jsavtree { 
+  top: 35px;
+}
+
+
 .thinredline {
   stroke: red;
 }
