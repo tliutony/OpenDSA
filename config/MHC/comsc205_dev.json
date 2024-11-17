@@ -207,6 +207,10 @@
       },
       "Binary/BSTDict": {}
     },
+    "Binary Search Trees II and Heaps": {
+      "MHC/bstDelete": {},
+      "MHC/heaps": {}
+    },
     "Heaps and Priority Queues": {
       "Binary/Heaps": {},
       "Binary/CompleteTree": {}

@@ -1,5 +1,5 @@
-FROM node:22-alpine3.20 AS node
-FROM python:3.10-alpine3.20
+FROM --platform=linux/amd64 node:22 AS node
+FROM --platform=linux/amd64 python:3.10
 
 ARG ODSA_ENV="DEV"
 ENV ODSA_ENV=${ODSA_ENV}
@@ -13,8 +13,11 @@ ENV PYTHONUNBUFFERED=1
 ENV TZ=America/New_York
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN apk update
-RUN apk add --no-cache bash git curl make
+# RUN apk update
+# RUN apk add --no-cache bash git curl make
+
+RUN apt-get update
+RUN apt-get install -y bash git curl make
 
 COPY --from=node /usr/lib /usr/lib
 COPY --from=node /usr/local/share /usr/local/share

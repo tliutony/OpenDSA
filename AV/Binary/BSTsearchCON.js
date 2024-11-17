@@ -9,6 +9,10 @@ $(document).ready(function () {
   var av = new JSAV(av_name);
   var pseudo = av.code(code[0]);
 
+  av.label("value", {left: 100, top: 250});
+  var valueBox = av.ds.array([32], {indexed: false, top: 247, left: 140});
+
+
   var bstTop = 45;
   var bt = av.ds.binarytree({top: bstTop, left: 10, visible: true, nodegap: 15});
   bt.root(37);
@@ -23,7 +27,7 @@ $(document).ready(function () {
   rt.right().right(120);
   bt.layout();
 
-  var rt1 = av.pointer("rt", bt.root(), {anchor: "right top"});
+  var rt1 = av.pointer("node", bt.root(), {anchor: "right top"});
 
   // Slide 1
   av.umsg(interpret("sc1"));
@@ -36,30 +40,31 @@ $(document).ready(function () {
   av.step();
 
   // Slide 3
-  av.umsg(interpret("sc3"));
-  pseudo.setCurrentLine("checkgreater");
+  av.umsg(interpret("sc17"));
+  pseudo.setCurrentLine("checkequal");
   av.step();
 
+
   // Slide 4
+  av.umsg(interpret("sc3"));
+  pseudo.setCurrentLine("checklessthan");
+  av.step();
+
+  // Slide 5
   av.umsg(interpret("sc4"));
   pseudo.setCurrentLine("visitleft");
   av.step();
 
-  // Slide 5
+  // Slide 6
   av.umsg(interpret("sc5"));
-  pseudo.setCurrentLine("sig");
+  pseudo.setCurrentLine("recursive");
   bt.root().addClass("processing");
   rt1.target(bt.root().left(), {anchor: "left top"});
   av.step();
 
-  // Slide 6
+  // Slide 7
   av.umsg(interpret("sc2"));
   pseudo.setCurrentLine("checknull");
-  av.step();
-
-  // Slide 7
-  av.umsg(interpret("sc16"));
-  pseudo.setCurrentLine("checkgreater");
   av.step();
 
   // Slide 8
@@ -68,25 +73,25 @@ $(document).ready(function () {
   av.step();
 
   // Slide 9
+  av.umsg(interpret("sc6"));
+  pseudo.setCurrentLine("checklessthan");
+  av.step();
+
+  // Slide 10
   av.umsg(interpret("sc7"));
   pseudo.setCurrentLine("visitright");
   av.step();
 
-  // Slide 10
+  // Slide 11
   av.umsg(interpret("sc9"));
-  pseudo.setCurrentLine("sig");
+  pseudo.setCurrentLine("recursive");
   bt.root().left().addClass("processing");
   rt1.target(bt.root().left().right(), {anchor: "right top"});
   av.step();
 
-  // Slide 11
+  // Slide 12
   av.umsg(interpret("sc2"));
   pseudo.setCurrentLine("checknull");
-  av.step();
-
-  // Slide 12
-  av.umsg(interpret("sc16"));
-  pseudo.setCurrentLine("checkgreater");
   av.step();
 
   // Slide 13
@@ -94,27 +99,27 @@ $(document).ready(function () {
   pseudo.setCurrentLine("checkequal");
   av.step();
 
-  // Slide 14
+  // Slide 15
   av.umsg(interpret("sc12"));
   pseudo.setCurrentLine("found");
   av.step();
 
-  // Slide 15
+  // Slide 16
   av.umsg(interpret("sc13"));
   bt.root().left().removeClass("processing");
   rt1.target(bt.root().left(), {anchor: "left top"});
   pseudo.setCurrentLine("visitright");
   av.step();
 
-  // Slide 16
+  // Slide 17
   av.umsg(interpret("sc14"));
   bt.root().removeClass("processing");
   rt1.target(bt.root(), {anchor: "right top"});
   pseudo.setCurrentLine("visitleft");
   av.step();
 
-  // Slide 17
+  // Slide 18
   av.umsg(interpret("sc15"));
-  pseudo.setCurrentLine("end");
+  pseudo.setCurrentLine("sig");
   av.recorded();
 });
