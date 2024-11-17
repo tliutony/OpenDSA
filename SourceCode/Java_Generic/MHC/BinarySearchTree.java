@@ -63,7 +63,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
     /* *** ODSAendTag: BSTcontains *** */
 
-    /* *** ODSATag: removeMax *** */
+    /* *** ODSATag: BSTremoveMax *** */
     private T removeMax(BinaryTreeNode<T> node) {
         // base case: if the right child has no right child, 
         // then node.getRight() is the largest value
@@ -79,7 +79,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             return removeMax(node.getRight());
         }
     }
-    /* *** ODSAendTag: removeMax *** */
+    /* *** ODSAendTag: BSTremoveMax *** */
 
     /* *** ODSATag: BSTremove *** */
     public T remove(T value) {
