@@ -62,6 +62,23 @@
   top: 35px;
 }
 
+#BSTremoveOneChild {
+  height: 800px;
+}
+
+#BSTremoveOneChild .jsavoutput.jsavline {
+  height: 40px;
+}
+
+#BSTremoveOneChild .jsavcode {
+  margin-left: 310px;
+}
+
+#BSTremoveOneChild .jsavtree { 
+  top: 35px;
+}
+
+
 
 .thinredline {
   stroke: red;

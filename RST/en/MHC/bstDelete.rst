@@ -117,3 +117,24 @@ Here is an example of removing a leaf node from a BST:
    :output: show
    :keyword: Binary Search Tree
 
+
+remove() case 2: removing a node with one child
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The second case is when the node we wish to remove has one child. In this case, we replace the node with its child, either left or right:
+
+.. inlineav:: BSTremoveOneChild ss
+   :long_name: BST removeOneChild Slideshow
+   :links: AV/Binary/BSTCON.css
+   :scripts: AV/MHC/BSTremoveOneChild.js
+   :output: show
+   :keyword: Binary Search Tree
+
+.. inlineav:: BSTremoveCON ss
+   :long_name: BST remove Slideshow
+   :links: AV/Binary/BSTCON.css
+   :scripts: AV/Binary/BSTremoveCON.js
+   :output: show
+   :keyword: Binary Search Tree
+
+Test
