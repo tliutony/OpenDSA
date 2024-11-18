@@ -24,7 +24,7 @@ $(document).ready(function() {
   rt.right().right().right("I");
   bt.layout();
 
-  var rt1 = av.pointer("rt", bt.root(), {anchor: "left top", top: -10});
+  var rt1 = av.pointer("node", bt.root(), {anchor: "left top", top: -10});
   var btLeft =  250;
 
   av.umsg(interpret("av_preorder"));

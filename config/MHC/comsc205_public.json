@@ -141,6 +141,14 @@
     },
     "Recursion II and Search": {
       "MHC/searching": {}
+    },
+    "Binary Trees": {
+      "MHC/binaryTrees": {},
+      "MHC/binaryTreeImplementation": {}
+    },
+    "Traversals and Binary Search Trees": {
+      "MHC/treeTraversal": {},
+      "MHC/bstInsert": {}
     }
   }
 }

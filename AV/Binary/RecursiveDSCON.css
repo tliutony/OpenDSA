@@ -27,3 +27,17 @@
   background-image: url(../Icons/person.png);
   background-size: cover;
 }
+
+#binaryTreeHeight {
+  height: 550px;
+}
+
+#binaryTreeHeight .jsavoutput.jsavline {
+  height: 30px;
+}
+
+#binaryTreeHeight .jsavcode{
+  position: relative;
+  top: 20px;
+  width: 600px;
+}

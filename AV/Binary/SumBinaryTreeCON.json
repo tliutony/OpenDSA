@@ -13,8 +13,8 @@
       "av_c4": "The second friend will take the right sub-tree to sum it",
       "av_c5": "The first friend will return the sum of  the left sub-tree",
       "av_c6": "The second friend will return the sum of  the left sub-tree",
-      "av_c7": "You will simply sum the root value to the sums received from your friends",
-      "av_c8": "You don't need to think about the details of recursion. Just accept that your friends (the recursive calls) will return back to you the correct answer for what they do."
+      "av_c7": "All you need to do is sum the root value to the sums received from your friends.",
+      "av_c8": "The intuition behind recursive methods is to trust that your friends (the helper method recursive calls) will return back to you the correct answer for what they do. Then, you just need to add what they tell you to the root value to get your final answer."
     }
   }
 }
