@@ -78,6 +78,23 @@
   top: 35px;
 }
 
+#BSTremoveTwoChildren {
+  height: 820px;
+}
+
+#BSTremoveTwoChildren .jsavoutput.jsavline {
+  height: 40px;
+}
+
+#BSTremoveTwoChildren .jsavcode {
+  margin-left: 300px;
+}
+
+#BSTremoveTwoChildren .jsavtree { 
+  top: 35px;
+}
+
+
 
 
 .thinredline {
