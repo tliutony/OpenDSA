@@ -154,6 +154,10 @@ We will use the ``removeMax()`` method we defined earlier to find the maximum va
     if (node.getLeft().getRight() == null) {
         // replace node's value with left child's value
         node.setValue(node.getLeft().getValue());
+        
+        // replace node's left child with left child's left child
+        node.setLeft(node.getLeft().getLeft());
+        return node;
     }
 
     // removal case 3b: left child has a right child, so 
