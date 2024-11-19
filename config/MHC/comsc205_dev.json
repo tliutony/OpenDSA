@@ -209,6 +209,7 @@
     },
     "Binary Search Trees II and Heaps": {
       "MHC/bstDelete": {},
+      "MHC/heapsPQs": {},
       "Binary/Heaps": {},
       "Binary/CompleteTree": {}
     },

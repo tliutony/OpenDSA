@@ -1,13 +1,13 @@
 {
   "translations" :{
     "en": {
-      "av_c1": "Here is the process for removing the maximum value from the max heap. We know that this value is at the root (array position 0), but we also need to update the heap when we remove it.",
-      "av_c2": "We know that we want to reduce the array/heap size by one. So we swap the first and last positions.",
-      "av_c3": "Decrement the heap by one, removing that last element.",
-      "av_c4": "But now, we no longer have a max heap. Push the top element down as appropriate.",
-      "av_c5": "Swap the root with its left child.",
-      "av_c6": "Swap with its right child.",
-      "av_c7": "Done."
+      "av_c1": "Here is the process for removing the maximum value from the max heap. We know that this value is at the root, but we also need to update the heap when we remove it.",
+      "av_c2": "We know that we want to reduce the heap size by one. So we swap the root with the 'last' leaf. This is done in the array representation by swapping the first and last elements.",
+      "av_c3": "Now that the old root is a the 'last' leaf, we can remove it. To do this in the array representation, we decrement the heap size by one, which effectively removes the last element. Here we have greyed out the removed value.",
+      "av_c4": "But now, we no longer have a max heap. We need to trickle the new root down to maintain the max heap property.",
+      "av_c5": "Since 60 is less than both of its children, we swap it with the larger of the two. We need to swap with the <b>larger</b> child to ensure that the max heap property is maintained. Here we swap with the left child.",
+      "av_c6": "We continue this process. Since 60 is less than both of its children, we swap it with the larger of the two. Here we swap with the right child.",
+      "av_c7": "Now the new root is greater than both of its children, so we are done."
     }
   }
 }

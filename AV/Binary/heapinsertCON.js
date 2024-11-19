@@ -27,6 +27,7 @@ $(document).ready(function() {
   av.step();
 
   // Slide 4
+  av.umsg(interpret("av_c4"));
   bh.swap(10, 4);
   bh.removeClass(10, "processing");
   bh.addClass(4, "processing");
@@ -39,6 +40,7 @@ $(document).ready(function() {
   av.step();
 
   // Slide 6
+  av.umsg(interpret("av_c5"));
   bh.swap(1, 0);
   bh.removeClass(1, "processing");
   bh.addClass(0, "processing");

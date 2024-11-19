@@ -188,7 +188,7 @@ height :math:`h`.
 
 .. note::
 
-    We sometimes use the notation :math:`O(h)` to represent the cost of an operation in a BST, where :math:`h` is the height of the tree.
+    We often discuss the cost of an operation in a BST in terms of :math:`h`, the height of the tree.
 
 If a binary tree is balanced, then the height for a tree of :math:`n`
 nodes is approximately :math:`\log n`.
@@ -216,14 +216,14 @@ the tree, since we must visit every node once.
 .. table:: Efficiency of BST Operations
     :align: center
 
-    +--------------+-----------------------+------------------------+
-    | Operation    | Balanced Case         | Worst Case             |
-    +==============+=======================+========================+
-    | contains()   | O(log n)              | O(n)                   |
-    +--------------+-----------------------+------------------------+
-    | insert()     | O(log n)              | O(n)                   |
-    +--------------+-----------------------+------------------------+
-    | remove()     | O(log n)              | O(n)                   |
-    +--------------+-----------------------+------------------------+
-    | traversal    | O(n)                  | O(n)                   |
-    +--------------+-----------------------+------------------------+
+    +--------------+-----------------------+------------------------+------------------------+
+    | Operation    | Cost in terms of h   | Balanced Case          | Worst Case             |
+    +==============+=======================+========================+========================+
+    | contains()   | O(h)                  | O(log n)               | O(n)                   |
+    +--------------+-----------------------+------------------------+------------------------+
+    | insert()     | O(h)                  | O(log n)               | O(n)                   |
+    +--------------+-----------------------+------------------------+------------------------+
+    | remove()     | O(h)                  | O(log n)               | O(n)                   |
+    +--------------+-----------------------+------------------------+------------------------+
+    | traversal    | O(n)                  | O(n)                   | O(n)                   |
+    +--------------+-----------------------+------------------------+------------------------+

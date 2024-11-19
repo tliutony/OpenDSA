@@ -45,7 +45,7 @@ Below is a partial class declaration for a Binary Search Tree.
    :tag: BinarySearchTree
 
 
-BST Insert
+BST insert()
 ----------
 
 We first look at how to insert a new node into a Binary Search Tree.
