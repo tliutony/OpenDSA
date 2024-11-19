@@ -175,9 +175,9 @@ We will use the ``removeMax()`` method we defined earlier to find the maximum va
 BST operation costs
 -------------------
 
-The cost for ``findhelp`` and ``inserthelp`` is the depth of
+The cost for ``contains()`` and ``insert()`` is the depth of
 the node found or inserted.
-The cost for ``removehelp`` is the depth of the node being
+The cost for ``remove()`` is the depth of the node being
 removed, or in the case when this node has two children,
 the depth of the node with smallest value in its right subtree.
 Thus, in the worst case, the cost for any one of these operations is
@@ -217,7 +217,7 @@ the tree, since we must visit every node once.
     :align: center
 
     +--------------+-----------------------+------------------------+------------------------+
-    | Operation    | Cost in terms of h   | Balanced Case          | Worst Case             |
+    | Operation    | Cost in terms of h    | Balanced Case          | Worst Case             |
     +==============+=======================+========================+========================+
     | contains()   | O(h)                  | O(log n)               | O(n)                   |
     +--------------+-----------------------+------------------------+------------------------+
