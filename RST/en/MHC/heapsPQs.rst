@@ -132,8 +132,10 @@ Again, because the heap is :math:`O(\log n)` levels deep, the cost of removing
 the maximum element is :math:`O(\log n)`.
 
 
-Heap operation costs
---------------------
+Heap priority queue operation costs
+-----------------------------------
+
+Below are the costs of the heap operations for priority queues.
 
 .. table:: Efficiency of Heap Operations
     :align: center
