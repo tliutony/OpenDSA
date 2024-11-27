@@ -43,6 +43,6 @@ $(document).ready(function() {
   arr.unhighlight();
   av.step();
 
-  av.umsg("The good news is that we can immediately tell if there is a record with key value 5 in the array.");
+  av.umsg("The good news is that we can immediately tell if there is a record with key value 5 in the array. This makes accessing the record with key value 5 an O(1) operation!");
   av.recorded();
 });
