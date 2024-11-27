@@ -149,6 +149,14 @@
     "Traversals and Binary Search Trees": {
       "MHC/treeTraversal": {},
       "MHC/bstInsert": {}
+    },
+    "Binary Search Trees II and Heaps": {
+      "MHC/bstDelete": {},
+      "MHC/heapsPQs": {}
+    },
+    "Heaps II and Maps": {
+      "Binary/CompleteTree": {},
+      "MHC/maps": {}
     }
   }
 }

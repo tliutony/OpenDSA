@@ -1,5 +1,5 @@
 #BSTsearchCON {
-  height: 360px;
+  height: 610px;
 }
 
 #BSTsearchCON .jsavoutput.jsavline {
@@ -7,7 +7,7 @@
 }
 
 #BSTsearchCON .jsavcode {
-  margin-left: 310px;
+  margin-left: 260px;
 }
 
 #BSTinsertCON {
@@ -23,7 +23,7 @@
 }
 
 #BSTdeletemaxCON {
-  height: 340px;
+  height: 450px;
 }
 
 #BSTdeletemaxCON .jsavoutput.jsavline {
@@ -31,7 +31,7 @@
 }
 
 #BSTdeletemaxCON .jsavcode{
-  margin-left: 320px;
+  margin-left: 260px;
 }
 
 #BSTremoveCON {
@@ -45,6 +45,57 @@
 #BSTremoveCON .jsavtree { 
   top: 35px;
 }
+
+#BSTremoveLeaf {
+  height: 750px;
+}
+
+#BSTremoveLeaf .jsavoutput.jsavline {
+  height: 40px;
+}
+
+#BSTremoveLeaf .jsavcode {
+  margin-left: 310px;
+}
+
+#BSTremoveLeaf .jsavtree { 
+  top: 35px;
+}
+
+#BSTremoveOneChild {
+  height: 800px;
+}
+
+#BSTremoveOneChild .jsavoutput.jsavline {
+  height: 40px;
+}
+
+#BSTremoveOneChild .jsavcode {
+  margin-left: 310px;
+}
+
+#BSTremoveOneChild .jsavtree { 
+  top: 35px;
+}
+
+#BSTremoveTwoChildren {
+  height: 820px;
+}
+
+#BSTremoveTwoChildren .jsavoutput.jsavline {
+  height: 40px;
+}
+
+#BSTremoveTwoChildren .jsavcode {
+  margin-left: 300px;
+}
+
+#BSTremoveTwoChildren .jsavtree { 
+  top: 35px;
+}
+
+
+
 
 .thinredline {
   stroke: red;

@@ -1,0 +1,41 @@
+{
+    "translations": {
+      "en": {
+        "av_c1": "",
+        "av_c2": "",
+        "av_c3": "",
+        "av_c4": "",
+        "av_c5": "",
+        "av_c6": ""
+      }
+    },
+    "code": {
+      "java_generic": [{
+        "url": "../../../SourceCode/Java_Generic/MHC/BSTRemoveSnippet.md",
+        "lineNumbers": false,
+        "startAfter": "/* *** ODSATag: BSTremoveLeaf *** */",
+        "endBefore": "/* *** ODSAendTag: BSTremoveLeaf *** */",
+        "tags": {
+          "sig": 1,
+          "checknull": 4,
+          "checkless": 20,
+          "visitleft": 21,
+          "checkgreater": 24,
+          "compare": 8,
+          "visitright": 25,
+          "found": 11,
+          "returnnull": [15],
+          "returnrt": 28,
+          "checkleft": 8,
+          "checkright": 9,
+          "twochildren": 10,
+          "getmax": 11,
+          "setelement": 12,
+          "setleft": 13,
+          "return": 16,
+          "end": 17
+        }
+      }]
+    }
+  }
+  

@@ -207,12 +207,15 @@
       },
       "Binary/BSTDict": {}
     },
-    "Heaps and Priority Queues": {
-      "Binary/Heaps": {},
-      "Binary/CompleteTree": {}
+    "Binary Search Trees II and Heaps": {
+      "MHC/bstDelete": {},
+      "MHC/heapsPQs": {}
     },
-    "Maps, Sets, and Hashing": {
-      "IntroToSoftwareDesign/MapsAndSets": {},
+    "Heaps II and Maps": {
+      "Binary/CompleteTree": {},
+      "MHC/maps": {}
+    },
+    "Hashing and Sorting": {
       "Hashing/HashIntro": {},
       "Hashing/HashFunc": {},
       "Hashing/OpenHash": {},

@@ -17,11 +17,7 @@ Array Implementation for Complete Binary Trees
 Array Implementation for Complete Binary Trees
 ----------------------------------------------
 
-From the :ref:`full binary tree theorem <BinaryTreeFullThm>`, we know
-that a large fraction of the space in a typical binary tree node
-implementation is devoted to structural :term:`overhead`, not to
-storing data.
-This module presents a simple, compact implementation
+This section presents a compact implementation
 for :term:`complete binary trees <complete binary tree>`.
 Recall that complete binary trees have all levels except the bottom
 filled out completely, and the bottom level has all of its nodes filled
@@ -46,6 +42,10 @@ position within the tree.
 The table lists the array indices for the
 children, parent, and siblings of each node in
 Figure :num:`Figure #BinArray`.
+
+.. note::
+
+   The tree pictured below is also a min-heap!
 
 .. _BinArray:
 
@@ -76,12 +76,6 @@ the parent, sibling, and children of the node.
    \textrm{Right Child} & 2  & 4 & 6 & 8 & 10 & \,--\, & \,--\, & \,--\, &
    \,--\, & \,--\, & \,--\, &  \,--\,\\
    \hline
-   \textrm{Left Sibling} & \,--\, & \,--\, & 1 & \,--\, &  3 & \,--\, & 5 &
-   \,--\, & 7 & \,--\, &  9 &  \,--\,\\
-   \hline
-   \textrm{Right Sibling} & \,--\, & 2 & \,--\, & 4 & \,--\, &  6 & \,--\, & 8 &
-   \,--\, & 10 & \,--\, & \,--\,\\
-   \hline
    \end{array}
 
 Looking at the table, you should see a pattern
@@ -94,7 +88,7 @@ This means there is no overhead to the array implementation if the
 array is selected to be of size :math:`n` for a tree of :math:`n`
 nodes.
 
-The formulae for calculating the array indices of the various
+The formula for calculating the array indices of the various
 relatives of a node are as follows.
 The total number of nodes in the tree is :math:`n`.
 The index of the node in question is :math:`r`,
@@ -107,12 +101,7 @@ which must fall in the range 0 to :math:`n-1`.
 
 * Right child(:math:`r`) :math:`= 2r + 2` if :math:`2r + 2 < n`.
 
-* Left sibling(:math:`r`) :math:`= r - 1` if :math:`r` is even and
-  :math:`r \neq 0`.
+.. note::
 
-* Right sibling(:math:`r`) :math:`= r + 1` if :math:`r`
-  is odd and :math:`r + 1 < n`.
+   The :math:`= \lfloor x \rfloor` notation means the floor of :math:`x`, which effectively rounds down to the nearest integer. This is automatically done in Java for integer division!
 
-.. avembed:: Exercises/Binary/CompleteFIB.html ka
-   :long_name: Complete Tree Exercise
-   :keyword: Binary Trees; Complete Binary Trees

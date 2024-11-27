@@ -1,9 +1,11 @@
 {
   "translations" :{
     "en": {
-      "av_c1": "Here is the process for inserting a new record into a heap.",
-      "av_c2": "We put the new value at the end of the array.",
-      "av_c3": "Now we have to start moving the value upward in the heap, as appropriate."
+      "av_c1": "Here is the process for inserting a new value into a heap.",
+      "av_c2": "We put the new value at the <b>rightmost</b> leaf node. This ensures that the heap maintains the shape of a complete binary tree.",
+      "av_c3": "Now we have to start moving the value upward in the heap, as appropriate. Since this is a <b>max heap</b>, we compare the new value to its parent. If it is greater than its parent, we swap them.",
+      "av_c4": "We continue this process of comparing and swapping until the new value is in the correct position.",
+      "av_c5": "99 is now at the root of the heap, and it is greater than all of its descendants, so the insert is complete."
     }
   }
 }
