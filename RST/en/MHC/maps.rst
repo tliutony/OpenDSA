@@ -37,12 +37,17 @@ limits on possible combinations, as long as they are object types and not primit
 
 The most important ``Map`` operations are:
 
-.. code-block:: java
+.. note::
 
-   public V put(K key, V val);         // store a given key, value pair. If the key already exists, the value is replaced, and the old value is returned.
-   public V get(K key);                // get the value associated with given key. If the key does not exist, ``null`` is returned.
-   public V remove(K key);             // remove key, value pair for given key, and returns the value that was removed.
-   public boolean containsKey(K key);  // determine whether key exists in Map.
+    Like we have done with previous interfaces, we only show a subset of the ``java.util.Map`` interface below, which we call ``MHCMap`` to differentiate it from the official ``Map`` interface in the ``java.util`` package.
+
+.. codeinclude:: MHC/MHCMap
+   :tag: MHCMap
+
+..    public V put(K key, V val);         // store a given key, value pair. If the key already exists, the value is replaced, and the old value is returned.
+..    public V get(K key);                // get the value associated with given key. If the key does not exist, ``null`` is returned.
+..    public V remove(K key);             // remove key, value pair for given key, and returns the value that was removed.
+..    public boolean containsKey(K key);  // determine whether key exists in Map.
 
 Classes that Implement Map
 ------------------------------

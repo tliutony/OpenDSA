@@ -157,6 +157,10 @@
     "Heaps II and Maps": {
       "Binary/CompleteTree": {},
       "MHC/maps": {}
+    },
+    "Hash Tables": {
+      "MHC/hashTable": {},
+      "MHC/hashCollisions": {}
     }
   }
 }

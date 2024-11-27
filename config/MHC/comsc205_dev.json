@@ -215,12 +215,9 @@
       "Binary/CompleteTree": {},
       "MHC/maps": {}
     },
-    "Hashing and Sorting": {
-      "Hashing/HashIntro": {},
-      "Hashing/HashFunc": {},
-      "Hashing/OpenHash": {},
-      "Hashing/HashCSimple": {},
-      "Hashing/HashDel": {}
+    "Hash Tables": {
+      "MHC/hashTable": {},
+      "MHC/hashCollisions": {}
     },
     "Sorting I": {
       "Sorting/InSort": {},
