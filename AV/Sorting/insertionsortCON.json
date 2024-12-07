@@ -1,7 +1,7 @@
 {
   "translations": {
     "en": {
-      "sc1": "Insertion Sort starts with the record in position 1.",
+      "sc1": "Insertion Sort starts with the record in position 1, as the record in position 0 is already 'sorted.'",
       "sc2": "Since this is smaller than the value to its left, swap them.",
       "sc3": "Now we are done with this record since it can't move further left.",
       "sc4": "Now we are ready to process the record in position 2.",
@@ -13,5 +13,16 @@
       "sc10": "We will compare it to the record in position 2.",
       "sc11": "Since the record in position 2 is smaller, nothing changes and we are done with the record in position 3."
     }
-  }
+  },
+  "code": {
+      "java_generic": [{
+        "url": "../../../SourceCode/Java_Generic/MHC/Sorting.java",
+        "lineNumbers": false,
+        "startAfter": "/* *** ODSATag: insertionSort *** */",
+        "endBefore": "/* *** ODSAendTag: insertionSort *** */",
+        "tags": {
+          "sig": 1
+        }
+      }]
+    }
 }

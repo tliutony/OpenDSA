@@ -1,0 +1,13 @@
+  #insertionSortCON  .jsavcanvas {
+    height: 800px;
+  }
+  
+  #insertionSortCON .jsavoutput.jsavline {
+    height: 30px;
+  }
+  
+  #insertionSortCON .jsavcode{
+    top: 100px;
+    width: 800px;
+    position: relative;
+  }

@@ -1,17 +1,21 @@
 /*global ODSA */
 $(document).ready(function() {
   "use strict";
-  var av_name = "insertionsortCON";
-  var interpret = ODSA.UTILS.loadConfig({av_name: av_name}).interpreter;
+  var av_name = "insertionSortCON";
+  var config = ODSA.UTILS.loadConfig({av_name: av_name}),
+  interpret = config.interpreter,       // get the interpreter
+  code = config.code;                   // get the code object
+  var av = new JSAV(av_name);
+  var pseudo = av.code(code[0]);
 
   var theArray1 = [20, 10, 15, 54, 55, 11, 78, 14];
-  var av = new JSAV(av_name);
-  var arr = av.ds.array(theArray1, {indexed: true});
+  var arr = av.ds.array(theArray1, {indexed: true, top:0, left:300});
 
   // Slide 1
   av.umsg(interpret("sc1"));
   arr.highlight(1);
   arr.addClass([2, 3, 4, 5, 6, 7], "deemph");
+  pseudo.setCurrentLine("sig");
   av.displayInit();
 
   // Slide 2
