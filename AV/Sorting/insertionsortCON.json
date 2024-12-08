@@ -1,17 +1,20 @@
 {
   "translations": {
     "en": {
-      "sc1": "Insertion Sort starts with the record in position 1, as the record in position 0 is already 'sorted.'",
-      "sc2": "Since this is smaller than the value to its left, swap them.",
-      "sc3": "Now we are done with this record since it can't move further left.",
-      "sc4": "Now we are ready to process the record in position 2.",
-      "sc5": "We will compare it to the record in position 1.",
-      "sc6": "Since the record in position 2 is smaller, swap them.",
-      "sc7": "Now compare against the record in position 0.",
-      "sc8": "Since the record currently in position 1 is not smaller than the one in position 0, we are done with it.",
-      "sc9": "Now we are ready to process the record in position 3.",
-      "sc10": "We will compare it to the record in position 2.",
-      "sc11": "Since the record in position 2 is smaller, nothing changes and we are done with the record in position 3."
+      "sc1": "Insertion sort works by maintaining a sorted portion of the array so far, demarcated by the <code>fill</code> index, and inserting the next value into the correct position within that sorted portion.",
+      "sc2": "The outer for loop starts with considering record in position 1, as the record in position 0 is already 'sorted.'",
+      "sc3": "We begin by saving the next value to insert in the variable <code>nextValue</code>.",
+      "sc4": "We then enter a second loop to compare <code>nextValue</code> to the value to its left, and if it is smaller, we move the larger value one position to the right to make room for the next value.",
+      "sc5": "Since 10 is less than 20, we move 20 one position to the right to make room for 10.",
+      "sc6": "We're now at the beginning of the array, so we can insert <code>nextValue</code> in position 0.",
+      "sc7": "Now we have two sorted values. The next iteration of the outer loop will consider the next <code>fill</code> position in the array, and we will repeat the process.",
+      "sc8": "Now <code>nextValue</code> is 15.",
+      "sc9": "We compare 15 to the value to its left, 20. Since 15 is less than 20, we move 20 one position to the right to make room for 15.",
+      "sc10": "Since 15 is greater than 10, we are done with this iteration of the inner loop, and we can insert 15 in position 1.",
+      "sc11": "Now we have three sorted values. Continue to repeat the process for the next value in the array at <code>fill</code> position 3.",
+      "sc12": "Now <code>nextValue</code> is 54.",
+      "sc13": "We compare 54 to the value to its left, 20. Since 54 is greater than 20, it doesn't move, and we can 'insert' 54 in position 3.",
+      "sc14": "Now we have four sorted values. Continue to repeat the process until the entire array is sorted."
     }
   },
   "code": {
@@ -21,7 +24,12 @@
         "startAfter": "/* *** ODSATag: insertionSort *** */",
         "endBefore": "/* *** ODSAendTag: insertionSort *** */",
         "tags": {
-          "sig": 1
+          "sig": 1,
+          "outerloop": 3,
+          "nextValue": [5, 6],
+          "innerloop": 9,
+          "moveRight": [10, 11],
+          "insert": 14
         }
       }]
     }

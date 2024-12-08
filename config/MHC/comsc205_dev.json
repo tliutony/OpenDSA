@@ -219,6 +219,9 @@
       "MHC/hashTable": {},
       "MHC/hashCollisions": {}
     },
+    "Sorting": {
+      "MHC/sorting": {}
+    },
     "Sorting I": {
       "Sorting/InSort": {},
       "Sorting/SortNotation": {

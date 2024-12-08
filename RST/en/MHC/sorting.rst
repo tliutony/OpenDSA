@@ -20,8 +20,7 @@ use in everyday life.
 For example, a natural way to sort your cards in a bridge hand is to
 go from left to right, and place each card in turn in its correct
 position relative to the other cards that you have already sorted.
-This is the idea behind
-:ref:`Insertion Sort <insertion sort> <InsertionSort>`.
+This is the idea behind insertion sort.
 After years of study, there are still unsolved problems related to
 sorting. New algorithms are still being developed and refined for
 special-purpose applications.
@@ -43,32 +42,27 @@ Then take the third bill and put it into the right position with
 respect to the first two, and so on.
 As you take each bill, you would add it to the sorted pile that you
 have already made.
-This simple approach is the inspiration for :term:`Insertion Sort`.
+This simple approach is the inspiration for **insertion sort**.
 
 Insertion Sort iterates through a list of records.
 For each iteration, the current record is inserted in turn at the
 correct position within a sorted list composed of those records
 already processed.
 
-Below we see the first few iterations of Insertion Sort:
+Call the current record :math:`x`. Insertion sort will make room for :math:`x` by moving other records to the right. As it does so, it will compare :math:`x` with the record immediately preceding it.
+As soon as a record value less than or equal to :math:`x` is
+encountered, insertion sort knows to insert :math:`x` to the right of that record.
 
-.. inlineav:: insertionsortCON ss
+Below we show an implementation of insertion sort alongside an animation that illustrates the algorithm:
+
+.. inlineav:: insertionSortCON ss
    :long_name: Insertion Sort Slideshow
-   :links: 
-   :scripts: AV/Sorting/insertionsortCON.js
+   :links: AV/Sorting/mhcsortCON.css
+   :scripts: AV/Sorting/insertionSortCON.js
    :output: show
    :keyword: Sorting; Insertion Sort
 
-This continues on with each record in turn.
-Call the current record :math:`x`.
-
-Insertion Sort will move it to the left so
-long as its value is less than that of the record immediately
-preceding it.
-
-As soon as a key value less than or equal to :math:`x` is
-encountered, Insertion Sort is done with that record because all
-records to its left in the array must have smaller keys.
+In the worst case, insertion sort requires :math:`O(n^2)` time. This is because each record may need to be moved all the way to the left -- think of the case where the smallest record is at the end of the list.
 
 Selection Sort
 --------------
