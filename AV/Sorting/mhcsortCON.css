@@ -11,3 +11,17 @@
     width: 800px;
     position: relative;
   }
+
+  #selectionSort  .jsavcanvas {
+    height: 450px;
+  }
+  
+  #selectionSort .jsavoutput.jsavline {
+    height: 30px;
+  }
+  
+  #selectionSort .jsavcode{
+    top: 100px;
+    width: 800px;
+    position: relative;
+  }

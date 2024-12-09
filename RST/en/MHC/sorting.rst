@@ -66,3 +66,28 @@ In the worst case, insertion sort requires :math:`O(n^2)` time. This is because 
 
 Selection Sort
 --------------
+
+Consider again the problem of sorting a pile of phone bills for the
+past year. Another intuitive approach might be to look through the pile until you find the bill for January, and pull that out.
+Then look through the remaining pile until you find the bill for
+February, and add that behind January.
+
+Proceed through the ever-shrinking pile of bills to select the next
+one in order until you are done.
+This is the inspiration for another :math:`O(n^2)` sort, called **selection sort**.
+
+The :math:`i`'th pass of Selection Sort "selects" the :math:`i`'th
+smallest key in the array, placing that record in the :math:`i`'th position of the array.
+In other words, selection sort first finds the smallest key in an
+unsorted list, then the next smallest, and so on.
+
+Below we show an implementation of selection sort alongside an animation that illustrates the algorithm:
+
+.. inlineav:: selectionSort ss
+   :long_name: Selection Sort Slideshow
+   :links: AV/Sorting/mhcsortCON.css
+   :scripts: AV/MHC/selectionSort.js
+   :output: show
+   :keyword: Sorting; Selection Sort
+
+Because of the nested for loops, selection sort requires :math:`O(n^2)` time.

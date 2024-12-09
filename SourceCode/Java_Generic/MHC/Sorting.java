@@ -6,6 +6,7 @@ public class Sorting<T extends Comparable<T>> {
      * portion.
      * @param values the values to sort
      */
+    /* *** ODSATag: selectionSort *** */
     public void selectionSort (T[] values) {
         // Grow the sorted part of the array
         for (int fill = 0; fill < values.length-1; fill++) {
@@ -19,15 +20,13 @@ public class Sorting<T extends Comparable<T>> {
                 }
             }
 
-            // Swap the smallest value with the first value in the
-            // unsorted portion
+            // Swap the smallest value with the first value in the unsorted portion
             T temp = values[fill];
             values[fill] = values[minPos];
             values[minPos] = temp;
         }
-
     }
-
+    /* *** ODSAendTag: selectionSort *** */
     /* *** ODSATag: insertionSort *** */
     public void insertionSort (T[] values) {
         // Grow the sorted part of the array
