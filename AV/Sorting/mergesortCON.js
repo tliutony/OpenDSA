@@ -20,7 +20,7 @@ $(document).ready(function() {
   function move(a, o, i) {
     av.step();
     av.umsg(interpret("av_c1"));
-    av.effects.moveValue(a, i, answerarr, o);
+    av.effects.copyValue(a, i, answerarr, o);
     a.unhighlight(i);
     av.step();
     av.umsg(interpret("av_c2"));
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
   // Slide 4
   av.umsg(interpret("av_c6"));
-  av.effects.moveValue(rightarr, 0, answerarr, 0);
+  av.effects.copyValue(rightarr, 0, answerarr, 0);
   rightarr.unhighlight(0);
   av.step();
 
@@ -66,6 +66,11 @@ $(document).ready(function() {
   move(rightarr, 5, 2);
   move(rightarr, 6, 3);
   move(leftarr, 7, 3);
-  move(leftarr, 8, 4);
+
+  // Slide 6
+  av.umsg(interpret("av_c8"));
+  av.effects.copyValue(leftarr, 4, answerarr, 8);
+  leftarr.highlight(4);
+
   av.recorded();
 });

@@ -52,6 +52,7 @@ public class Sorting<T extends Comparable<T>> {
      * @param a the first sorted array
      * @param b the second sorted array
      */
+    /* *** ODSATag: merge *** */
     private void merge(T[] result, T[] a, T[] b) {
         // Index of next value to compare in a
         int left = 0;
@@ -88,18 +89,23 @@ public class Sorting<T extends Comparable<T>> {
             next++;
         }
     }
+    /* *** ODSAendTag: merge *** */
 
     /**
      * mergesort is a recursive sorting algorithm that involves repeatedly splitting
      * an array in half, sorting the halves, and merging the sorted halves togethern
      * @param values the values to sort.  On return, the values will be in sorted order.
      */
+
+    /* *** ODSATag: mergesort *** */
     public void mergesort(T[] values) {
         // Base case:  values contains 0 or 1 int.  Return without
         // doing anything since values is already sorted in that case.
-            
+        if (values.length <= 1) {    
+            return;
+        }
         // Recursive case:  there are at least 2 values, so we need to sort them
-        if (values.length > 1) {
+        else {
             // Split the array into 2 equal-sized parts
             int middle = values.length / 2;
             T[] left = (T[]) (new Comparable[middle]);
@@ -115,6 +121,8 @@ public class Sorting<T extends Comparable<T>> {
             merge(values, left, right);
         }
     }
+    /* *** ODSAendTag: mergesort *** */
+
 
     /*******  Quicksort code starts here *********/
     

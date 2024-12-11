@@ -161,6 +161,9 @@
     "Hash Tables": {
       "MHC/hashTable": {},
       "MHC/hashCollisions": {}
+    },
+    "Sorting": {
+      "MHC/sorting": {}
     }
   }
 }

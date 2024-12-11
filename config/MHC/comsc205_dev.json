@@ -222,36 +222,6 @@
     "Sorting": {
       "MHC/sorting": {}
     },
-    "Sorting I": {
-      "Sorting/InSort": {},
-      "Sorting/SortNotation": {
-        "SortIntroSumm": {
-          "threshold": 3
-        }
-      },
-      "Design/Comparison": {},
-      "Sorting/InsertionSort": {},
-      "Sorting/BubbleSort": {
-        "BubsortPRO": {
-          "points": 2,
-          "threshold": 3
-        }
-      },
-      "Sorting/SelectionSort": {
-        "SelsortPRO": {
-          "points": 2
-        }
-      }
-    },
-    "Sorting II": {
-      "Sorting/SortingEmpirical": {},
-      "Sorting/Heapsort": {},
-      "Sorting/Mergesort": {},
-      "Sorting/MergesortImpl": {},
-      "Sorting/ExchangeSort": {},
-      "Sorting/Quicksort": {},
-      "Sorting/QuicksortVid": {}
-    },
     "Graphs I": {
       "Graph/GraphIntro": {},
       "Graph/GraphImpl": {}

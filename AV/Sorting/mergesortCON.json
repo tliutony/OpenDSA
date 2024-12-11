@@ -1,13 +1,14 @@
 {
   "translations" :{
     "en": {
-      "av_c1": "Move the smaller value.",
-      "av_c2": "Compare the smallest values in each list.",
+      "av_c1": "Copy the smaller value.",
+      "av_c2": "Compare the smallest values in each array.",
       "av_c3": "We will merge two sorted lists into one.",
-      "av_c4": "First compare the smallest values in each list.",
-      "av_c5": "The smaller value is 2 in the right list.",
-      "av_c6": "Move it to position 0 of the output list.",
-      "av_c7": "Continue in this way, at each step comparing the smallest values in each list."
+      "av_c4": "First compare the smallest values in each array.",
+      "av_c5": "The smaller value is 2 in the right array.",
+      "av_c6": "Copy it to position 0 of the output array.",
+      "av_c7": "Continue in this way, at each step comparing the smallest values in each array.",
+      "av_c8": "Now that we have copied all of the values from the right array, we can copy the remaining values from the left array."
     }
   }
 }

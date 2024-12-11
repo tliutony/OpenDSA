@@ -1,7 +1,7 @@
 {
   "translations" :{
     "en": {
-	  "Slide 1": "The analysis of merge sort is straightforward. Consider the following array of 8 elements.",
+	  "Slide 1": "We now analyze the running time of merge sort. Consider the following array of 8 elements.",
 	  "Slide 3": "Splitting the array into two halves requires 8 units of work.",
 	  "Slide 5": "Splitting the selected array into two halves requires 4 units of work.",
 	  "Slide 7": "Splitting the selected array into two halves requires 2 units of work.",
@@ -16,9 +16,9 @@
 	  "Slide 25": "Merging the green highlighted arrays requires 2 units of work.",
 	  "Slide 27": "Merging the green highlighted arrays requires 4 units of work.",
 	  "Slide 29": "Merging the green highlighted arrays requires 8 units of work.",
-	  "Slide 31": "Thus, we have $\\log{n+1}$ levels each of which requires $\\theta(n)$ work.",
-	  "Slide 32": "Therefore, the total running time of merge sort is $\\theta(n\\log{n})$.",
-	  "Slide 33": "This cost is unaffected by the relative order of the values being sorted, thus this analysis holds for the best, average, and worst cases.",
+	  "Slide 31": "Thus, we have $\\log{n+1}$ levels each of which requires $O(n)$ work due to the merge and arraycopy operations.",
+	  "Slide 32": "Therefore, the total running time of merge sort is $O(n\\log{n})$.",
+	  "Slide 33": "This is the best possible running time for a comparison-based sorting algorithm. The tradeoff however is that we need to copy the values into two separate arrays at each level, which takes up additional space that insertion sort and selection sort do not require.",
 	  "lab1": "<b><u>Splitting Work</u></b>",
 	  "lab2": "<b><u>Merging Work</u></b>"
     }
