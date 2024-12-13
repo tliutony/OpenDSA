@@ -215,42 +215,12 @@
       "Binary/CompleteTree": {},
       "MHC/maps": {}
     },
-    "Hashing and Sorting": {
-      "Hashing/HashIntro": {},
-      "Hashing/HashFunc": {},
-      "Hashing/OpenHash": {},
-      "Hashing/HashCSimple": {},
-      "Hashing/HashDel": {}
+    "Hash Tables": {
+      "MHC/hashTable": {},
+      "MHC/hashCollisions": {}
     },
-    "Sorting I": {
-      "Sorting/InSort": {},
-      "Sorting/SortNotation": {
-        "SortIntroSumm": {
-          "threshold": 3
-        }
-      },
-      "Design/Comparison": {},
-      "Sorting/InsertionSort": {},
-      "Sorting/BubbleSort": {
-        "BubsortPRO": {
-          "points": 2,
-          "threshold": 3
-        }
-      },
-      "Sorting/SelectionSort": {
-        "SelsortPRO": {
-          "points": 2
-        }
-      }
-    },
-    "Sorting II": {
-      "Sorting/SortingEmpirical": {},
-      "Sorting/Heapsort": {},
-      "Sorting/Mergesort": {},
-      "Sorting/MergesortImpl": {},
-      "Sorting/ExchangeSort": {},
-      "Sorting/Quicksort": {},
-      "Sorting/QuicksortVid": {}
+    "Sorting": {
+      "MHC/sorting": {}
     },
     "Graphs I": {
       "Graph/GraphIntro": {},

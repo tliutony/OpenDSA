@@ -39,7 +39,7 @@ $(document).ready(function() {
   var arr, arr11, arr12, arr21, arr22, arr23, arr24, arr31, arr32, arr33, arr34, arr35, arr36, arr37, arr38;
   var arr_values = [];
   var i;
-  var rectTopAlign = 35;
+  var rectTopAlign = 40;
   var rectLeftAlign = 350;
 
   // Slide 1
@@ -61,8 +61,8 @@ $(document).ready(function() {
   // Slide 4
   arr11 = av.ds.array([arr_values[0], arr_values[1], arr_values[2], arr_values[3]], {left: 40, top: 75, indexed: false});
   arr12 = av.ds.array([arr_values[4], arr_values[5], arr_values[6], arr_values[7]], {left: 200, top: 75, indexed: false});
-  av.label(interpret("lab1"),  {top: "-22px", left: "370px"}).addClass("largeLabel");
-  av.label("|----------- $n$ -----------|",  {top: "-3px", left: "355px"});
+  av.label(interpret("lab1"),  {top: "-12px", left: "370px"}).addClass("largeLabel");
+  av.label("|------------- $n$ -------------|",  {top: "7px", left: "355px"});
   for (i = 0; i < 8; i++) {
     av.g.rect(rectLeftAlign + (i * 20), rectTopAlign, 20, 20);
   }
@@ -108,7 +108,7 @@ $(document).ready(function() {
   merge(av, arr31, arr32, arr21);
   arr31.hide();
   arr32.hide();
-  av.label(interpret("lab2"),  {top: "-22px", left: "620px"}).addClass("largeLabel");
+  av.label(interpret("lab2"),  {top: "-12px", left: "620px"}).addClass("largeLabel");
   av.label("$\\frac{n}{8}$ ",  {top: "215px", left: rectLeftAlign + 252});
   av.label("$\\frac{n}{8}$ ",  {top: "215px", left: rectLeftAlign + 282});
   for (i = 0; i < 2; i++) {
