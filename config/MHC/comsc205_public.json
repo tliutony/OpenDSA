@@ -1,6 +1,6 @@
 {
-  "title": "MHC F24 COMSC 205: Data Structures",
-  "desc": "MHC F24 COMSC 205: Data Structures",
+  "title": "MHC S25 COMSC 205: Data Structures",
+  "desc": "MHC S25 COMSC 205: Data Structures",
   "build_dir": "Books",
   "code_dir": "SourceCode/",
   "lang": "en",
@@ -82,88 +82,6 @@
   "chapters": {
     "Welcome!": {
       "MHC/courseResources": {}
-    },
-    "Intro to Java I: Data Types and Hello World!": {
-      "java4python/introduction" : {},
-      "java4python/whylearnjava" : {},
-      "java4python/firstjavaprogram" : {},
-      "java4python/javaDataTypes" : {}
-    },
-    "Intro to Java II:  File I/O, Loops, and Conditionals": {
-      "java4python/dataStructuresIO" : {},
-      "java4python/conditionals": {},
-      "java4python/loopsanditeration": {}
-    },
-    "Intro to Java III: Classes": {
-      "java4python/definingclasses": {},
-      "MHC/javaInfo": {},
-      "MHC/scoping": {}
-    },
-    "Object Oriented Programming I: Inheritance": {
-      "javajavajava/inheritance_intro": {},
-      "javajavajava/inheritance_java": {}
-    },
-    "Object Oriented Programming II: Abstract Classes": {
-      "javajavajava/polymorphism_abstract" : {}
-    },
-    "Algorithm Analysis": {
-      "Background/IntroDSA": {},
-      "MHC/algoIntro" : {},
-      "MHC/algoCompare" : {},
-      "MHC/algoAsymptotic": {}
-    },
-    "List Interface and Array based Lists": {
-      "MHC/generics": {},
-      "MHC/listInterface": {},
-      "MHC/listArray": {}
-    },
-    "Linked Lists I ": {
-      "MHC/references": {},
-      "MHC/linkedList": {}
-    },
-    "Linked Lists II: Doubly Linked": {
-      "MHC/listDoubleLinked": {}
-    },
-    "Testing Code": {
-      "MHC/testing": {}
-    },
-    "Exceptions": {
-      "MHC/exceptions": {}
-    },
-    "Stacks": {
-      "MHC/stacks": {}
-    },
-    "Queues": {
-      "MHC/queues": {}
-    },
-    "Recursion I": {
-      "MHC/recursion": {}
-    },
-    "Recursion II and Search": {
-      "MHC/searching": {}
-    },
-    "Binary Trees": {
-      "MHC/binaryTrees": {},
-      "MHC/binaryTreeImplementation": {}
-    },
-    "Traversals and Binary Search Trees": {
-      "MHC/treeTraversal": {},
-      "MHC/bstInsert": {}
-    },
-    "Binary Search Trees II and Heaps": {
-      "MHC/bstDelete": {},
-      "MHC/heapsPQs": {}
-    },
-    "Heaps II and Maps": {
-      "Binary/CompleteTree": {},
-      "MHC/maps": {}
-    },
-    "Hash Tables": {
-      "MHC/hashTable": {},
-      "MHC/hashCollisions": {}
-    },
-    "Sorting": {
-      "MHC/sorting": {}
     }
   }
 }

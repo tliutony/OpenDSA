@@ -4,7 +4,7 @@ Course Resources
 Welcome to COMSC-205: Data Structures! Below are links to resources for the course:
 
 * `Syllabus <https://comsc205.github.io>`_
-* `Ed Discussion <https://edstem.org/us/courses/61155>`_ 
+* `Ed Discussion <https://edstem.org/us/courses/74163>`_ 
 
 **Software**
 
@@ -18,9 +18,9 @@ We will program in Java this semester using Visual Studio Code.  You can downloa
 
 **Section 02: Tony's Section**
 
-*  Tue Thu 9am - 10:15am, Kendade 305
-* `Moodle <https://moodle.mtholyoke.edu/course/view.php?id=27930>`_
-* `Gradescope <https://www.gradescope.com/courses/809468>`_
+*  Tue Thu 9am - 10:15am, Clapp 402
+* `Moodle <https://moodle.mtholyoke.edu/course/view.php?id=28927>`_
+* `Gradescope <https://www.gradescope.com/courses/957060>`_
 
 .. note::
     Whenever you see one of these call out boxes, it's a place where the instructors are commenting on the readings.
