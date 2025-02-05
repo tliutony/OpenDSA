@@ -82,6 +82,22 @@
   "chapters": {
     "Welcome!": {
       "MHC/courseResources": {}
+    },
+    "Intro to Java I: Data Types and Hello World!": {
+      "java4python/introduction" : {},
+      "java4python/whylearnjava" : {},
+      "java4python/firstjavaprogram" : {},
+      "java4python/javaDataTypes" : {}
+    },
+    "Intro to Java II:  File I/O, Loops, and Conditionals": {
+      "java4python/dataStructuresIO" : {},
+      "java4python/conditionals": {},
+      "java4python/loopsanditeration": {}
+    },
+    "Intro to Java III: Classes": {
+      "java4python/definingclasses": {},
+      "MHC/javaInfo": {},
+      "MHC/scoping": {}
     }
   }
 }

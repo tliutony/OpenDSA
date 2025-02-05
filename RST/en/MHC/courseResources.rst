@@ -13,8 +13,8 @@ We will program in Java this semester using Visual Studio Code.  You can downloa
 **Section 01: Barb's Section**
 
 *  Tue Thu 10:30am - 11:45am, Kendade 303
-* `Moodle <https://moodle.mtholyoke.edu/course/view.php?id=27929>`_
-* `Gradescope <https://www.gradescope.com/courses/843632>`_
+* `Moodle <https://moodle.mtholyoke.edu/course/view.php?id=28926>`_
+* `Gradescope <https://www.gradescope.com/courses/968620>`_
 
 **Section 02: Tony's Section**
 
