@@ -98,6 +98,10 @@
       "java4python/definingclasses": {},
       "MHC/javaInfo": {},
       "MHC/scoping": {}
+    },
+    "Object Oriented Programming I: Inheritance": {
+      "javajavajava/inheritance_intro": {},
+      "javajavajava/inheritance_java": {}
     }
   }
 }
