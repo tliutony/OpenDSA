@@ -7,24 +7,18 @@ import java.util.Arrays;
 /* *** ODSATag: MHCArrayListVars *** */
 public class MHCArrayList<E> implements MHCList<E> {
     private E[] elements;   // Array holding list elements
-    private static final int DEFAULT_CAPACITY = 10; // Default capacity
     private int capacity;     // Maximum number of values that fit in the array
     private int size;    // Current number of elements in the list
     /* *** ODSAendTag: MHCArrayListVars *** */
 
     /* *** ODSATag: MHCArrayListConstructor *** */
-    // Constructor
+    // Constructor: creates a list with a default capacity of 10
     @SuppressWarnings("unchecked") // Generic array allocation
-    public MHCArrayList(int capacity) {
-        this.capacity = capacity;
-        size = 0;
-        elements = (E[]) new Object[capacity];  // Initialize elements
-    }
-    
-    // Create a list with the default capacity
     public MHCArrayList() {
-        this(DEFAULT_CAPACITY);  // Just call the other constructor
-    }  
+        elements = (E[]) new Object[10];  // Initialize elements array to 10 by default
+        capacity = elements.length;
+        size = 0;
+    }
     /* *** ODSAendTag: MHCArrayListConstructor *** */
 
     // Replaces the element at the specified position in this list with the specified element.

@@ -11,7 +11,7 @@
    :keyword: Array-based List Implementation
 
 
-Array-Based List Implementation
+ArrayList Implementation
 ===============================
 
 Full Implementation
@@ -55,19 +55,18 @@ Instance variables and constructors
 
 
 
-Below are the constructors for our ``MHCArrayList`` class:
+Below is the constructor for our ``MHCArrayList`` class:
 
 .. codeinclude:: MHC/MHCArrayList
    :tag: MHCArrayListConstructor
 
-If we look at the first constructor, we initialize the ``capacity`` of the ArrayList to the specified parameter. Because the programmer is creating a 
-new ``MHCArrayList`` object, there are no data elements stored within it and so the ``size`` of the list begins at 0.
+We create a new empty array named ``elements`` that can hold 10 elements and initialize the ``capacity`` of the ArrayList to the length of the ``elements`` array. Because the programmer is creating a new ``MHCArrayList`` object, there are no data elements stored within it and so the ``size`` of the list begins at 0.
 
 You'll notice that there is something a little unusual going on in the initialization of the ``elements`` array:
 
 .. code-block:: java
 
-   elements = (E[]) new Object[capacity];  // Initialize elements
+   elements = (E[]) new Object[10];  // Initialize elements array to 10 by default
 
 
 Since the type ``E`` is generic, we actually cannot instantiate an array of type ``E``. 
@@ -87,15 +86,9 @@ You'll also notice a line that begins with ``@`` above the constructor, which is
 We include this because the Java compiler knows that casting to an unknown type ``E[]`` is a risky operation, so it will display a warning message if we compile the code.
 The annotation tells Java not to worry, and that we really do want to make this cast. But this again goes to show that casting should be used sparingly, if at all!
 
-Finally, you'll notice that we have another constructor declared that does not take any parameters. Instead, it uses the ``this`` keyword to call the first constructor to create
-a new ``MHCArrayList`` object with ``DEFAULT_CAPACITY``:
+.. note::
 
-.. code-block:: java
-
-   public MHCArrayList() {
-      this(DEFAULT_CAPACITY);  // Just call the other constructor
-   }  
-
+   Don't worry about the specific details of this constructor -- we have to use this syntax because of the way Java handles generic types. This is the only time we'll see this syntax this semester.
 
 Adding elements to a given position: add(int index, E o)
 -----------------------------------
@@ -153,8 +146,7 @@ following widget.
    :output: show
    :keyword: Array-based List
 
-In the average case, insertion or removal each requires moving half
-of the elements, which is :math:`O(n/2) = O(n)`.
+In the worst case, insertion or removal each requires moving either :math:`n` or :math:`n-1` elements, which is :math:`O(n)`.
 
 remove() Interactive Exericse
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

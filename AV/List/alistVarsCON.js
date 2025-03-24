@@ -26,13 +26,15 @@ $(document).ready(function() {
   av.step();
 
   // Slide 4
-  av.umsg(interpret("sc4"));
-  pseudo.setCurrentLine("default");
-  av.step();
+  // av.umsg(interpret("sc4"));
+  // pseudo.setCurrentLine("default");
+  // av.step();
+  //"sc4": "An optional parameter is declared for the <code>MHCArrayList</code> constructor. With this parameter, the user can indicate the maximum number of elements permitted in the list. If no parameter is given, then it takes the value <code>DEFAULT_CAPACITY</code>, which is assumed to be a suitably defined constant value.",
+
 
   // Slide 5
   av.umsg(interpret("sc5"));
-  pseudo.setCurrentLine("maxSize");
+  pseudo.setCurrentLine("capacity");
   av.step();
 
   // Slide 6

@@ -136,39 +136,7 @@ However they are considerably different in approaches and in their
 space/time tradeoffs.
 
 The code below presents our list interface, which should
-be able to support different data types for the elements.
-One way to do this in Java is to store data values of type
-``Object``:
-
-.. note: the comments are pulled directly from the java.util.List interface documentation
-
-.. code-block:: java
-
-    public interface MHCList {
-        // Replaces the element at the specified position in this list with the specified element.
-        public void set (int index, Object o);
-
-        // Returns the element at the specified position in this list.
-        public Object get (int index);
-
-        // Returns the number of elements in this list.
-        public int size();
-
-        // Appends the specified element to the end of this list.
-        public boolean add (Object o); 
-
-        // Inserts the specified element at the specified position in this list.
-        public void add (int index, Object o);
-
-        // Removes the element at the specified position in this list, and returns it.
-        public Object remove (int index);
-
-        // Returns true if this list contains no elements.
-        public boolean isEmpty();
-
-        // Returns a string representation of the list elements.
-        public String toString();
-    }
+be able to support different data types for the elements. Languages that support generics, like Java, give us more control over the element types:
 
 .. TL note: I removed these methods from the interface because they will require some discussion of .equals()
 .. // Removes the first occurrence of the specified element from this list, if it is present.
@@ -178,8 +146,6 @@ One way to do this in Java is to store data values of type
 .. // Returns the index of the first occurrence of the specified element in this list,
 .. // or -1 if this list does not contain the element.
 .. int indexOf (Object o);
-
-Languages that support generics, like Java, give more control over the element types. Here is the same interface but with generics:
 
 .. codeinclude:: MHC/MHCList
    :tag: MHCList
@@ -225,24 +191,57 @@ in any desired order, and to access any desired position in the list.
 .. since it could be implemented by means of the other
 .. member functions in the same asymptotic time.
 
-A list can be iterated through as follows:
+Using a List
+------------
+
+We can modify a List using the methods defined in the ``MHCList`` interface:
+
+.. code-block:: java
+
+    MHCList<String> theList = new MHCArrayList<>(); // Create a new empty ArrayList
+    System.out.println(theList.size()); // Output: 0
+    System.out.println(theList.isEmpty()); // Output: true
+
+    theList.add("Hello"); // add "Hello" to the beginning of the list
+    theList.add("World"); // add "World" to the end of the list
+    theList.add(1, "There"); // add "There" to the second position in the list, which shifts "World" to the third position
+    System.out.println(theList); // Output: [Hello, There, World]
+
+    String removedElement = theList.remove(theList.size() - 1); // remove the last element from the list, and return it
+    System.out.println(removedElement); // Output: World
+    System.out.println(theList); // Output: [Hello, There]
+
+    theList.set(0, "Hi"); // replace the first element with "Hi"
+    System.out.println(theList); // Output: [Hi, There]
+
+
+A List can be iterated through as follows:
 
 .. code-block:: java
     
-    MHCList theList; // assume theList is initialized
-    Object curElement;
+    MHCList<String> theList; // assume theList is initialized previously
+    String curElement;
 
+    // size() returns the number of elements in the list
     for (int i = 0; i < theList.size(); i++) {
+
+        // get() returns the element at the specified position in the list
         curElement = theList.get(i);
+
+        // take some action with the current element
         doSomething(curElement);    
     }
 
 In this example, each element of the list in turn is stored
 in ``curElement``, and passed to the ``doSomething`` function.
 The loop terminates when the index ``i`` reaches the end of the
-list. This code needs no knowledge about the specific list implementation, just the ``MHCList`` interface.
+list. 
 
-We will now look at a standard approach of implementing lists, the array-based list or ArrayList.
+.. note::
+
+    None of this code needs to know about the specific list implementation -- all we need to know is the ``MHCList`` interface!
+
+Next class, we will look at a standard approach of implementing lists, the array-based list or ArrayList.
 
 .. The list class declaration presented here is just one of
 .. many possible interpretations for lists.

@@ -102,6 +102,36 @@
     "Object Oriented Programming I: Inheritance": {
       "javajavajava/inheritance_intro": {},
       "javajavajava/inheritance_java": {}
+    },
+    "Object Oriented Programming II: Abstract Classes": {
+      "javajavajava/polymorphism_abstract" : {}
+    },
+    "Algorithm Analysis": {
+      "Background/IntroDSA": {},
+      "MHC/algoIntro" : {},
+      "MHC/algoCompare" : {},
+      "MHC/algoAsymptotic": {}
+    },
+    "The List Interface and Generics": {
+      "MHC/generics": {},
+      "MHC/listInterface": {}
+    },
+    "ArrayLists" : {
+      "MHC/listArray": {}
+    },
+    "Linked Lists I ": {
+      "MHC/references": {},
+      "MHC/linkedList": {}
+    },
+    "Linked Lists II: Doubly Linked": {
+      "MHC/listDoubleLinked": {}
+    },
+    "Exceptions and Testing": {
+      "MHC/testing": {},
+      "MHC/exceptions": {}
+    },
+    "Stacks": {
+      "MHC/stacks": {}
     }
   }
 }

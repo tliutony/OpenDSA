@@ -1,11 +1,11 @@
 {
   "translations": {
     "en": {
-      "sc1": "Inserting at the end of the list is straightforward.",
+      "sc1": "Let's now add an element to the end of the list, which is done by calling <code>add()</code> without specifying an index.",
       "sc2": "We will call <code>add(23)</code>, appending the value 23.",
       "sc3": "First check that the array has a free slot.",
-      "sc4": "Now simply insert the value into the empty position, and update <code>size</code>.",
-      "sc5": "Thus, <b>if we do not need to grow the list</b>, adding to the end requires constant time."
+      "sc4": "Now insert the value into the empty position, and update <code>size</code>.",
+      "sc5": "Thus, <b>if we do not need to grow the list</b>, adding to the end requires constant time, O(1)."
     }
   },
   "code": {
