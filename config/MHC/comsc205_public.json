@@ -132,6 +132,13 @@
     },
     "Stacks": {
       "MHC/stacks": {}
+    },
+    "Queues": {
+      "MHC/queues": {}
+    },
+    "Recursion and Search": {
+      "MHC/recursion": {},
+      "MHC/searching": {}
     }
   }
 }
