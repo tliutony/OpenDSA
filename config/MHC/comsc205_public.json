@@ -139,6 +139,13 @@
     "Recursion and Search": {
       "MHC/recursion": {},
       "MHC/searching": {}
+    },
+    "Recursive Structures": {
+      "MHC/binaryTrees": {}
+    },
+    "Binary Trees": {
+      "MHC/binaryTreeImplementation": {},
+      "MHC/treeTraversal": {}
     }
   }
 }
