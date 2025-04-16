@@ -87,7 +87,7 @@ One way to build a heap is to insert the elements one at a time. Unlike the BST 
 
 .. note::
 
-    The following animations are for a **max heap**, unlike the min heaps we will discuss in lecture. You'll also see that the animations show some array operations. Don't worry about the arrays for now and focus on heap operation concepts -- we will discuss the array-based implementation next time.
+    The following animations are for a **max heap**, unlike the min heaps we will discuss in lecture. You'll also see that the animations show some array operations. Don't worry about the arrays for now and focus on heap operation concepts -- we will discuss the array-based implementation in the next section.
 
 .. inlineav:: heapinsertCON ss
    :long_name: Heap insert Slideshow

@@ -146,6 +146,17 @@
     "Binary Trees": {
       "MHC/binaryTreeImplementation": {},
       "MHC/treeTraversal": {}
+    },
+    "Binary Search Trees": {
+      "MHC/bstInsert": {},
+      "MHC/bstDelete": {}
+    },
+    "Heaps" : {
+      "MHC/heapsPQs": {},
+      "Binary/CompleteTree": {}
+    },
+    "Sorting": {
+      "MHC/sorting": {}
     }
   }
 }

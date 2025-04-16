@@ -165,7 +165,7 @@ Runtime comparisons between sorting algorithms
 
 .. note::
 
-   We did not cover bubble sort or quick sort this semester, they are listed here for reference.
+   We will not cover bubble sort or quick sort this semester -- they are listed here for reference.
 
 +-------------------+------------------------+----------------+
 | Sorting Algorithm | Time Complexity        | Memory Usage   |
