@@ -73,7 +73,7 @@ in any predictable order.
 
 .. note::
 
-    We'll focus on the ``HashMap`` implementation next lecture.
+    We'll focus on the ``HashMap`` implementation in the upcoming classes.
 
 Using a Map
 -----------
@@ -88,7 +88,7 @@ names (keys) with phone numbers (values) in pairs.
 
 .. code-block:: java
 
-   public void testMap()
+   public static void testMap()
    {
        Map<String, String> noCallMap = new HashMap<String, String>();
    }
@@ -103,7 +103,7 @@ a Map, we'll call the ``put()`` method:
 
 .. code-block:: java
 
-   public void testMap()
+   public static void testMap()
    {
        Map<String, String> noCallMap = new HashMap<String, String>();
 
@@ -119,7 +119,7 @@ To access those pairs, we use the ``get()`` method:
 
 .. code-block:: java
 
-   public void testMap()
+   public static void testMap()
    {
        Map<String, String> noCallMap = new HashMap<String, String>();
 
@@ -157,7 +157,7 @@ since keys must be unique in a map, we really only need a key.
 
 .. code-block:: java
 
-   public void testMap()
+   public static void testMap()
    {
        Map<String, String> noCallMap = new HashMap<String, String>();
 
@@ -171,4 +171,4 @@ since keys must be unique in a map, we really only need a key.
 Here, we add "Jane Q" and her phone number to the Map, remove it, then the value ``false``
 would be printed out as there is no longer a key called "Jane Q" in our Map.
 
-In the following section, we'll look at how Hash Maps (also known as Hash Tables) implement the ``Map`` interface.
+In the next section, we'll look at how Hash Maps (also known as Hash Tables) implement the ``Map`` interface.

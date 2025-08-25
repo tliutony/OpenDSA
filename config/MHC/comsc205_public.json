@@ -157,6 +157,15 @@
     },
     "Sorting": {
       "MHC/sorting": {}
+    },
+    "Maps": {
+      "MHC/maps": {}
+    },
+    "Hash Tables I": {
+      "MHC/hashTable": {}
+    },
+    "Hash Tables II": {
+      "MHC/hashCollisions": {}
     }
   }
 }
