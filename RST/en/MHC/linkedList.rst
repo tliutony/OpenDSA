@@ -132,7 +132,7 @@ named ``MHCLinkedList``.
 
 .. note::
 
-    We'll go over the rest of the implementation in lecture and in Lab 5!
+   We'll discuss the rest of the implementation over the next few classes!
 
 .. codeinclude:: MHC/MHCLinkedList
    :tag: MHCLinkedList

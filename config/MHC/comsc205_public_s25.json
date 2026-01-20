@@ -1,6 +1,6 @@
 {
-  "title": "MHC F25 COMSC 205: Data Structures",
-  "desc": "MHC F25 COMSC 205: Data Structures",
+  "title": "MHC S25 COMSC 205: Data Structures",
+  "desc": "MHC S25 COMSC 205: Data Structures",
   "build_dir": "Books",
   "code_dir": "SourceCode/",
   "lang": "en",
@@ -119,21 +119,16 @@
     "ArrayLists" : {
       "MHC/listArray": {}
     },
-    "Singly Linked Lists": {
+    "Linked Lists I ": {
       "MHC/references": {},
       "MHC/linkedList": {}
     },
-    "Doubly Linked Lists": {
+    "Linked Lists II: Doubly Linked": {
       "MHC/listDoubleLinked": {}
     },
-    "Exceptions": {
+    "Exceptions and Testing": {
+      "MHC/testing": {},
       "MHC/exceptions": {}
-    },
-    "Testing": {
-      "MHC/testing": {}
-    },
-    "Midterm Review": {
-      
     },
     "Stacks": {
       "MHC/stacks": {}
@@ -142,33 +137,35 @@
       "MHC/queues": {}
     },
     "Recursion and Search": {
-      "MHC/recursion": {}
-    },
-    "Binary Search and Recursive Structures": {
+      "MHC/recursion": {},
       "MHC/searching": {}
     },
+    "Recursive Structures": {
+      "MHC/binaryTrees": {}
+    },
     "Binary Trees": {
-      "MHC/binaryTrees": {},
-      "MHC/binaryTreeImplementation": {}    
+      "MHC/binaryTreeImplementation": {},
+      "MHC/treeTraversal": {}
     },
-    "Binary Search Trees I ": {
-      "MHC/treeTraversal": {},
-      "MHC/bstInsert": {}
+    "Binary Search Trees": {
+      "MHC/bstInsert": {},
+      "MHC/bstDelete": {}
     },
-    "Binary Search Trees II and Heaps": {
-      "MHC/bstDelete": {},
-      "MHC/heapsPQs": {}
+    "Heaps" : {
+      "MHC/heapsPQs": {},
+      "Binary/CompleteTree": {}
     },
-    "Maps and Hash Tables": {
-      "MHC/maps": {},
-      "MHC/hashTable": {},
+    "Sorting": {
+      "MHC/sorting": {}
+    },
+    "Maps": {
+      "MHC/maps": {}
+    },
+    "Hash Tables I": {
+      "MHC/hashTable": {}
+    },
+    "Hash Tables II": {
       "MHC/hashCollisions": {}
-    },
-    "Sorting I ": {
-      "MHC/sorting1": {}
-    },
-    "Sorting II": {
-      "MHC/sorting2": {}
     }
   }
 }
