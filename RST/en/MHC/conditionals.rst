@@ -205,7 +205,7 @@ For example:
 
 
 Java also supports the boolean expression.
-``condition ? trueValue : falseValue`` This expression can be used to
+``condition ? trueValue : falseValue`` This expression is called a **ternary operator** and can be used to
 test a condition as part of an assignment statement. For example
 ``a = a % 2 == 0 ? a*a : 3*x -1`` In the previous assignment statement
 the expression ``a%2 ==0`` is first checked. If it is true then a is
