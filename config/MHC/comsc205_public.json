@@ -78,17 +78,17 @@
     }
   },
   "start_chap_num": 0,
-  "chapter_name" : "Lecture",
+  "chapter_name": "Lecture",
   "chapters": {
     "Introduction and Hello World!": {
       "MHC/courseResources": {},
-      "MHC/javaIntro" : {},
-      "MHC/helloWorld" : {}
+      "MHC/javaIntro": {},
+      "MHC/helloWorld": {}
     },
     "Intro to Java I: Data Types, Loops, and Conditionals": {
-      "java4python/javaDataTypes" : {},
-      "java4python/conditionals": {},
-      "java4python/loopsanditeration": {}
+      "MHC/javaDataTypes": {},
+      "MHC/conditionals": {},
+      "MHC/loopsIteration": {}
     }
   }
 }

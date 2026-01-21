@@ -22,9 +22,6 @@ line and then run it:
 
 Now lets look at the same program written in Java:
 
-.. highlight:: java
-   :linenothreshold: 4
-
 .. 
     activecode:: hellojava
     :language: java
