@@ -13,7 +13,7 @@ Java has some very handy naming conventions.
    to represent multiword method names. for example ``nextInt()``
 
 -  Instance variables of a class start with a lower case letter and use
-   camelCase
+   camelCase -- that is, the first letter of each word is capitalized after the first word For example: ``myVariableName``
 
 -  Constants are in all upper case letters. for example ``Math.MAXINT``
 
