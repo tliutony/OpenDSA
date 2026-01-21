@@ -1,6 +1,6 @@
 {
-  "title": "MHC F25 COMSC 205: Data Structures",
-  "desc": "MHC F25 COMSC 205: Data Structures",
+  "title": "MHC S26 COMSC 205: Data Structures",
+  "desc": "MHC S26 COMSC 205: Data Structures",
   "build_dir": "Books",
   "code_dir": "SourceCode/",
   "lang": "en",
@@ -80,95 +80,16 @@
   "start_chap_num": 0,
   "chapter_name" : "Lecture",
   "chapters": {
-    "Welcome!": {
-      "MHC/courseResources": {}
-    },
-    "Intro to Java I: Data Types and Hello World!": {
+    "Introduction and Hello World!": {
+      "MHC/courseResources": {},
       "java4python/introduction" : {},
       "java4python/whylearnjava" : {},
-      "java4python/firstjavaprogram" : {},
-      "java4python/javaDataTypes" : {}
+      "java4python/firstjavaprogram" : {}
     },
-    "Intro to Java II:  File I/O, Loops, and Conditionals": {
-      "java4python/dataStructuresIO" : {},
+    "Intro to Java I: Data Types, Loops, and Conditionals": {
+      "java4python/javaDataTypes" : {},
       "java4python/conditionals": {},
       "java4python/loopsanditeration": {}
-    },
-    "Intro to Java III: Classes": {
-      "java4python/definingclasses": {},
-      "MHC/javaInfo": {},
-      "MHC/scoping": {}
-    },
-    "Object Oriented Programming I: Inheritance": {
-      "javajavajava/inheritance_intro": {},
-      "javajavajava/inheritance_java": {}
-    },
-    "Object Oriented Programming II: Abstract Classes": {
-      "javajavajava/polymorphism_abstract" : {}
-    },
-    "Algorithm Analysis": {
-      "Background/IntroDSA": {},
-      "MHC/algoIntro" : {},
-      "MHC/algoCompare" : {},
-      "MHC/algoAsymptotic": {}
-    },
-    "The List Interface and Generics": {
-      "MHC/generics": {},
-      "MHC/listInterface": {}
-    },
-    "ArrayLists" : {
-      "MHC/listArray": {}
-    },
-    "Singly Linked Lists": {
-      "MHC/references": {},
-      "MHC/linkedList": {}
-    },
-    "Doubly Linked Lists": {
-      "MHC/listDoubleLinked": {}
-    },
-    "Exceptions": {
-      "MHC/exceptions": {}
-    },
-    "Testing": {
-      "MHC/testing": {}
-    },
-    "Midterm Review": {
-      
-    },
-    "Stacks": {
-      "MHC/stacks": {}
-    },
-    "Queues": {
-      "MHC/queues": {}
-    },
-    "Recursion and Search": {
-      "MHC/recursion": {}
-    },
-    "Binary Search and Recursive Structures": {
-      "MHC/searching": {}
-    },
-    "Binary Trees": {
-      "MHC/binaryTrees": {},
-      "MHC/binaryTreeImplementation": {}    
-    },
-    "Binary Search Trees I ": {
-      "MHC/treeTraversal": {},
-      "MHC/bstInsert": {}
-    },
-    "Binary Search Trees II and Heaps": {
-      "MHC/bstDelete": {},
-      "MHC/heapsPQs": {}
-    },
-    "Maps and Hash Tables": {
-      "MHC/maps": {},
-      "MHC/hashTable": {},
-      "MHC/hashCollisions": {}
-    },
-    "Sorting I ": {
-      "MHC/sorting1": {}
-    },
-    "Sorting II": {
-      "MHC/sorting2": {}
     }
   }
 }
