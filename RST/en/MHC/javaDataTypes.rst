@@ -57,6 +57,7 @@ Next, lets look at the Java equivalent:
 ..     :sourcefile: TempConv.java
 ..     :stdin: 212
 .. code-block:: java
+    :linenos:
 
     public class TempConv {
         public static void main(String[] args) {
@@ -71,13 +72,6 @@ Next, lets look at the Java equivalent:
         }
     }
 
-There are several new concepts introduced in this example. We will look
-at them in the following order:
-
--  Variable Declaration
-
--  Import
-
 Declaring Variables
 -------------------
 
@@ -91,10 +85,9 @@ type of object the variable can refer to is determined when the variable
 is **declared**. Once the declaration is made it is an error for a
 variable to refer to an object of any other type.
 
-In the example above, lines 5—7 contain variable declarations.
+In the example above, lines 3-4 contain variable declarations.
 Specifically we are saying that ``fahr`` and ``cel`` are going to
-reference objects that are of type ``Double``. The variable ``in`` will
-reference a ``Scanner`` object. This means that if we were to try an
+reference objects that are of type ``double``. This means that if we were to try an
 assignment like ``fahr = "xyz"`` the compiler would generate an error
 because ``"xyz"`` is a string and ``fahr`` is supposed to be a double.
 
