@@ -23,7 +23,7 @@ In Java we would write this as:
         System.out.println(i);
     }
 
-Recall that the ``range`` function provides you with a wide variety of
+In Python, the ``range`` function provides you with a wide variety of
 options for controlling the value of the loop variable.
 
 ::
@@ -59,33 +59,8 @@ In Java we would write this as:
     for (int i = 100; i >= 0; i -= 5) {
         System.out.println(i);
     }
-    
-In Python the for loop can also iterate over any sequence such as a
-list, a string, or a tuple. Java also provides a variation of its for
-loop that provides the same functionality in its so called ``for each``
-loop.
-
-In Python we can iterate over a list as follows:
-
-::
-
-    l = [1, 1, 2, 3, 5, 8, 13, 21]
-    for fib in l:
-       print(fib)
-
-In Java we can iterate over an array of integers too:
 
 
-::
-
-    int l[] = {1,1,2,3,5,8,13,21};
-    for(int i : l) {
-        System.out.println(i);
-    }
-
-
-.. note::
-    More on arrays in Java next week!
 Indefinite Loops
 ----------------
 

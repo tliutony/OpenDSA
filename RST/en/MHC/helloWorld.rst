@@ -45,7 +45,7 @@ are some elements of Java that will fade into the background as you
 become used to seeing them. 
 
 .. note::
-    We suggest for the readings that you copy-pastethe code into your own
+    We suggest for the readings that you copy-past the code into your own
     code editor so you can try them out yourself. Here, you can copy the above code into a file called ``Hello.java``.
 
 

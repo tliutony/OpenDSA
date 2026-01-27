@@ -78,10 +78,6 @@ at them in the following order:
 
 -  Import
 
-
-.. note::
-    We have split this section of the reading across lectures, and so we will cover imports as well as Input/Output and the Scanner class next time.
-
 Declaring Variables
 -------------------
 
@@ -126,8 +122,7 @@ side of the equals sign, it usually means that you have not declared the
 variable. If you have ever tried to use a Python variable that you have
 not initialized the second error message will be familiar to you. The
 difference here is that we see the message before we ever try to test
-our program. More common error messages are discussed in the section
-:ref:`Common Mistakes`.
+our program.
 
 The general rule in Java is that you must decide what kind of an object
 your variable is going to reference and then you must declare that

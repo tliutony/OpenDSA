@@ -95,15 +95,15 @@ In Java we have a couple of ways to write this
             System.out.println('F');
         } else {
             if (grade < 70) {
-                System.out.println('F');
+                System.out.println('D');
             } else {
                 if (grade < 80) {
-                    System.out.println('F');
+                    System.out.println('C');
                 } else {
                     if (grade < 90) {
-                        System.out.println('F');
+                        System.out.println('B');
                     } else {
-                        System.out.println('F');
+                        System.out.println('A');
                     }
                 }
             }
@@ -165,7 +165,7 @@ program using a switch statement we would use the following:
             System.out.println('C');
             break;
         case 6:
-            System.out.println('A');
+            System.out.println('D');
             break;
         default:
             System.out.println('F');
