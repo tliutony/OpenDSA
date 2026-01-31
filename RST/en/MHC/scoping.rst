@@ -20,24 +20,18 @@ source code where the name is visible and can be used.
 Local Scope
 ~~~~~~~~~~~
 
-Recall that mutator methods (or "setters" as they're often called) are used to
-change the values of private fields in a class.  For example:
+We often write methods to access and modify the values of instance variables in a class.  For example:
 
 .. code-block:: java
 
-   public class Cat
-   {
+   public class Cat {
        private String color;
-
-       // ...
-
-       public void setColor(String newColor)
-       {
-            color = newColor;
+       public void setColor(String newColor) {
+           color = newColor;
        }
    }
 
-This  ``setColor()`` method makes use of both a field and a parameter.
+This  ``setColor()`` method makes use of both an instance variable and a parameter.
 It is important to note that there is a difference in where these two types
 of variables can be used. The **scope** of a variable or method refers to where
 it can be used in a program.
@@ -91,10 +85,8 @@ like if-statements or loops are involved, scope can be a bit more specific.
 
 .. code-block:: java
 
-   public void exampleMethod(int x)
-   {
-       if (x % 2 == 0)
-       {
+   public void exampleMethod(int x) {
+       if (x % 2 == 0) {
            int value = 4;
        }
        value = value + 2; // This will not work!
@@ -115,8 +107,7 @@ The same is true for looping structures:
 
 .. code-block:: java
 
-   for (int i = 0; i < 12; i++)
-   {
+   for (int i = 0; i < 12; i++) {
        System.out.println(i);
    }
    i = i + 1; // This will not work!
@@ -131,11 +122,9 @@ the control structure and also after it.
 
 .. code-block:: java
 
-   public void exampleMethod(int x)
-   {
+   public void exampleMethod(int x) {
        int value = 0;
-       if (x % 2 == 0)
-       {
+       if (x % 2 == 0) {
            value = 4;
        }
        value = value + 2;
@@ -146,8 +135,7 @@ We could also do something similar with a for loop:
 .. code-block:: java
 
    int i = 0;
-   for (i = 0; i < 12; i++)
-   {
+   for (i = 0; i < 12; i++) {
        System.out.println(i);
    }
    i = i + 1; // This will work!
@@ -172,14 +160,12 @@ the variable's type whenever referring to it.  For example:
 
 .. code-block:: java
 
-    public class Cat
-    {
+    public class Cat {
         private String color;
 
         // ...
 
-        public void setColor(String newColor)
-        {
+        public void setColor(String newColor) {
              String color = newColor;
         }
     }
@@ -265,14 +251,10 @@ have two String variables called ``color``.  One a field and one a parameter.
 
 .. code-block:: java
 
-    public class Cat
-    {
+    public class Cat {
         private String color;
 
-        // ...
-
-        public void setColor(String color)
-        {
+        public void setColor(String color) {
              color = color;
         }
     }
@@ -285,17 +267,14 @@ look at what is happening here by adding a few print statements:
 
 .. code-block:: java
 
-    public class Cat
-    {
+    public class Cat {
         private String color;
 
-        public Cat()
-        {
+        public Cat() {
             this.color = "Black";
         }
 
-        public void setColor(String color)
-        {
+        public void setColor(String color) {
             color = color;
             System.out.println(this.color);
             System.out.println(color);
@@ -339,8 +318,7 @@ distinct names like we did initially:
 
 .. code-block:: java
 
-    public void setColor(String newColor)
-    {
+    public void setColor(String newColor) {
         color = newColor;
     }
 
@@ -352,8 +330,7 @@ variable you are referring to:
 
 .. code-block:: java
 
-    public void setColor(String color)
-    {
+    public void setColor(String color) {
         this.color = color;
     }
 
@@ -368,43 +345,6 @@ the value that will be stored in the field. When using this approach it
 is mandatory to alway include ``this.`` as a prefix when referring to the
 field name, because otherwise, all uses of the name would refer to the
 parameter only.
-
-Summarizing Scope Concepts
---------------------------
-
-.. raw:: html
-
-   <div class="align-center" style="margin-top:1em;">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/2nTjUAeD5WE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   </div>
-
-
-.. note::
-    The readings for this semester sometimes have interactive widgets for you to practice
-    concepts. These exercises are optional and are not graded, but we encourage you
-    to try them out. 
-    
-    If anything is confusing or if you have questions about the exercises, we encourage you to post to Ed!
-
-Check Your Understanding: Scope
--------------------------------
-
-.. TL note: the exercise randomizer is broken, so curating individual exercises
-.. avembed:: Exercises/IntroToSoftwareDesign/Week12Quiz4Q1.html ka
-   :long_name: Scope1
-
-.. avembed:: Exercises/IntroToSoftwareDesign/Week12Quiz4Q2.html ka
-   :long_name: Scope2
-
-.. .. avembed:: Exercises/IntroToSoftwareDesign/Week12Quiz4Q3.html ka
-..    :long_name: Scope3
-
-Syntax Practice: Scoping
-------------------------
-
-.. extrtoolembed:: 'Syntax Practice: Scoping'
-   :workout_id: 1572
-
 
 .. Java Input and Output
 .. ---------------------
