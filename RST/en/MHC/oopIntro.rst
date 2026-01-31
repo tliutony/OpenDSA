@@ -116,20 +116,3 @@ inside the computer that can store a certain type of value. For example, as show
 A **method**, which corresponds to an action or a behavior, is a named chunk of
 code that can be **called** to perform a certain pre-defined set of
 actions. For example, as its name suggests, the ``reportBalance()`` method reports the customer's account balance.
-
-
-Instance versus Class Variables and Methods
--------------------------------------------
-
-Variables and methods can be associated either with objects or with their
-classes.
-
-An **instance variable** (or **instance method**) is a variable (or method)
-that belongs to an object. By contrast, a **class variable** (or **class
-method**) is a variable (or method) that is associated with the class itself.
-
-An example of a method that is associated with the class is a special method
-known as a **constructor**. This is a method used to create an object. Calling
-a constructor to create an object is like pressing the cookie cutter into the
-cookie dough: the result is an individual cookie (object).
-
