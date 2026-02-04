@@ -30,6 +30,9 @@ Therefore if we legitimately want to be able to access information such as the n
 or denominator for a particular fraction we provide a way to access these variables, called **getter** methods.  If we
 want to be able to modify an instance variable from another class, we also need to provide a way to do so, called a **setter** method.
 
+.. note::
+    The one exception we have seen so far is the ``length`` attribute of an array, which is a public instance variable: notice how we access it as ``array.length`` rather than ``array.length()``. Arrays are a special case, and we otherwise follow the rule that all instance variables should be private.
+
 .. code-block:: java
 
     public int getNumerator() {

@@ -90,14 +90,14 @@ to find them in our chapter about :ref:`Java Documentation`.
 ==================== ================ ======================================================
          Return type      Method name                                            Description
 ==================== ================ ======================================================
-             boolean        hasNext()                   returns true if more data is present
+             boolean    hasNextLine()         returns true if there is another line of input
              boolean     hasNextInt()   returns true if the next thing to read is an integer
              boolean   hasNextFloat()      returns true if the next thing to read is a float
              boolean  hasNextDouble()     returns true if the next thing to read is a double
              Integer        nextInt()           returns the next thing to read as an integer
                Float      nextFloat()              returns the next thing to read as a float
               Double     nextDouble()             returns the next thing to read as a Double
-              String           next()             returns the next thing to read as a String
+              String       nextLine()             returns the next line of input as a String
 ==================== ================ ======================================================
 
 
@@ -124,13 +124,13 @@ You can think of an array as a container that contains a number of **elements** 
 
 .. code-block:: java
 
-    int arr[];          // Declare a name for the array
+    int[] arr;          // Declare a name for the array
     arr = new int[15];  // Create the array itself
 
 These two steps can be combined into a single statement as follows:
 
 .. code-block:: java
 
-    int arr[] = new int[15];
+    int[] arr = new int[15];
 
 In this example, the array's element type is ``int`` and its length is 15, which is **fixed and cannot be changed** after the array is created. This means that the array contains 15 variables of type ``int``, which will be referred to as ``arr[0]``, ``arr[1]``, … ``arr[14]``. The fact that the array's length is fixed will be a limitation of the array data structure, and we will see how to overcome this limitation in the coming weeks!

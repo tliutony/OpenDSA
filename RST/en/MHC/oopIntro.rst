@@ -81,7 +81,7 @@ What is a Class?
 ----------------
 
 A **class** is a template for an object. A class encapsulates the attributes
-and actions that characterize a certain type of object. Both the ``lobby`` and ``driveThru`` ATMs are of the ``ATM`` class.
+and actions that characterize a certain type of object. Both the ``lobby`` and ``drivethru`` ATMs are of the ``ATM`` class.
 
 In an object-oriented program, classes serve as blueprints or templates for the objects that the program uses.
 
