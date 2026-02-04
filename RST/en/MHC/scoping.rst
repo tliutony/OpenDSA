@@ -20,24 +20,18 @@ source code where the name is visible and can be used.
 Local Scope
 ~~~~~~~~~~~
 
-Recall that mutator methods (or "setters" as they're often called) are used to
-change the values of private fields in a class.  For example:
+We often write methods to access and modify the values of instance variables in a class.  For example:
 
 .. code-block:: java
 
-   public class Cat
-   {
+   public class Cat {
        private String color;
-
-       // ...
-
-       public void setColor(String newColor)
-       {
-            color = newColor;
+       public void setColor(String newColor) {
+           color = newColor;
        }
    }
 
-This  ``setColor()`` method makes use of both a field and a parameter.
+This  ``setColor()`` method makes use of both an instance variable and a parameter.
 It is important to note that there is a difference in where these two types
 of variables can be used. The **scope** of a variable or method refers to where
 it can be used in a program.
@@ -91,10 +85,8 @@ like if-statements or loops are involved, scope can be a bit more specific.
 
 .. code-block:: java
 
-   public void exampleMethod(int x)
-   {
-       if (x % 2 == 0)
-       {
+   public void exampleMethod(int x) {
+       if (x % 2 == 0) {
            int value = 4;
        }
        value = value + 2; // This will not work!
@@ -115,8 +107,7 @@ The same is true for looping structures:
 
 .. code-block:: java
 
-   for (int i = 0; i < 12; i++)
-   {
+   for (int i = 0; i < 12; i++) {
        System.out.println(i);
    }
    i = i + 1; // This will not work!
@@ -131,11 +122,9 @@ the control structure and also after it.
 
 .. code-block:: java
 
-   public void exampleMethod(int x)
-   {
+   public void exampleMethod(int x) {
        int value = 0;
-       if (x % 2 == 0)
-       {
+       if (x % 2 == 0) {
            value = 4;
        }
        value = value + 2;
@@ -146,8 +135,7 @@ We could also do something similar with a for loop:
 .. code-block:: java
 
    int i = 0;
-   for (i = 0; i < 12; i++)
-   {
+   for (i = 0; i < 12; i++) {
        System.out.println(i);
    }
    i = i + 1; // This will work!
@@ -156,12 +144,12 @@ We could also do something similar with a for loop:
 Class Scope
 ~~~~~~~~~~~
 
-By contrast, fields and all methods have scope that extends throughout the
+By contrast, instance variables and all methods have scope that extends throughout the
 entire class, that is, **class scope**. They
 can be used in the body of any method and in the expressions that assign
 initial values to class level variables.
 
-**Class-Level Variables.** Fields and methods have class scope, which extends throughout the class.
+**Class-Level Variables.** instance variables and methods have class scope, which extends throughout the class.
 
 
 A Common Misconception
@@ -172,23 +160,21 @@ the variable's type whenever referring to it.  For example:
 
 .. code-block:: java
 
-    public class Cat
-    {
+    public class Cat {
         private String color;
 
         // ...
 
-        public void setColor(String newColor)
-        {
+        public void setColor(String newColor) {
              String color = newColor;
         }
     }
 
-This setter will **not** change the value of the field ``color``.  To Java,
+This setter will **not** change the value of the instance variable ``color``.  To Java,
 whenever the type of a variable is included, you are declaring a variable.
 Java will allow you to declare variables with the same name, as long as they
 are in different scopes.
-In the code above, there is a field called ``color`` with class-level
+In the code above, there is a instance variable called ``color`` with class-level
 scope, *and* a local variable called ``color`` that only exists within
 the ``setColor()`` method.
 
@@ -217,13 +203,13 @@ Even though these variables have the same name and type, they are different. Cha
 ..     }
 
 .. This is the same issue as we saw in the previous example.
-.. There is a class-level ``Cat`` object declared as a field (``private Cat testCat;``).
-.. But, instead of initializing the field inside ``setUp()``, we also
+.. There is a class-level ``Cat`` object declared as a instance variable (``private Cat testCat;``).
+.. But, instead of initializing the instance variable inside ``setUp()``, we also
 .. have a local variable being declared, also called ``testCat``.  This means
-.. the field ``testCat`` will not be initialized, since the object created inside
+.. the instance variable ``testCat`` will not be initialized, since the object created inside
 .. ``setUp()`` is being used to initialize the local variable inside that method,
 .. which will cease to exist when the method ends.  When
-.. we refer to the ``testCat`` variable in ``test1()``, we refer to the field,
+.. we refer to the ``testCat`` variable in ``test1()``, we refer to the instance variable,
 .. which was never initialized and will therefore contain ``null``.  Thus, this
 .. test will produce a ``NullPointerException``.
 
@@ -248,7 +234,7 @@ Even though these variables have the same name and type, they are different. Cha
 ..         }
 ..     }
 
-.. This code would run without error. The field ``testCat`` is still declared
+.. This code would run without error. The instance variable ``testCat`` is still declared
 .. outside any method, giving it a class-level scope.  But this time, it is
 .. initialized in our ``setUp()`` method correctly, and ``setUp()``
 .. runs before every test.  This means that in ``test1()``, ``testCat`` would
@@ -261,41 +247,34 @@ A Note on Naming
 As we saw above, Java can handle having two variables with the same name
 and type when they are declared in different scopes.  This can also lead to
 confusion.  For example, we could
-have two String variables called ``color``.  One a field and one a parameter.
+have two String variables called ``color``.  One a instance variable and one a parameter.
 
 .. code-block:: java
 
-    public class Cat
-    {
+    public class Cat {
         private String color;
 
-        // ...
-
-        public void setColor(String color)
-        {
+        public void setColor(String color) {
              color = color;
         }
     }
 
 This code would compile but it is not advisable to use such naming conventions.
-This is because it is not clear if the field ``color`` is being set to the
+This is because it is not clear if the instance variable ``color`` is being set to the
 parameter ``color`` or vice-versa, or something else entirely.  Let's take a
 look at what is happening here by adding a few print statements:
 
 
 .. code-block:: java
 
-    public class Cat
-    {
+    public class Cat {
         private String color;
 
-        public Cat()
-        {
+        public Cat() {
             this.color = "Black";
         }
 
-        public void setColor(String color)
-        {
+        public void setColor(String color) {
             color = color;
             System.out.println(this.color);
             System.out.println(color);
@@ -308,7 +287,7 @@ look at what is happening here by adding a few print statements:
     }
 
 In this example, whenever we make a new ``Cat`` object, the value of the
-field ``color`` is set to "Black" at first.  When we run the main method with ``setColor("Green")`` we see an interesting result in our print statements:
+instance variable ``color`` is set to "Black" at first.  When we run the main method with ``setColor("Green")`` we see an interesting result in our print statements:
 
 ::
     
@@ -319,15 +298,15 @@ field ``color`` is set to "Black" at first.  When we run the main method with ``
 
 
 The first thing to be printed out is ``this.color``.  Which we see is "Black".
-The value of the field was not changed to "Green"! This means that when we write
-``color = color`` we know that the field color was not on the left side of
+The value of the instance variable was not changed to "Green"! This means that when we write
+``color = color`` we know that the instance variable color was not on the left side of
 the assignment operator.
 
 One might assume, then, that the parameter ``color`` is the value on the left
 side of the assignment operator.  This would mean that the parameter was changed
 from "Green" to "Black". But our second print statement tells us otherwise.
 When we print out the parameter ``color`` we see it is still "Green".  This
-means that the field ``color`` was not on the right side of the equals
+means that the instance variable ``color`` was not on the right side of the equals
 sign either!
 
 What happened in this code is that we set the parameter variable ``color``
@@ -339,8 +318,7 @@ distinct names like we did initially:
 
 .. code-block:: java
 
-    public void setColor(String newColor)
-    {
+    public void setColor(String newColor) {
         color = newColor;
     }
 
@@ -352,59 +330,24 @@ variable you are referring to:
 
 .. code-block:: java
 
-    public void setColor(String color)
-    {
+    public void setColor(String color) {
         this.color = color;
     }
 
-Now, the field ``color`` is on the left side of the assignment operator and the
+Now, the instance variable ``color`` is on the left side of the assignment operator and the
 parameter ``color`` is on the right.  So, if we ran ``setColor("Green");``
-the field ``color`` would be changed from "Black" to "Green".
+the instance variable ``color`` would be changed from "Black" to "Green".
 
 You will sometimes see this convention in setter methods or constructors,
 where the programmer has intentionally used the same name for both the
-parameter and the field, to communicate the intent that the parameter is
-the value that will be stored in the field. When using this approach it
+parameter and the instance variable, to communicate the intent that the parameter is
+the value that will be stored in the instance variable. When using this approach it
 is mandatory to alway include ``this.`` as a prefix when referring to the
-field name, because otherwise, all uses of the name would refer to the
+instance variable name, because otherwise, all uses of the name would refer to the
 parameter only.
 
-Summarizing Scope Concepts
---------------------------
-
-.. raw:: html
-
-   <div class="align-center" style="margin-top:1em;">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/2nTjUAeD5WE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   </div>
-
-
 .. note::
-    The readings for this semester sometimes have interactive widgets for you to practice
-    concepts. These exercises are optional and are not graded, but we encourage you
-    to try them out. 
-    
-    If anything is confusing or if you have questions about the exercises, we encourage you to post to Ed!
-
-Check Your Understanding: Scope
--------------------------------
-
-.. TL note: the exercise randomizer is broken, so curating individual exercises
-.. avembed:: Exercises/IntroToSoftwareDesign/Week12Quiz4Q1.html ka
-   :long_name: Scope1
-
-.. avembed:: Exercises/IntroToSoftwareDesign/Week12Quiz4Q2.html ka
-   :long_name: Scope2
-
-.. .. avembed:: Exercises/IntroToSoftwareDesign/Week12Quiz4Q3.html ka
-..    :long_name: Scope3
-
-Syntax Practice: Scoping
-------------------------
-
-.. extrtoolembed:: 'Syntax Practice: Scoping'
-   :workout_id: 1572
-
+    In general, whenever Java encounters a variable name, it'll look **locally** for a variable with that name first within the current scope before looking at any instance variables. If there is ambiguity about which variable we want to refer to, we use the ``this`` keyword to tell Java that we want to explicitly refer to the instance variable, not any local variables.
 
 .. Java Input and Output
 .. ---------------------
@@ -412,7 +355,7 @@ Syntax Practice: Scoping
 .. We have been using ``System.out.println()`` for a while, but you might not
 .. have thought about what it means. ``System`` is a class that provides methods
 .. related to the "system" or environment where programs run. It also provides
-.. ``System.out``, which is a special field that refers to an object providing
+.. ``System.out``, which is a special instance variable that refers to an object providing
 .. methods for displaying output, including ``println()``.
 .. In fact, we can use ``System.out.println()`` to display the value
 .. of ``System.out``:

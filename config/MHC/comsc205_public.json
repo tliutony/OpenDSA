@@ -89,6 +89,14 @@
       "MHC/javaDataTypes": {},
       "MHC/conditionals": {},
       "MHC/loopsIteration": {}
+    },
+    "Intro to Java II: Arrays and Input/Output": {
+      "MHC/arraysIO" : {},
+      "MHC/oopIntro" : {}
+    },
+    "Intro to Java III: Classes and Scope": {
+      "MHC/definingclasses": {},
+      "MHC/scoping": {}
     }
   }
 }
